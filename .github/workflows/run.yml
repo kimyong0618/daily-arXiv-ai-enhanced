@@ -118,6 +118,30 @@ jobs:
             exit 1
         fi
         echo "AI增强处理完成 / AI enhancement processing completed"
+
+    - name: Filter papers and generate email digest
+      if: steps.dedup_check.outputs.has_new_content == 'true'
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+        MODEL_NAME: ${{ vars.MODEL_NAME }}
+        RELEVANCE_THRESHOLD: ${{ vars.RELEVANCE_THRESHOLD || '60' }}
+        RELEVANCE_MAX_WORKERS: ${{ vars.RELEVANCE_MAX_WORKERS || '1' }}
+      run: |
+        source .venv/bin/activate
+        today=${{ steps.crawl_step.outputs.crawl_date }}
+        language="${{ vars.LANGUAGE }}"
+        python -m email_digest.run_digest \
+          --data "data/${today}_AI_enhanced_${language}.jsonl" \
+          --scanned-data "data/${today}.jsonl" \
+          --date "$today"
+
+    - name: Generate empty email digest when there are no new papers
+      if: steps.dedup_check.outputs.has_new_content == 'false'
+      run: |
+        source .venv/bin/activate
+        today=${{ steps.crawl_step.outputs.crawl_date }}
+        python -m email_digest.run_digest --empty --date "$today"
         
     - name: Convert to Markdown
       if: steps.dedup_check.outputs.has_new_content == 'true'
@@ -154,7 +178,7 @@ jobs:
       if: steps.dedup_check.outputs.has_new_content == 'true'
       run: |
         echo "更新文件列表... / Updating file list..."
-        ls data/*.jsonl | sed 's|data/||' > assets/file-list.txt
+        find data -maxdepth 1 -type f -name '*_AI_enhanced_*.jsonl' -printf '%f\n' | sort > assets/file-list.txt
         echo "文件列表更新完成 / File list updated"
 
     - name: Generate password hash and inject into config
@@ -292,6 +316,7 @@ jobs:
         # 复制数据文件到临时目录 / Copy data files to temporary directory
         cp -r data/* /tmp/data_files/data/ 2>/dev/null || true
         cp assets/file-list.txt /tmp/data_files/assets/ 2>/dev/null || true
+        cp -r email_digest /tmp/email_digest_sender
         
         echo "数据文件已保存到临时目录 / Data files saved to temporary directory"
 
@@ -310,6 +335,7 @@ jobs:
         # These files are already saved to temporary directory, so safe to remove
         rm -rf data/*.jsonl 2>/dev/null || true
         rm -f data/*.md 2>/dev/null || true
+        rm -f data/*_email.html data/*_email.txt 2>/dev/null || true
         rm -f assets/file-list.txt 2>/dev/null || true
         
         # 检查 data 分支是否存在 / Check if data branch exists
@@ -371,3 +397,27 @@ jobs:
             fi
           fi
         done
+
+    - name: Send HTML email digest
+      if: steps.dedup_check.outputs.has_new_content == 'true' || steps.dedup_check.outputs.has_new_content == 'false'
+      env:
+        MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+        MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+        MAIL_TO: ${{ secrets.MAIL_TO }}
+        MAIL_SMTP_SERVER: ${{ vars.MAIL_SMTP_SERVER || 'smtp.qq.com' }}
+        MAIL_SMTP_PORT: ${{ vars.MAIL_SMTP_PORT || '465' }}
+      run: |
+        source .venv/bin/activate
+        today=${{ steps.crawl_step.outputs.crawl_date }}
+        subject="每日 arXiv 论文速递 | CO · LLM · EC · RL | ${today}"
+        if [ "${{ steps.dedup_check.outputs.has_new_content }}" = "true" ]; then
+          python /tmp/email_digest_sender/send_email.py \
+            --html "data/${today}_email.html" \
+            --plain "data/${today}_email.txt" \
+            --subject "$subject"
+        else
+          python -m email_digest.send_email \
+            --html "data/${today}_email.html" \
+            --plain "data/${today}_email.txt" \
+            --subject "$subject"
+        fi

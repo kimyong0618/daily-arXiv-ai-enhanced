@@ -19,6 +19,8 @@ This innovative tool transforms how you stay updated with arXiv papers by combin
 🤖 **Smart AI Summarization**
 - Daily paper crawling with DeepSeek-powered summaries
 - Cost-effective: Only ~0.2 CNY per day
+- LLM-based relevance classification for CO / LLM / EC / RL research
+- Mobile-friendly HTML email digest after each daily workflow
 
 💫 **Smart Reading Experience**
 - Personalized paper highlighting based on your interests
@@ -67,6 +69,29 @@ Otherwise, you can watch the video above first and directly use this repo in htt
 9. You can manually click **Run workflow** to test if it works well (it may take about one hour). By default, this action will automatically run every day. You can modify it in `.github/workflows/run.yml`
 10. Set up GitHub pages: Go to your own repo -> Settings -> Pages. In `Build and deployment`, set `Source="Deploy from a branch"`, `Branch="main", "/(root)"`. Wait for a few minutes, go to https://\<username\>.github.io/daily-arXiv-ai-enhanced/. Please see this [issue](https://github.com/dw-dengwei/daily-arXiv-ai-enhanced/issues/14) for more precise instructions.
 </details>
+
+## Research relevance email digest
+
+The daily workflow reuses the existing AI-enhanced JSONL, asks the configured LLM to classify each paper from its title and abstract, and emails only papers at or above the relevance threshold. It also stores `data/YYYY-MM-DD_filtered.jsonl`, `data/YYYY-MM-DD_email.html`, and a plain-text fallback on the `data` branch. The GitHub Pages input remains the existing `*_AI_enhanced_*.jsonl` files.
+
+Recommended repository variable:
+
+- `CATEGORIES`: `cs.AI, cs.LG, cs.CL, cs.NE, cs.DS, math.OC`
+
+Required Actions secrets for mail:
+
+- `MAIL_USERNAME`: SMTP login and From address
+- `MAIL_PASSWORD`: SMTP app password / authorization code (not the mailbox login password)
+- `MAIL_TO`: recipient address; multiple addresses may be separated by commas
+
+Actions variables:
+
+- `RELEVANCE_THRESHOLD`: minimum score to include, default `60`
+- `RELEVANCE_MAX_WORKERS`: concurrent classifier requests, default `1`
+- `MAIL_SMTP_SERVER`: default `smtp.qq.com`
+- `MAIL_SMTP_PORT`: default `465`; port `465` uses implicit TLS, other ports use STARTTLS
+
+Common SMTP examples are QQ Mail (`smtp.qq.com:465`), Gmail (`smtp.gmail.com:465`), and 163 Mail (`smtp.163.com:465`). Run the workflow manually once after configuring the secrets to verify that the provider has SMTP access enabled.
 
 # Contributors
 Thanks to the following special contributors for contributing code, discovering bugs, and sharing useful ideas for this project!!!

@@ -15,7 +15,7 @@ Otherwise, you can directly use this repo in https://dw-dengwei.github.io/daily-
 4. Create two repository secrets named `OPENAI_API_KEY` and `OPENAI_BASE_URL`, and input corresponding values.
 5. Go to Variables. Variables are shown as plain text and are used for non-sensitive data
 6. Create the following repository variables:
-   1. `CATEGORIES`: separate the categories with ",", such as "cs.CL, cs.CV"
+   1. `CATEGORIES`: separate the categories with ",", recommended: "cs.AI, cs.LG, cs.CL, cs.NE, cs.DS, math.OC"
    2. `LANGUAGE`: such as "Chinese" or "English"
    3. `MODEL_NAME`: such as "deepseek-chat"
    4. `EMAIL`: your email for push to github
@@ -25,6 +25,23 @@ Otherwise, you can directly use this repo in https://dw-dengwei.github.io/daily-
 By default, this action will automatically run every day
 You can modify it in `.github/workflows/run.yml`
 9. If you wish to modify the content in `README.md`, do not directly edit README.md. You should edit `template.md`.
+
+## Research relevance email digest
+
+The workflow uses the configured LLM to classify each AI-enhanced paper by title and abstract, then sends an HTML digest containing papers whose score reaches `RELEVANCE_THRESHOLD` (default `60`). Existing GitHub Pages and Markdown generation continue to use the original AI-enhanced data.
+
+Add these Actions secrets:
+
+- `MAIL_USERNAME`: SMTP login and From address
+- `MAIL_PASSWORD`: SMTP app password / authorization code, not the normal mailbox password
+- `MAIL_TO`: recipient address (comma-separated addresses are supported)
+
+Add these optional Actions variables:
+
+- `RELEVANCE_THRESHOLD`: default `60`
+- `RELEVANCE_MAX_WORKERS`: default `1`
+- `MAIL_SMTP_SERVER`: default `smtp.qq.com`
+- `MAIL_SMTP_PORT`: default `465`
 
 # To-do list
 - [x] Replace markdown with GitHub pages front-end.
