@@ -826,16 +826,15 @@ async function loadPapersByDate(date) {
   `;
   
   try {
-    const selectedLanguage = selectLanguageForDate(date);
-    // 从 data 分支获取数据文件
-    const dataUrl = DATA_CONFIG.getDataUrl(`data/${date}_AI_enhanced_${selectedLanguage}.jsonl`);
+    // 只展示与研究方向相关的论文，复用筛选文件中已有的 AI 总结。
+    const dataUrl = DATA_CONFIG.getDataUrl(`data/${date}_filtered.jsonl`);
     const response = await fetch(dataUrl);
     // 如果文件不存在（例如返回 404），在论文展示区域提示没有论文
     if (!response.ok) {
       if (response.status === 404) {
         container.innerHTML = `
           <div class="loading-container">
-            <p>No papers found for this date.</p>
+            <p>No filtered papers found for this date.</p>
           </div>
         `;
         paperData = {};
@@ -849,7 +848,7 @@ async function loadPapersByDate(date) {
     if (!text || text.trim() === '') {
       container.innerHTML = `
         <div class="loading-container">
-          <p>No papers found for this date.</p>
+          <p>No relevant papers found for this date.</p>
         </div>
       `;
       paperData = {};
@@ -1710,10 +1709,11 @@ async function loadPapersByDateRange(startDate, endDate) {
     const allPaperData = {};
     
     for (const date of validDatesInRange) {
-      const selectedLanguage = selectLanguageForDate(date);
-      // 从 data 分支获取数据文件
-      const dataUrl = DATA_CONFIG.getDataUrl(`data/${date}_AI_enhanced_${selectedLanguage}.jsonl`);
+      // 日期范围也只读取筛选后的论文；旧日期可能尚未生成筛选文件。
+      const dataUrl = DATA_CONFIG.getDataUrl(`data/${date}_filtered.jsonl`);
       const response = await fetch(dataUrl);
+      if (response.status === 404) continue;
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const text = await response.text();
       const dataPapers = parseJsonlData(text, date);
       
