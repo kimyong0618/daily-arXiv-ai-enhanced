@@ -91,6 +91,8 @@ Actions variables:
 - `MAIL_SMTP_SERVER`: default `smtp.qq.com`
 - `MAIL_SMTP_PORT`: default `465`; port `465` uses implicit TLS, other ports use STARTTLS
 
+For the official DeepSeek API (`https://api.deepseek.com`), `deepseek-v4-flash` is the documented Flash model name. The application disables DeepSeek's default thinking mode for its function-calling-based structured summaries.
+
 Common SMTP examples are QQ Mail (`smtp.qq.com:465`), Gmail (`smtp.gmail.com:465`), and 163 Mail (`smtp.163.com:465`). Run the workflow manually once after configuring the secrets to verify that the provider has SMTP access enabled.
 
 # Contributors

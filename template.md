@@ -43,6 +43,8 @@ Add these optional Actions variables:
 - `MAIL_SMTP_SERVER`: default `smtp.qq.com`
 - `MAIL_SMTP_PORT`: default `465`
 
+For the official DeepSeek API (`https://api.deepseek.com`), `deepseek-v4-flash` is the documented Flash model name; the structured-output pipeline disables its default thinking mode.
+
 # To-do list
 - [x] Replace markdown with GitHub pages front-end.
 - [ ] Bugfix: In the statistics page, the number of papers for a keyword is not correct.

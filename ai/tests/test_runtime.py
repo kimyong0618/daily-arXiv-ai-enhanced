@@ -30,6 +30,20 @@ class BuildChatOpenAIKwargsTests(unittest.TestCase):
             kwargs["extra_body"],
         )
 
+    def test_deepseek_configuration_disables_thinking_for_structured_output(self):
+        """DeepSeek V4 defaults to thinking, which rejects the forced tool choice."""
+        kwargs = build_chat_openai_kwargs(
+            model_name="deepseek-v4-flash",
+            base_url="https://api.deepseek.com/",
+            api_key="deepseek-test-key",
+        )
+
+        self.assertEqual("deepseek-v4-flash", kwargs["model"])
+        self.assertEqual(
+            {"thinking": {"type": "disabled"}},
+            kwargs["extra_body"],
+        )
+
     def test_processing_error_is_reported_after_a_batch(self):
         """Catches swallowing authentication failures and publishing fallback summaries."""
         with self.assertRaisesRegex(RuntimeError, r"2 paper\(s\) failed"):
