@@ -20,6 +20,38 @@ jobs:
       run: |
         curl -LsSf https://astral.sh/uv/install.sh | sh
         uv sync
+
+    - name: Load recent papers for deduplication
+      run: |
+        mkdir -p data
+
+        # Paper data is stored on the separate data branch. Restore only the
+        # previous seven raw daily files before crawling so they are available
+        # to the deduplication step, but never include them in today's digest.
+        if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+          git fetch --depth=1 origin data:refs/remotes/origin/data
+          for offset in {1..7}; do
+            history_date=$(date -u -d "$offset day ago" "+%Y-%m-%d")
+            history_path="data/${history_date}.jsonl"
+            if git cat-file -e "origin/data:${history_path}" 2>/dev/null; then
+              git show "origin/data:${history_path}" > "${history_path}"
+              echo "Loaded ${history_path} for duplicate detection"
+            fi
+          done
+
+          # Together with today's result, the previous six filtered files form
+          # the rolling seven-day website and email digest.
+          for offset in {1..6}; do
+            history_date=$(date -u -d "$offset day ago" "+%Y-%m-%d")
+            filtered_path="data/${history_date}_filtered.jsonl"
+            if git cat-file -e "origin/data:${filtered_path}" 2>/dev/null; then
+              git show "origin/data:${filtered_path}" > "${filtered_path}"
+              echo "Loaded ${filtered_path} for the rolling digest"
+            fi
+          done
+        else
+          echo "No data branch yet; skipping historical duplicate detection on this first run"
+        fi
         
     - name: Crawl arXiv papers
       id: crawl_step
@@ -178,7 +210,7 @@ jobs:
       if: steps.dedup_check.outputs.has_new_content == 'true'
       run: |
         echo "更新文件列表... / Updating file list..."
-        find data -maxdepth 1 -type f -name '*_AI_enhanced_*.jsonl' -printf '%f\n' | sort > assets/file-list.txt
+        find data -maxdepth 1 -type f -name '*_filtered.jsonl' -printf '%f\n' | sort > assets/file-list.txt
         echo "文件列表更新完成 / File list updated"
 
     - name: Generate password hash and inject into config
@@ -409,7 +441,7 @@ jobs:
       run: |
         source .venv/bin/activate
         today=${{ steps.crawl_step.outputs.crawl_date }}
-        subject="每日 arXiv 论文速递 | CO · LLM · EC · RL | ${today}"
+        subject="近7日 arXiv 论文速递 | CO · LLM · EC · RL | ${today}"
         if [ "${{ steps.dedup_check.outputs.has_new_content }}" = "true" ]; then
           python /tmp/email_digest_sender/send_email.py \
             --html "data/${today}_email.html" \

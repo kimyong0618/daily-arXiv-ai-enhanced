@@ -76,6 +76,7 @@ def generate_html(
     papers: list[dict[str, Any]],
     digest_date: str,
     scanned_count: int,
+    window_days: int = 1,
 ) -> str:
     papers = sorted(papers, key=lambda paper: paper.get("relevance", {}).get("score", 0), reverse=True)
     high = [paper for paper in papers if paper.get("relevance", {}).get("score", 0) >= 80]
@@ -97,7 +98,7 @@ def generate_html(
     else:
         content = f"""
 <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;margin-top:24px;padding:28px;text-align:center;">
-  <p style="color:#334155;font-size:16px;line-height:1.7;margin:0;">今日未发现与 CO / LLM / EC / RL 高度相关的新论文。</p>
+  <p style="color:#334155;font-size:16px;line-height:1.7;margin:0;">近{window_days}日未发现与 CO / LLM / EC / RL 高度相关的新论文。</p>
 </div>"""
 
     return f"""<!doctype html>
@@ -105,12 +106,12 @@ def generate_html(
 <body style="background:#f8fafc;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',Arial,sans-serif;">
 <div style="max-width:800px;margin:0 auto;padding:24px 14px 40px;">
   <div style="background:#0f172a;border-radius:10px;padding:24px;color:#ffffff;">
-    <p style="font-size:12px;letter-spacing:.08em;margin:0 0 8px;color:#cbd5e1;">DAILY ARXIV RESEARCH DIGEST</p>
+    <p style="font-size:12px;letter-spacing:.08em;margin:0 0 8px;color:#cbd5e1;">{window_days}-DAY ARXIV RESEARCH DIGEST</p>
     <h1 style="font-size:24px;line-height:1.3;margin:0 0 16px;">{_escape(digest_date)}</h1>
     <table role="presentation" style="border-collapse:collapse;width:100%;color:#ffffff;font-size:13px;"><tr>
-      <td style="padding:4px 12px 4px 0;">扫描论文：<strong>{scanned_count}</strong></td>
-      <td style="padding:4px 12px 4px 0;">相关论文：<strong>{len(papers)}</strong></td>
-      <td style="padding:4px 0;">高度相关：<strong>{len(high)}</strong></td>
+      <td style="padding:4px 12px 4px 0;">今日扫描：<strong>{scanned_count}</strong></td>
+      <td style="padding:4px 12px 4px 0;">近{window_days}日相关：<strong>{len(papers)}</strong></td>
+      <td style="padding:4px 0;">近{window_days}日高度相关：<strong>{len(high)}</strong></td>
     </tr></table>
     <p style="font-size:12px;line-height:1.6;margin:14px 0 0;color:#cbd5e1;">研究方向：{RESEARCH_DIRECTIONS}</p>
   </div>
@@ -119,15 +120,17 @@ def generate_html(
 </div></body></html>"""
 
 
-def generate_plain_text(papers: list[dict[str, Any]], digest_date: str, scanned_count: int) -> str:
+def generate_plain_text(
+    papers: list[dict[str, Any]], digest_date: str, scanned_count: int, window_days: int = 1
+) -> str:
     lines = [
-        f"每日 arXiv 论文速递 | {digest_date}",
-        f"扫描论文：{scanned_count} 相关论文：{len(papers)} 高度相关：{sum(p.get('relevance', {}).get('score', 0) >= 80 for p in papers)}",
+        f"近{window_days}日 arXiv 论文速递 | {digest_date}",
+        f"今日扫描：{scanned_count} 近{window_days}日相关：{len(papers)} 近{window_days}日高度相关：{sum(p.get('relevance', {}).get('score', 0) >= 80 for p in papers)}",
         f"研究方向：{RESEARCH_DIRECTIONS}",
         "",
     ]
     if not papers:
-        lines.append("今日未发现与 CO / LLM / EC / RL 高度相关的新论文。")
+        lines.append(f"近{window_days}日未发现与 CO / LLM / EC / RL 高度相关的新论文。")
     for paper in papers:
         relevance = paper.get("relevance", {})
         lines.extend(

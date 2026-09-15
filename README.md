@@ -72,7 +72,7 @@ Otherwise, you can watch the video above first and directly use this repo in htt
 
 ## Research relevance email digest
 
-The daily workflow reuses the existing AI-enhanced JSONL, asks the configured LLM to classify each paper from its title and abstract, and emails only papers at or above the relevance threshold. It also stores `data/YYYY-MM-DD_filtered.jsonl`, `data/YYYY-MM-DD_email.html`, and a plain-text fallback on the `data` branch. GitHub Pages reads the filtered JSONL files, so it shows the same selected papers while reusing their existing AI summaries. The original AI-enhanced files remain on the `data` branch.
+The daily workflow reuses the existing AI-enhanced JSONL and asks the configured LLM to classify each new paper from its title and abstract. Before any LLM call, it compares normalized arXiv IDs and titles with the previous seven days stored on the `data` branch, preventing cross-day duplicates from consuming summary or classification tokens. Daily filtered files remain separate, while the email and the default GitHub Pages view combine the latest seven calendar days of filtered papers and deduplicate the combined result. The original AI-enhanced files remain on the `data` branch.
 
 Recommended repository variable:
 

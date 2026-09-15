@@ -24,17 +24,18 @@ class GenerateEmailTests(unittest.TestCase):
         }
 
     def test_html_contains_counts_cards_links_and_escaped_content(self):
-        result = generate_html([self.paper], "2026-09-12", 132)
-        self.assertIn("扫描论文：<strong>132</strong>", result)
+        result = generate_html([self.paper], "2026-09-12", 132, 7)
+        self.assertIn("今日扫描：<strong>132</strong>", result)
+        self.assertIn("近7日相关：<strong>1</strong>", result)
         self.assertIn("Highly Relevant", result)
         self.assertIn("LLM &lt; Optimizer", result)
         self.assertIn("中文总结 中文方法 中文结果", result)
         self.assertIn("https://arxiv.org/pdf/2609.00001", result)
 
     def test_empty_digest_has_required_message_and_plain_fallback(self):
-        html = generate_html([], "2026-09-12", 0)
-        plain = generate_plain_text([], "2026-09-12", 0)
-        expected = "今日未发现与 CO / LLM / EC / RL 高度相关的新论文。"
+        html = generate_html([], "2026-09-12", 0, 7)
+        plain = generate_plain_text([], "2026-09-12", 0, 7)
+        expected = "近7日未发现与 CO / LLM / EC / RL 高度相关的新论文。"
         self.assertIn(expected, html)
         self.assertIn(expected, plain)
 

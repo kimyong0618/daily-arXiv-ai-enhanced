@@ -4,14 +4,29 @@
 用于获取去重检查的状态结果 / Used to get deduplication check status results
 
 功能说明 / Features:
-- 检查当日与昨日论文数据的重复情况 / Check duplication between today's and yesterday's paper data
+- 检查当日与过去七天论文数据的重复情况 / Check duplication between today and the previous seven days
 - 删除重复论文条目，保留新内容 / Remove duplicate papers, keep new content
 - 根据去重后的结果决定工作流是否继续 / Decide workflow continuation based on deduplication results
 """
 import json
 import sys
 import os
-from datetime import datetime, timedelta
+import re
+import unicodedata
+from datetime import datetime, timedelta, timezone
+
+
+def normalize_arxiv_id(value):
+    """Normalize arXiv identifiers so URL and version suffix variants match."""
+    arxiv_id = str(value or '').strip().lower().rstrip('/')
+    arxiv_id = arxiv_id.rsplit('/', 1)[-1]
+    return re.sub(r'v\d+$', '', arxiv_id)
+
+
+def normalize_title(value):
+    """Normalize a title for conservative exact-title duplicate detection."""
+    title = unicodedata.normalize('NFKC', str(value or '')).casefold()
+    return ' '.join(re.sub(r'[^\w]+', ' ', title).split())
 
 def load_papers_data(file_path):
     """
@@ -24,23 +39,30 @@ def load_papers_data(file_path):
     Returns:
         list: 论文数据列表 / List of paper data
         set: 论文ID集合 / Set of paper IDs
+        set: 标准化标题集合 / Set of normalized paper titles
     """
     if not os.path.exists(file_path):
-        return [], set()
+        return [], set(), set()
     
     papers = []
     ids = set()
+    titles = set()
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             for line in f:
                 if line.strip():
                     data = json.loads(line)
                     papers.append(data)
-                    ids.add(data.get('id', ''))
-        return papers, ids
+                    paper_id = normalize_arxiv_id(data.get('id', ''))
+                    title = normalize_title(data.get('title', ''))
+                    if paper_id:
+                        ids.add(paper_id)
+                    if title:
+                        titles.add(title)
+        return papers, ids, titles
     except Exception as e:
         print(f"Error reading {file_path}: {e}", file=sys.stderr)
-        return [], set()
+        return [], set(), set()
 
 def save_papers_data(papers, file_path):
     """
@@ -73,7 +95,8 @@ def perform_deduplication():
              - "error": 处理错误 / Processing error
     """
 
-    today = datetime.now().strftime("%Y-%m-%d")
+    now = datetime.now(timezone.utc)
+    today = now.strftime("%Y-%m-%d")
     today_file = f"../data/{today}.jsonl"
     history_days = 7  # 向前追溯几天的数据进行对比
 
@@ -82,33 +105,57 @@ def perform_deduplication():
         return "no_data"
 
     try:
-        today_papers, today_ids = load_papers_data(today_file)
+        today_papers, _, _ = load_papers_data(today_file)
         print(f"今日论文总数: {len(today_papers)} / Today's total papers: {len(today_papers)}", file=sys.stderr)
 
         if not today_papers:
             return "no_data"
 
-        # 收集历史多日 ID 集合
+        # 收集历史多日 ID 和标题集合
         history_ids = set()
+        history_titles = set()
         for i in range(1, history_days + 1):
-            date_str = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
+            date_str = (now - timedelta(days=i)).strftime("%Y-%m-%d")
             history_file = f"../data/{date_str}.jsonl"
-            _, past_ids = load_papers_data(history_file)
+            _, past_ids, past_titles = load_papers_data(history_file)
             history_ids.update(past_ids)
+            history_titles.update(past_titles)
 
-        print(f"历史{history_days}日去重库大小: {len(history_ids)} / History {history_days} days deduplication library size: {len(history_ids)}", file=sys.stderr)
+        print(
+            f"历史{history_days}日去重库: {len(history_ids)} IDs, {len(history_titles)} titles / "
+            f"History {history_days} days deduplication library: {len(history_ids)} IDs, {len(history_titles)} titles",
+            file=sys.stderr,
+        )
 
-        duplicate_ids = today_ids & history_ids
+        seen_today_ids = set()
+        seen_today_titles = set()
+        new_papers = []
+        duplicate_count = 0
 
-        if duplicate_ids:
-            print(f"发现 {len(duplicate_ids)} 篇历史重复论文 / Found {len(duplicate_ids)} historical duplicate papers", file=sys.stderr)
-            new_papers = [paper for paper in today_papers if paper.get('id', '') not in duplicate_ids]
+        for paper in today_papers:
+            paper_id = normalize_arxiv_id(paper.get('id', ''))
+            title = normalize_title(paper.get('title', ''))
+            is_duplicate = (
+                (paper_id and (paper_id in history_ids or paper_id in seen_today_ids))
+                or (title and (title in history_titles or title in seen_today_titles))
+            )
+            if is_duplicate:
+                duplicate_count += 1
+                continue
+            new_papers.append(paper)
+            if paper_id:
+                seen_today_ids.add(paper_id)
+            if title:
+                seen_today_titles.add(title)
+
+        if duplicate_count:
+            print(f"发现 {duplicate_count} 篇重复论文 / Found {duplicate_count} duplicate papers", file=sys.stderr)
 
             print(f"去重后剩余论文数: {len(new_papers)} / Remaining papers after deduplication: {len(new_papers)}", file=sys.stderr)
 
             if new_papers:
                 if save_papers_data(new_papers, today_file):
-                    print(f"已更新今日文件，移除 {len(duplicate_ids)} 篇重复论文 / Today's file updated, removed {len(duplicate_ids)} duplicate papers", file=sys.stderr)
+                    print(f"已更新今日文件，移除 {duplicate_count} 篇重复论文 / Today's file updated, removed {duplicate_count} duplicate papers", file=sys.stderr)
                     return "has_new_content"
                 else:
                     print("保存去重后的数据失败 / Failed to save deduplicated data", file=sys.stderr)
@@ -162,4 +209,4 @@ def main():
         sys.exit(2)
 
 if __name__ == "__main__":
-    main() 
+    main()

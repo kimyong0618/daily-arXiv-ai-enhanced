@@ -386,7 +386,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fetchAvailableDates().then(() => {
     if (availableDates.length > 0) {
-      loadPapersByDate(availableDates[0]);
+      const latestDate = availableDates[0];
+      loadPapersByDateRange(shiftIsoDate(latestDate, -6), latestDate);
     }
   });
 });
@@ -707,7 +708,7 @@ async function fetchAvailableDates() {
     const text = await response.text();
     const files = text.trim().split('\n');
 
-    const dateRegex = /(\d{4}-\d{2}-\d{2})_AI_enhanced_(English|Chinese)\.jsonl/;
+    const dateRegex = /(\d{4}-\d{2}-\d{2})_filtered\.jsonl/;
     const dateLanguageMap = new Map(); // Store date -> available languages
     const dates = [];
     
@@ -715,7 +716,7 @@ async function fetchAvailableDates() {
       const match = file.match(dateRegex);
       if (match && match[1] && match[2]) {
         const date = match[1];
-        const language = match[2];
+      const language = 'Chinese';
         
         if (!dateLanguageMap.has(date)) {
           dateLanguageMap.set(date, []);
@@ -795,6 +796,13 @@ function formatDateForAPI(date) {
   return date.getFullYear() + "-" + 
          String(date.getMonth() + 1).padStart(2, '0') + "-" + 
          String(date.getDate()).padStart(2, '0');
+}
+
+function shiftIsoDate(dateString, days) {
+  const [year, month, day] = dateString.split('-').map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString().slice(0, 10);
 }
 
 function toggleRangeMode() {
