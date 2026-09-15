@@ -388,6 +388,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (availableDates.length > 0) {
       const latestDate = availableDates[0];
       loadPapersByDateRange(shiftIsoDate(latestDate, -6), latestDate);
+    } else {
+      document.getElementById('paperContainer').innerHTML =
+        '<div class="loading-container"><p>No available filtered papers. Please retry after the daily workflow finishes.</p></div>';
     }
   });
 });
@@ -708,15 +711,16 @@ async function fetchAvailableDates() {
     const text = await response.text();
     const files = text.trim().split('\n');
 
-    const dateRegex = /(\d{4}-\d{2}-\d{2})_filtered\.jsonl/;
+    // Accept the old manifest until the next daily workflow publishes the new one.
+    const dateRegex = /(\d{4}-\d{2}-\d{2})_(?:filtered|AI_enhanced_(English|Chinese))\.jsonl/;
     const dateLanguageMap = new Map(); // Store date -> available languages
     const dates = [];
     
     files.forEach(file => {
       const match = file.match(dateRegex);
-      if (match && match[1] && match[2]) {
+      if (match && match[1]) {
         const date = match[1];
-      const language = 'Chinese';
+        const language = match[2] || 'Chinese';
         
         if (!dateLanguageMap.has(date)) {
           dateLanguageMap.set(date, []);
