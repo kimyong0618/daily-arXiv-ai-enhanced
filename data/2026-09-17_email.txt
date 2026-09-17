@@ -1,0 +1,1955 @@
+近7日 arXiv 论文速递 | 2026-09-17
+今日扫描：313 近7日相关：244 近7日高度相关：28
+研究方向：CO / LLM / EC / RL / Automated Algorithm Design
+
+[84] Which LLM is Best for Translating Natural Language Goals to PDDL
+中文标题：哪个LLM最适合将自然语言目标翻译为PDDL
+Topics: LLM
+推荐理由：评估多个LLM将自然语言目标翻译为PDDL用于自动规划，属于LLM用于规划任务，直接相关LLM+规划/优化交叉方向。
+中文摘要：本文实证评估了当前主流大语言模型能否将电子游戏测试者用非正式自然语言表述的测试目标，可靠地翻译为可用于经典规划的良好形式PDDL目标，通过设计提示模板对六个模型进行正确性、速度与错误倾向的系统测试。 作者基于迭代实验的经验，设计了一个精心构造的提示模板，以最大化多个先进LLM在准确性与响应连贯性上的表现；选取六个当代模型，在真实的、领域特定的基准上，从正确率、响应速度和错误倾向三个维度进行系统评估。 所有模型的正确率均超过92%；其中Gemini 2.5 Flash准确率最高，达96%，且假阳性出现率最低；GPT-4.1在响应速度上领先。模型性能之间仍存在关键差异，偶发失败主要源于语言歧义与领域表示能力的局限。
+Abstract: https://arxiv.org/abs/2609.18731
+PDF: https://arxiv.org/pdf/2609.18731
+
+[82] Evolutionary Ensemble Search: Council-Guided Program Evolution with Persistent Memory
+中文标题：进化集成搜索：委员会引导的持久记忆程序进化
+Topics: EC / LLM
+推荐理由：提出进化集成搜索框架，通过LLM角色委员会指导程序进化与记忆，自动设计ML流程，属EC+LLM自动化算法设计。
+中文摘要：EES通过专家引导的程序演化构建机器学习流程，采用角色分工的委员会生成搜索方向、编排器调度执行专家与演化引擎，并以验证证据门控集成与存档，在MLE-bench Lite上22个任务中19个达到奖牌阈值（86.36%），最佳为11金5银3铜。 核心机制包括四层：(1) 角色专业化委员会将任务证据与实验结果转化为结构化搜索方向；(2) 编排器把方向分配给执行专家和演化引擎；(3) 演化引擎选择已测量的父代、诊断其错误，并通过代码变异、结构化流水线编辑与交叉生成子代，每个子代必须实际执行并获得自身验证证据；(4) 种群存档保留有效备选方案，兼容的预测在验证门控的集成阶段竞争。搜索本身通过父代相对算子绩效、会话记忆以及跨运行检索的问题索引化经验进行自适应。文中还明确区分各机制的执行画像，并定义在候选计算发生变化时进行比较所需的契约。 在公开的MLE-bench Lite开发账本上，22个任务中有19个产生了达到奖牌阈值的成果，占86.36%；最佳结果为11枚金牌、5枚银牌和3枚铜牌。覆盖任务横跨文本、图像、表格、音频、科学几何以及确定性变换等多种模态。该活动还包含运行间的等级反馈、外部来源路径和混合确认流程。
+Abstract: https://arxiv.org/abs/2609.17590
+PDF: https://arxiv.org/pdf/2609.17590
+
+[82] Benchmarking Tabular Foundation Models as Surrogates in Expensive Evolutionary Optimization
+中文标题：将表格基础模型作为昂贵进化优化代理模型的基准评测
+Topics: EC / CO
+推荐理由：研究表格基础模型作为代理模型用于昂贵进化优化，直接涉及进化计算与优化算法设计，属核心交叉方向。
+中文摘要：本文通过大量实验与理论分析，系统研究了TabPFN作为代理模型在代理辅助进化算法（SAEAs）中的有效性，发现其效果高度依赖问题类型，无法普遍替代传统代理模型。 在离线和在线SAEA两种设置下开展广泛实验，覆盖单目标、多目标、约束、组合、混合变量及工程优化等多类问题场景，并结合深入的理论分析，考察TabPFN的优势与局限。 TabPFN的有效性高度依赖于具体问题，不能普遍替代传统代理模型；其表现受数据可用性、适应度景观复杂度、搜索空间特征及算法中角色等因素影响。
+Abstract: https://arxiv.org/abs/2609.18130
+PDF: https://arxiv.org/pdf/2609.18130
+
+[82] A Metaheuristic Optimization Framework for Discrete Optimization under Strict Time Limits
+中文标题：严格时间限制下离散优化的元启发式优化框架
+Topics: CO
+推荐理由：提出面向严格时间限制的元启发式优化框架STILO，集成ACO、GA、SA及算子配置，属于自动化算法设计与组合优化方向。
+中文摘要：本文提出 STILO——一个面向严格时间限制的元启发式优化框架，集成 ACO、GA 与 SA 的细粒度配置空间及新算子，实验表明算法与算子的有效性依赖于问题类型、实例特征及可用计算预算。 提出 STILO，一个专为严格时间限制下优化设计的元启发式优化框架。该框架为蚁群优化（ACO）、遗传算法（GA）和模拟退火（SA）集成了细粒度配置空间，融合已有算子与新型算子；其中包含面向 SA 的离散距离计算机制，以及面向 ACO 的与问题无关的图结构。在多种离散优化问题的合成实例与基准实例上开展实验。 实验表明：所提出的 SA 离散距离计算机制在严格时间限制下对优化有效；所提出的 ACO 问题无关图结构在不同时间限制下的相对有效性会变化，即使实例特征相同亦然。总体而言，算法族与算子的有效性不仅取决于问题类型，还取决于实例特征与可用计算预算。
+Abstract: https://arxiv.org/abs/2609.18702
+PDF: https://arxiv.org/pdf/2609.18702
+
+[82] Bad Genius: Counterfactual-Guided Harness Evolution Beyond Task-Specific Shortcuts
+中文标题：坏天才：反事实引导的超越任务特定捷径的Harness进化
+Topics: 
+推荐理由：提出反事实引导的LLM智能体harness进化方法，属于自动优化/搜索与LLM智能体的结合。
+中文摘要：论文提出 CHASE，将自动 harness 优化中的评测可靠性问题建模为约束生成，通过 Challenger 搜索保持语义的 benchmark 反事实变换来识别并抵消 benchmark 级别的捷径，从而获得对 $B_0$ 更稳健的 harness 评估。 CHASE 将 harness evolution 视为对保持有效性的 benchmark 反事实的约束生成。每次 Proposer 更新后，Challenger 搜索能大幅破坏增益的可执行协议变换；validity firewall 检查任务语义是否保持，confirmation set 决定反事实是否进入有限 archive。作者形式化 shortcut-neutralized benchmark $B_0$，并给出将有限反事实 archive 与 $B_0$ 关联的统计保证，以及顺序 Challenger 搜索的刻画。 在合成 benchmark 与 OfficeQA 上评估，CHASE 在保留较强 released-benchmark 增益的同时，显著降低了在有效协议变化下的 gain destruction。
+Abstract: https://arxiv.org/abs/2609.18366
+PDF: https://arxiv.org/pdf/2609.18366
+
+[82] Compiled Agency: Frontier General-Purpose Coding Agents Build Winning Game Players from Bare Interaction - from Flappy Bird to StarCraft II and Civilization
+中文标题：编译式能动性：前沿通用编码智能体从零交互构建获胜游戏玩家——从Flappy Bird到星际争霸II与文明
+Topics: LLM
+推荐理由：前沿编码智能体自主构建游戏策略程序，体现LLM作为优化器/设计器自动生成可执行控制器的能力，与LLM智能体设计优化算法高度相关。
+中文摘要：提出 Gauntlet 框架：让通用编码智能体仅凭游戏描述、原始观测/动作接口和空策略文件，在单次自主会话中自建完整玩家程序，冻结后零模型调用评测，在 roguelike、星际争霸 II 与 Freeciv 上首次实现独立通关。 Gauntlet 采用"开发—冻结—评测"框架，覆盖从小型街机到完整商业规模的游戏，遵循极简契约：通用编码智能体只获得游戏描述、原始观测/动作接口和空策略文件，不含策略、算法或架构。智能体在单次自主会话中与实时游戏交互实验，自行工程化一个独立控制器；随后冻结该结果，在留出实例上评分，游玩过程零模型调用。 在未公开的程序化 roguelike 上，留出成功率介于 0–86%，并呈现明显的代际阈值：最新一代系统的每个观测会话均超过上一代最佳会话。在完整游戏规模下，编译后的原始 API 控制器击败所有公平的《星际争霸 II》内置 AI 及两个作弊变体；单次会话程序在留出种子上以全面征服方式赢得完整《文明》（Freeciv）对局。尽管对新手 AI 胜率不高，但这是首次：此前无任何语言智能体系统能在无逐回合模型调用与手工战术层的条件下独立赢下该类型完整对局。
+Abstract: https://arxiv.org/abs/2609.18996
+PDF: https://arxiv.org/pdf/2609.18996
+
+[82] Rethinking Critic Learning in PPO: Understanding and Mitigating Value Flattening
+中文标题：重新思考PPO中的评估器学习：理解与缓解价值平坦化
+Topics: RL / LLM
+推荐理由：针对LLM强化学习中PPO评估器价值平坦化问题提出稀疏监督策略，属于LLM+RL核心方向。
+中文摘要：本文发现PPO中critic存在"Value Flattening"失效模式（中间状态价值剧变但预测平坦），并从理论与实证角度归因于隐式方差惩罚与相关状态的冗余更新，提出稀疏监督方法SP³O缓解该问题并提升策略表现。 提出SParse Proximal Policy Optimization（SP³O），在每条response中仅对少量、相互间隔较远的"良分离"状态施加价值损失，从而同时缓解隐式方差惩罚和时间相关状态带来的冗余更新两种效应。 在Qwen3-Base上，每条response仅监督三个状态即可缓解Value Flattening，并在不同模型规模和评测套件上持续提升所学策略；在受控FrozenLake环境中该现象随状态空间增大更明显。
+Abstract: https://arxiv.org/abs/2609.18708
+PDF: https://arxiv.org/pdf/2609.18708
+
+[78] Designing Agentic AI Workflow Portfolios under Imperfect Selection and Compute Cost
+中文标题：不完美选择与计算成本下的智能体AI工作流组合设计
+Topics: LLM / Optimization
+推荐理由：研究LLM智能体工作流组合与选择问题，结合组合优化与算法组合思想，涉及LLM智能体决策与算力分配，与LLM+优化、智能体设计方向相关。
+中文摘要：本文研究agentic AI系统的"工作流组合与选择器"范式：机构并行运行多个工作流执行并事后择优。作者将其建模为工作流组合问题，联合优化运行规模与工作流类型间分配，提出选择器质量指标（odds-lift index）、有限池的精确/松弛/随机舍入方法与证书，以及大规模隐式工作流类的对偶+椭球+定价oracle方法，并在三个数据集上验证有效性。 1) 形式化为工作流组合问题：联合决策运行规模（run size）与各工作流类型的分配（allocation）。2) 用odds-lift index刻画选择器质量。3) 推导工作流多样性价值的紧界（sharp bounds）。4) 针对有限工作流池：给出精确形式化、线性规划松弛、随机舍入规程及可计算性能证书。5) 针对大规模隐式工作流类：推导有限维对偶，结合椭球法与定价oracle，识别"加权准确率扣除重复计算成本后"较高的工作流；在弱条件下以多项式次oracle调用获得松弛的近优解。 在ABCD、Schema-Guided Dialogue、HotpotQA三个数据集上评估：相对于最佳单工作流，组合优化使留出集选择器准确率分别提升3.1、7.5、0.9个百分点；对偶引导的工作流生成在ABCD上额外提升3.5个点，在HotpotQA上提升24.1个点，而在Schema-Guided Dialogue上无额外增益。
+Abstract: https://arxiv.org/abs/2609.18126
+PDF: https://arxiv.org/pdf/2609.18126
+
+[78] Agora: Git as Shared Memory for Collective AutoResearch
+中文标题：Agora：以 Git 作为集体自动研究的共享记忆
+Topics: LLM
+推荐理由：LLM 代理集体自动化研究循环优化权重迁移，与 LLM 代理优化及自动算法设计相关。
+中文摘要：Agora 是一个基于 Git 的有向无环图（DAG）共享研究记忆系统，使多个自主研究智能体能够累积式协作，而非重复劳动。在一项持续近 12 天的真实运行中，13 个无中央调度的语言模型工作节点在无训练数据、无梯度更新的条件下解决了权重迁移问题，将评估指标从 3.39 降至 1.899 bits per byte，弥补了与训练过的 GPT-2 124M 之间 62% 的差距。 Agora 将研究过程记录为仅追加的有向无环图（DAG），存储于 Git 中，每个论断对应一个不可变提交（commit）；父边表示其依赖关系，使任何论断都可被检出并复现。系统覆盖结果、洞见、假设、验证和报告等提交类型，并通过派生索引暴露研究前沿、被忽视分支及各论断的验证状态；同时采用多样性感知的选择规则，防止群体收敛于单一主导方向。研究在权重迁移任务上展开：给定 141 个预训练供体模型和一个冻结的 119.6M 参数注意力-SSM 混合目标模型（维度与任何供体均不匹配），工作节点须在无训练数据、无梯度更新的条件下初始化目标模型。 运行近 12 天，13 个语言模型工作节点在无任务分配、无中央规划者的情况下共发布 1,703 项贡献，将评估器指标从 3.39 降至 1.899 bits per byte，弥补了与训练过的 GPT-2 124M 之间 62% 的差距。获胜方案将供体的下一词元统计压缩进目标的嵌入层和输出头，并通过稀疏编辑注意力、前馈和状态空间块注入短程上下文信号；其 145 次提交的谱系跨越 15 个账户，共发布 165 次独立复现，无一失败。
+Abstract: https://arxiv.org/abs/2609.18094
+PDF: https://arxiv.org/pdf/2609.18094
+
+[78] WetRobo: A Reproducible Robot Kit for Coding Agents in Biological Laboratories
+中文标题：WetRobo：面向生物实验室编码智能体的可复现机器人套件
+Topics: LLM
+推荐理由：利用编码智能体（LLM驱动）在真实实验室中编写并执行机器人操作程序，核心是LLM智能体作为控制器进行任务适配与程序生成，属于LLM智能体用于优化/控制的前沿方向。
+中文摘要：本文提出 WetRobo——一套可在实验室间迁移的机器人套件，用编码智能体（而非遥操作或神经网络训练）完成任务编程与自适应，并在真实实验室中验证了其跨实验室迁移优势。 构建 WetRobo 机器人套件，包含：一台机械臂、实验室设备（培养箱、带盖试剂瓶、培养皿）、现有机械臂控制代码、各任务的遥操作示范记录，以及通用的 AGENTS.md 技能文件。由生物实验人员以自然语言下达任务，不采集本地遥操作训练数据、不训练神经网络；编码智能体观察本地实验室环境，借助外部工具编写并执行程序以完成自适应。以 OpenAI Codex (gpt-5.6-sol) 演示。 在真实实验室中成功完成三项任务：提起培养皿盖、取下瓶盖、打开培养箱门。在瓶盖任务上，编码智能体在 Lab X 与 Lab Y 两个实验室均成功；而在 Lab X 示范上微调的 VLA 在 Lab X 成功，却无法迁移到 Lab Y。
+Abstract: https://arxiv.org/abs/2609.18435
+PDF: https://arxiv.org/pdf/2609.18435
+
+[78] Reasoning through Evolution: Automatic Meta-path Discovery for LLM-based Fake News Detection
+中文标题：通过进化进行推理：面向LLM虚假新闻检测的自动元路径发现
+Topics: LLM / EC
+推荐理由：利用多智能体遗传进化自动发现面向LLM推理的元路径，属于进化计算与LLM结合的自动化设计，可迁移至优化算法生成
+中文摘要：MAGER：多智能体遗传进化框架，自动发现面向LLM推理优化的元路径，将传播图压缩为信息子图，使冻结LLM实现结构感知的虚假新闻检测。 提出MAGER多智能体遗传进化框架：自动进化出适合LLM推理的元路径，将复杂传播图压缩为信息丰富的子图，缓解信息过载与模态不匹配；并引入图上下文学习策略，检索语义与结构相似的示例以增强分类与推理；LLM保持冻结。 大量实验表明，MAGER在数据高效（data-efficient）场景下显著提升冻结LLM作为独立虚假新闻检测器的性能。代码已开源。
+Abstract: https://arxiv.org/abs/2609.18597
+PDF: https://arxiv.org/pdf/2609.18597
+
+[78] Online Robust Reinforcement Learning Through Monte-Carlo Planning
+中文标题：基于蒙特卡洛规划的在线鲁棒强化学习
+Topics: RL
+推荐理由：研究鲁棒MCTS规划算法，属于强化学习与决策规划方向，与优化搜索相关但未涉及LLM/EC/CO核心交叉。
+中文摘要：本文提出一种鲁棒的MCTS变体，通过鲁棒幂均值备份算子与探索奖励，缓解动态模型歧义，并在根节点达到与标准MCTS相当的收敛速率。 在MCTS框架中引入鲁棒幂均值备份算子（robust power mean backup operator），并设计专门的探索奖励机制，同时处理转移动态歧义与奖励分布歧义，以保证搜索树中每个节点的有限样本收敛。 理论上证明根节点值估计的收敛速率为O(n^{-1/2})，与标准MCTS相当；实验表明在奖励分布与转移动态存在显著歧义时，该方法仍能实现鲁棒的规划性能。
+Abstract: https://arxiv.org/abs/2609.18599
+PDF: https://arxiv.org/pdf/2609.18599
+
+[78] Integrated Optimization of Automated Warehouse Operations and Last-Mile Transport for Differentiated On-Demand Delivery
+中文标题：面向差异化按需配送的自动化仓库运营与末端运输集成优化
+Topics: RL / CO
+推荐理由：将深度强化学习与多目标调度及车辆路径优化结合，用于仓库与末端配送联合优化，属于RL+CO交叉应用，但非算法自动设计。
+中文摘要：该研究提出AGV智能仓储与末端多式联运的集成优化方法，采用深度强化学习实现多目标联合调度，仓储端用MORM-AGDQN算法，运输端用MRMH-HCVRP框架，显著提升准时率、缩短配送时间与里程并提高高优先级服务率。 设计多目标联合调度的深度强化学习算法，动态连接仓储与运输两系统；仓储侧提出基于多目标、多奖励机制与A*引导深度Q网络的MORM-AGDQN改进算法，综合服务水准、系统成本与外部运输需求；运输侧提出基于多奖励、多头注意力异构容量车辆路径问题的MRMH-HCVRP改进框架，融合优化后的调度订单序列与分组，并考虑客户位置、需求、优先级及车辆容量、速度与服务范围。 所提框架显著优于传统方法：仓储作业准时交付率达100%；联合优化后末端平均配送时间降低29.3%~53.2%，总运输距离减少46.4%，高优先级服务率提升至92%以上，并在运营成本与客户满意度之间保持平衡。
+Abstract: https://arxiv.org/abs/2609.19048
+PDF: https://arxiv.org/pdf/2609.19048
+
+[78] Evidence-Grounded Agentic Formulation Development in an Autonomous Laboratory
+中文标题：自主实验室中基于证据的智能体制剂开发
+Topics: LLM Agent / Optimization
+推荐理由：将LLM智能体用于实验设计与优化闭环，属于LLM智能体作为优化器/控制器的自动化优化算法设计范畴，且含证据消融分析。
+中文摘要：提出智能体系统Andromeda 2，通过推理内部结构化实验证据并调用计算与实验工具，迭代设计自乳化给药系统（SEDDS）配方，显著提升紫杉醇口服制剂的命中率与AUC。 Andromeda 2为智能体系统，基于内部结构化实验证据进行推理，并调用计算与实验工具，连续设计与执行多批次配方；在匹配预算的小型自动化实验室中，与Andromeda 1（已部署的概率优化模型）及湿实验DoE方案进行基准对比；并以消融实验评估内部结构化实验证据的作用。 紫杉醇任务中，Andromeda 2高性能命中率50%，Andromeda 1为17%，DoE为2%；满足全部四项TPP目标的配方数分别为12、6、0。$AUC_{10-240}$中位数分别为70.1、12.0、3.5 mg·min/mL，Andromeda 2与Andromeda 1的最大AUC相当。选定全TPP配方首次FaSSIF测定表观有效载药量为19±5% w/w，约为已发表紫杉醇S-SEDDS的5.7% w/w的3.3倍。消融实验显示，获取内部结构化实验证据使平均AUC提高34%。
+Abstract: https://arxiv.org/abs/2609.19099
+PDF: https://arxiv.org/pdf/2609.19099
+
+[75] Recursive Reasoning or Statistical Extrapolation? In-Context Learning in Multi-Agent Interdependent Decision-Making
+中文标题：递归推理还是统计外推？多智能体相互依赖决策中的上下文学习
+Topics: LLM
+推荐理由：研究LLM智能体在博弈中的上下文学习机制，揭示其统计外推而非推理的局限，与LLM决策和优化相关，但未直接涉及CO/EC等核心优化问题。
+中文摘要：研究通过多智能体不完全信息博弈，将ICL的作用机制拆分为"内部推理精炼"与"统计模式外推"，发现ICL更符合统计外推而非策略推理。 构建公共品博弈环境，要求递归信念推理；操控历史反馈的统计结构，并以与历史无关的理性预期均衡（REE）作为基准评估决策质量。 当历史统计模式被破坏时，更长上下文的收益基本消失，决策质量退化至无上下文基线，且该退化在策略相互依赖更强时被显著放大。
+Abstract: https://arxiv.org/abs/2609.18591
+PDF: https://arxiv.org/pdf/2609.18591
+
+[72] EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents
+中文标题：EvolveTrade：面向自进化LLM交易智能体的经验驱动策略精炼
+Topics: LLM / LLM Agent
+推荐理由：LLM智能体通过经验反馈自我进化策略，属于LLM作为优化器/控制器方向，但应用域为金融交易而非核心优化问题，相关性中等偏上。
+中文摘要：EvolveTrade 将工具型交易代理的系统提示视为文本参数化策略，通过策略代理利用决策轨迹与组合反馈持续修改该策略，在固定主干 LLM 的前提下提升跨市场状态下的夏普比率与累计收益。 提出 EvolveTrade 自演化框架：把工具型交易代理的系统提示当作文本参数化策略；每个更新周期后，由 Policy Agent 基于累积的决策轨迹与已实现组合反馈修订该策略，主干 LLM 保持冻结；更新后的策略用于下一批交易决策，从而迭代优化信息获取与组合构建流程。 在多种市场状态与两个 LLM 主干上的实验表明，EvolveTrade 在多数评估设置中相比固定策略 LLM 基线提升了夏普比率与累计收益；行为分析显示自演化策略增加了代码介导的分析并激活了与市场状态相关的计算；案例级"策略—收益"归因追踪了策略诱导的配置变化如何贡献于已实现收益差异。
+Abstract: https://arxiv.org/abs/2609.17632
+PDF: https://arxiv.org/pdf/2609.17632
+
+[72] The Cost of Becoming: Developmental Encoding Increases Phenotypic Diversity but Reduces Locality and Recombination Robustness in Evolved Robots
+中文标题：成为的代价：发育编码在进化机器人中提高表型多样性却降低局部性与重组鲁棒性
+Topics: EC
+推荐理由：研究进化计算中的发育编码与直接编码权衡，涉及基因型-表型局部性、鲁棒性和重组，与EC核心方向相关。
+中文摘要：在严格配对的进化机器人基准中，发育编码并未在适应度上稳定超越直接编码，但显著提升表型多样性与发育期内损伤衰减，同时降低突变存活率、基因型-表型局部性与重组后代的适应度和存活率，揭示"生成性-局部性-稳健性-可继承性"的表示层权衡。 采用受控进化机器人基准，比较三种相互匹配的表示：直接编码、静态生成式编码、时序合子发育编码。三者在基因组参数数（34）、成体控制器参数数（34）、初始基因组矩阵、优化器、突变与交叉算子、环境及适应度评估次数上完全一致；每种表示执行30次配对进化运行，并测量最终与分布外适应度、种群及突变可达表型多样性、突变存活率、基因型-表型局部性、交叉后代适应度/存活率/重组新颖性，以及发育早期与晚期损伤的对比。 发育编码在最终训练与分布外适应度上未能稳定超过直接编码，但显著提高最终种群表型多样性与突变可达表型多样性。同一表示表现出更低的突变存活率、更低的基因型-表型局部性、明显降低的交叉后代适应度与存活率，以及更高的重组新颖性。此外，持续的发育动力学使发育早期的损伤相对于条件相同的晚期损伤被衰减。
+Abstract: https://arxiv.org/abs/2609.17606
+PDF: https://arxiv.org/pdf/2609.17606
+
+[72] GraphEcho: Structural Redundancy and Evidence Provenance in LLM Graph Agents
+中文标题：GraphEcho：LLM图智能体中的结构冗余与证据溯源
+Topics: LLM
+推荐理由：研究LLM图智能体的探索与证据来源，属LLM智能体用于搜索探索，与优化和智能体控制相关，但非核心CO/EC/RL交集。
+中文摘要：GraphEcho 基准测试揭示 LLM 智能体在图上探索时会错误地将重复遍历的路径当作独立证据，混淆"探索效率"与"证据有效性"。 提出 GraphEcho 基准：在固定证据内容不变的前提下，改变路径数量与证据来源，评估智能体的判断与主动探索行为。同时在受控合成任务与科学论断任务上进行实验，并提出来源感知后训练（PAPT）方法以缓解重复问题。 受控合成实验显示，智能体判断变化依赖具体模型，但冗余支持路径在所有被评估的冻结智能体中都提高了重复遍历的占比。PAPT 能减少重访并提升合成任务准确率，但覆盖的来源更少；在科学论断任务上，它继续减少重复，但准确率反而下降。
+Abstract: https://arxiv.org/abs/2609.17695
+PDF: https://arxiv.org/pdf/2609.17695
+
+[72] A Better-Than-$3$ Approximation Algorithm for Demand Matching via Knapsack Intersection LP and Contention Resolution
+中文标题：基于背包交LP与争用消解的需求匹配优于3的近似算法
+Topics: CO
+推荐理由：针对需求匹配问题设计改进近似算法，属组合优化核心方向，但未涉及LLM/EC/RL等交叉热点。
+中文摘要：该论文研究需求匹配问题（推广了背包问题与b-匹配问题），首次给出优于3的近似比：一般图随机(3/2+√2+ε)≈2.914+ε近似算法，二部图随机(2+ε)近似算法。方法基于相交整数背包多面体加强的LP松弛，并证明存在(q,1/(1+q))-平衡的争用消解方案。 采用基于在顶点处相交整数背包多面体的加强LP松弛，并结合多选（multiple-choice）推广；关键工具是为整数背包多面体构造(q,1/(1+q))-平衡的争用消解方案，对任意q∈[0,1]成立。算法运行时间为1/ε与输入长度的多项式。 一般图得到随机(3/2+√2+ε)≈2.914+ε近似算法；二部图得到随机(2+ε)近似算法，均为首次优于3的结果。同时证明背包多面体的平衡保证1/(1+q)在最坏情况下是紧的。
+Abstract: https://arxiv.org/abs/2609.17932
+PDF: https://arxiv.org/pdf/2609.17932
+
+[72] Reflect, Revise, Reuse: Training-Free Skill Evolution for GUI Agents
+中文标题：反思、修订、复用：GUI智能体的免训练技能进化
+Topics: LLM
+推荐理由：LLM智能体通过反思-修订-复用实现技能自我进化，属于智能体优化与自动化技能改进，与LLM优化设计相关。
+中文摘要：提出免训练框架 EvoSkill-GUI，将技能视为可在部署期由执行反馈持续修正的"活"程序性知识，通过 reflect-revise-reuse 循环提升 GUI 智能体长程任务表现。 免训练框架。每个技能为结构化多文件包，含检索元数据、可执行计划、备用定位、失败恢复规则、无障碍工具与失败案例。运行 reflect-revise-reuse 循环：执行器在 rollout 内即时修订；隔离的 critic 在严格信息隔离下诊断失败轨迹；执行器经受限工具接口编辑特定技能文件。 在 MobileWorld、AndroidWorld、OSWorld 三个移动与桌面 GUI 基准上，无需训练即稳定提升多个基座模型，最大增益分别为 +16.2%、+6.0%、+10.5%；演化后的技能库可迁移受益于相关任务，而非每次重建。
+Abstract: https://arxiv.org/abs/2609.17653
+PDF: https://arxiv.org/pdf/2609.17653
+
+[72] REVERSAL-BENCH: A Reversibility Axis and Reset Oracle for Measuring the Reset-Free RL Cliff
+中文标题：REVERSAL-BENCH：衡量无重置强化学习悬崖的可逆性轴与重置预言机
+Topics: RL
+推荐理由：提出面向无重置强化学习的可逆性基准与重置预言机，评估多种RL算法，属于RL研究相关方向。
+中文摘要：论文提出 REVERSAL-BENCH 基准，通过连续可逆性参数 ρ 与重置预言机系统研究自主强化学习在不可逆操作任务中的失效现象，揭示了"可逆性悬崖"：免重置智能体随 ρ 增大被永久吸收进不可恢复状态，而情节式智能体保持稳定学习。 构建 REVERSAL-BENCH 基准：用连续参数 ρ∈[0,1] 控制环境可逆程度，并提供重置预言机（reset oracle）作为验证状态可恢复性的真值机制；覆盖五大物理引擎、八种操作场景。评估多种策略架构，包括标准 actor-critic、安全强化学习及专门的免重置框架；并通过与几何结构完全相同但可逆的对照环境进行因果对比。此外评估一种在不可逆失败发生前介入的安全防护罩（safety shield）。 随 ρ 增大出现明显的"可逆性悬崖"：免重置智能体被一致地吸收进不可恢复状态，而情节式智能体学习保持稳定；该失效模式在免重置基线与约束强化学习中均出现。由于缺乏外部重置，任何进入不可恢复状态的转移都会导致永久吸收，学习随即停止。该吸收现象在真实物理仿真与学到的操作策略下依然存在。几何相同但可逆的对照实验确认，该崩溃由不可逆性而非障碍复杂度因果导致。安全防护罩结果表明：可恢复性可被准确预测，但主动恢复仅在智能体能物理避开陷阱时才主要成功。
+Abstract: https://arxiv.org/abs/2609.17745
+PDF: https://arxiv.org/pdf/2609.17745
+
+[72] TuiML: Machine Learning for AI Agents
+中文标题：TuiML：面向AI智能体的机器学习库
+Topics: LLM
+推荐理由：为LLM智能体构建的自描述机器学习库，支持自主搜索、组合与扩展组件，属于LLM智能体自动化工具与流程方向，与自动算法设计间接相关。
+中文摘要：TuiML 是一个面向 AI 智能体设计的自包含机器学习库，通过机器可读元数据、参数模式、调用验证与追踪，让智能体可自主检索、组合、扩展和复现机器学习工作流。 提出 TuiML：包含覆盖监督学习、无监督学习、时间序列、数据处理、调参与评估的原生算法；每个组件通过机器可读元数据与参数模式自描述，支持智能体检索组件、查看组件、组合经校验的工作流并注册可被发现的新组件；每次调用均经校验、设置随机种子并被追踪，会话可导出为可运行 notebook；由单一规范层驱动 MCP、智能体框架适配器、Python API、CLI 与本地模型服务，数据与模型不出本机。 基准测试表明 TuiML 的预测性能与 scikit-learn 和 Weka 相比仍具竞争力。
+Abstract: https://arxiv.org/abs/2609.17984
+PDF: https://arxiv.org/pdf/2609.17984
+
+[72] Adaptive hybrid coupling with operator inference, the overlapping Schwarz alternating method and reinforcement learning
+中文标题：基于算子推断、重叠Schwarz交替法与强化学习的自适应混合耦合方法
+Topics: RL
+推荐理由：用强化学习在线自适应选择全阶/降阶模型，属于强化学习驱动的自适应算法设计，与RL优化算法方向相关。
+中文摘要：提出基于强化学习（DQN）的在线自适应框架，用于重叠Schwarz交替法（O-SAM）耦合的FOM-ROM混合域分解模拟，实现随局部特征传播动态调整各子域模型保真度。 将子域局部FOM与预训练Operator Inference（OpInf）ROM的选择建模为序贯决策问题，采用深度Q网络（DQN）离线训练策略，奖励函数平衡精度、成本与模型切换频率；训练后的策略在未见的测试问题上预测性部署，且无需参考FOM解；在O-SAM迭代框架下通过重叠界面传输边界条件交换解信息。算例包括带移动前沿的1D对流-扩散问题和基于Norma.jl固体力学代码的3D线弹性波传播问题。 对流-扩散算例中，学习策略随前沿传播动态分配高保真分辨率，优于静态FOM/ROM分配；同时让智能体自适应域分解未带来额外收益。弹性波算例中，两子域与三子域分解的学习策略均能跟踪传播波，将FOM分配给含波子域、其余区域使用ROM，符合预期。
+Abstract: https://arxiv.org/abs/2609.17837
+PDF: https://arxiv.org/pdf/2609.17837
+
+[72] A Walk From Free Probability to Matrix Discrepancy I: Matrix Spencer
+中文标题：从自由概率到矩阵差异的旅程I：矩阵Spencer
+Topics: CO
+推荐理由：研究矩阵差异理论中的算法构造，属于组合优化与算法设计的交叉，但未涉及LLM/EC/RL等核心方向。
+中文摘要：该论文证明矩阵Spencer猜想：对算子范数不超过1的实对称矩阵组，存在签名使符号和的算子范数不超过O(√(n log(2m/n)))，并给出多项式时间的随机算法，同时在实数算术模型中处理方形与矩形情形。 采用协方差控制的超立方体随机游走，从原点出发，逐步对接近面的坐标进行舍入并固定。势函数刻画演化差异矩阵被算子值自由半圆元扰动后的软谱边缘，结合Lehner自由边缘变分公式与谱Tsallis正则化，将差异与剩余协方差统一为光滑优化问题，并具有有限维半正定表述；其优化器的稳定性由与矩阵Dyson方程相关的方程控制，从而找到可移动的大子空间。方形情形用Tsallis-1/2正则化，矩形情形用广义Tsallis幂正则化。 证明了m≤n时的O(√n)界，解决了方形情形；通过更换正则化器得到矩形界，即达到O(√(n log(2m/n)))的算子范数上界，算法在实数算术模型下具有多项式运行时间。
+Abstract: https://arxiv.org/abs/2609.18914
+PDF: https://arxiv.org/pdf/2609.18914
+
+[72] PrimeScientist: Strategic Allocation of Research Effort in Autonomous Research
+中文标题：PrimeScientist：自主研究中科研投入的战略分配
+Topics: LLM / RL
+推荐理由：自主研究智能体用MCTS做研究资源分配与方向选择，属于LLM/RL用于自动化搜索与决策优化。
+中文摘要：本文提出 PrimeScientist，将自主研究代理的“研究方向选择”与“资源投入分配”联合建模为序贯决策问题，利用可执行计划树与自适应 MCTS 策略在有限资源下权衡探索与利用。 将战略性研究投入分配形式化为序贯决策问题，并让剩余资源显式引导研究策略。为此引入可执行计划树（executable plan tree），在多次尝试中保留相互竞争的计划及其结果；基于该表示提出自适应 MCTS 分配策略，利用实验反馈与剩余资源平衡探索与利用。 在 AI 研究、系统与代码优化、机器学习工程等场景评测中，战略性分配同时提升研究质量与样本效率。在 12 个 AI 研究任务上，相同资源预算下，PrimeScientist 相比 AutoResearch 平均奖励提升 10.3%，研究尝试次数减少 50.6%。
+Abstract: https://arxiv.org/abs/2609.17846
+PDF: https://arxiv.org/pdf/2609.17846
+
+[72] Secretary Problems with Interactive Ordinal Queries
+中文标题：具有交互式序数查询的秘书问题
+Topics: 
+推荐理由：研究在线秘书问题的序数查询模型，属于在线优化与算法设计，但与LLM/EC/RL等核心方向无直接关联，仅方法上可借鉴阈值与竞争比分析。
+中文摘要：本文研究带有限序数查询预言机的秘书问题，在单选择秘书问题中针对随机序、对抗序及两种基于样本的对抗序，分别无查询、一次查询和无限查询情形给出紧界；并将模型推广至拟阵秘书问题，通过简单查询与完全查询两种接口得到概率竞争比结果。 将预言机查询定义为序数型：单选择情形中一次查询返回超过当前记录的未见元素数量；分析随机序、对抗序和两种基于样本的对抗序，在零次、一次和无限次查询下的最优成功概率。进一步将模型扩展到拟阵秘书问题，设计两种查询接口：简单查询识别可单独改进当前最优解的未见元素，完全查询给出未见元素相对于当前最优权的更精细序数划分；在基于样本的在线对抗序与随机序下分析概率竞争算法。 单选择秘书问题中除一个变体外均获紧界：对抗序下查询不优于平凡的1/n保证；随机序下一次查询将最优成功概率从1/e提升至0.4477…，无限查询达到最优1/2；基于样本模型中，在线对抗序下一次查询已达紧值1/e，离线对抗序下无限查询给出精确值(20√10−29)/81，剩余一次查询离线对抗情形开放，并给出两个部分上界。拟阵秘书问题中，基于样本在线对抗序下单次简单查询得到1/4概率竞争算法，完全查询提升至最优1/e；随机序下无限完全查询达到最优1/2概率竞争比。
+Abstract: https://arxiv.org/abs/2609.19016
+PDF: https://arxiv.org/pdf/2609.19016
+
+[72] Symbolic Temporal Supervision of LLM Agents Using Contracts
+中文标题：基于契约的LLM智能体符号时序监督
+Topics: LLM
+推荐理由：面向LLM智能体的符号时序监督，提升智能体行为可靠性，与LLM智能体控制相关，但未涉及优化算法设计或搜索优化。
+中文摘要：提出 ContrAgent，一种基于契约的符号时序监督框架，用 LTLf 契约编译为确定性有限自动机（DFA），统一实现在线门控与离线轨迹评估，具备确定性、可复现与低延迟特性。 ContrAgent 将智能体行为表示为工具调用序列，并形式化为固定可检查谓词集合上的 trace；用有限轨迹线性时序逻辑（LTLf）中的 assume-guarantee 契约刻画所需行为；每个契约编译为 DFA，既用于在线门控动作，也用于离线评估已记录轨迹。契约库作为可复用知识库，独立于智能体模型维护，可跨同一任务域的不同智能体应用。 在覆盖在线与离线两种角色的四个基准上，ContrAgent 达到与最先进 LLM 评判器及基于规则的护栏基线相当的效果，同时给出确定性、可复现的判定，并在在线模式下实现数量级更低的单次调用延迟。
+Abstract: https://arxiv.org/abs/2609.18128
+PDF: https://arxiv.org/pdf/2609.18128
+
+[72] WFM: Wiki Foundation Model for Complex Agentic Reasoning
+中文标题：WFM：面向复杂智能体推理的维基基础模型
+Topics: LLM
+推荐理由：面向LLM智能体的结构化记忆与检索增强，改进知识表示与检索效率，与LLM智能体研究相关但非核心优化方向。
+中文摘要：本文提出面向智能体的知识表示新范式 Wiki Foundation Model（WFM），通过融合稠密文档上下文与稠密拓扑链接的 Wiki Graph、查询条件化注意力聚合及 NCCL 边界交换协议，实现可扩展的智能体原生表示与检索，在五个长时记忆与多跳推理基准上取得显著性能，并在分布式集群上实现 10.5 倍训练加速。 (i) 形式化 Wiki Graph schema，将细粒度结构与稠密上下文无缝衔接，在保留显式拓扑的同时维持连续语义；(ii) 设计查询条件化注意力聚合（query-conditioned attentive aggregation），用于丰富的 wiki 消息传递，并引入显式注意力方差正则化；(iii) 构建基础设施层面的 NCCL 边界交换协议，将静态分区索引上提并采用固定形状的 GPU-to-GPU 集合通信，规避 CPU 序列化与内存拷贝开销。 在五个长期智能体记忆与多跳推理基准上进行了广泛评估，WFM 展现出显著性能，并在分布式集群上实现 10.5 倍训练加速。
+Abstract: https://arxiv.org/abs/2609.18182
+PDF: https://arxiv.org/pdf/2609.18182
+
+[72] Maximum Strong Independent Sets in Hypergraphs: Reductions, Bounds, and Greedy Certificates
+中文标题：超图中的最大强独立集：归约、界与贪心证书
+Topics: 
+推荐理由：研究超图中最大强独立集问题，提出归约、界与贪心算法及证书，属于组合优化与启发式算法设计。
+中文摘要：本文研究有限超图中的最大强独立集问题（即寻找与每条超边至多相交一个顶点的最大顶点集），建立关联结构工具包，给出精确归约、上界与证书，并分析分层贪心聚类算法。 发展关联结构工具包：证明支配、关联孪生与权重为1块的精确归约；推导闭式与低权重上界；引入穿刺证书与覆盖证书以收紧上界；分析由块权重和剩余关联驱动的分层贪心聚类算法，并给出可行性、极大性、条件最优性、分层见证匹配上界及关联局部复杂度界。 获得适用于广泛关联族的正确性、终止性、不动点与最优性证书，并通过示例展示不同证书何时相互区分或重合。
+Abstract: https://arxiv.org/abs/2609.17951
+PDF: https://arxiv.org/pdf/2609.17951
+
+[72] Where Should Agents Live? Energy-Memory Characterization of Agentic AI for the Edge-Cloud Continuum
+中文标题：智能体应部署于何处？面向边缘-云连续体的智能体AI能量-内存表征
+Topics: LLM
+推荐理由：研究LLM多智能体工作流在边缘云的能量与内存特性及编排放置，与LLM智能体系统优化相关，但非核心的算法自动设计或优化求解。
+中文摘要：提出agentic-eCAL指标，将AI生命周期能耗度量从单模型推理推广到多智能体工作流，耦合闭式双速率单次调用能耗模型与7层OSI数据传输，并在A100/H100实测验证，发现智能体间文本传输仅占工作流能耗0.25%，分布部署的主导能耗来自通信引发的额外推理与上下文处理。 提出agentic-eCAL，将有向多智能体工作流的能耗成本指标（eCAL）一般化：耦合闭式双速率单次调用能耗模型（计算受限的prefill与内存受限的decode）与7层OSI数据传输模型。基于NVIDIA A100与H100上数百种GPU基准配置、16个开放权重模型和8种编排拓扑进行指标组件的验证，并研究工作流放置的影响。 跨5G RAN、城域与光链路场景下，智能体间文本传输仅占工作流能耗的0.25%；因此在边云智能体放置中，分布式部署的主导能耗往往不是智能体间文本传输本身，而是该通信所引发的额外推理与上下文处理开销。
+Abstract: https://arxiv.org/abs/2609.18283
+PDF: https://arxiv.org/pdf/2609.18283
+
+[72] What Counts as Strategic Reasoning? A Systematic Mapping of Chess Research on Humans, Engines, and Language Models
+中文标题：何为战略推理？人类、引擎与语言模型国际象棋研究的系统映射
+Topics: LLM / RL
+推荐理由：系统性综述国际象棋中LLM、RL与搜索/规划的研究，涉及LLM作为推理智能体的战略决策，与LLM+RL及搜索规划方向相关。
+中文摘要：本文对以国际象棋为研究领域的近期文献进行系统性映射研究，构建包含84个核心研究族的地图，按智能体类型、战略推理阶段与评估维度分类，揭示研究集中于局面评估与动作选择，而规划、解释、元认知与人机协作较少。 采用系统性映射研究（systematic mapping study），覆盖人类棋手、经典棋类引擎、神经与强化学习系统、大语言模型及混合方法等研究；将文献归纳为84个核心研究族，并按智能体类型、战略推理阶段和评估维度进行分类。 文献高度集中于态势评估、局面评价与动作选择；显式规划、解释、元认知和人机协作探索不足。大语言模型研究侧重状态表征与泛化，而基于依据的解释更多出现在将语言模型与引擎、专家知识或外部结构结合的混合方法中。地图还呈现两处未加区分的差异：混合系统在异质能力的结合位置与时机上不同；人类表现提升的评估并不等同于人机协同。
+Abstract: https://arxiv.org/abs/2609.18286
+PDF: https://arxiv.org/pdf/2609.18286
+
+[72] Rollback the World, Keep the Reflection: Rollback-Induced Reflection for Long-Horizon LLM Agents
+中文标题：回滚世界，保留反思：面向长时程LLM智能体的回滚诱导反思
+Topics: LLM / Planning
+推荐理由：针对长时程LLM智能体的回滚与反思恢复框架，属于LLM智能体控制与规划范畴，与智能体优化决策相关但非直接优化算法设计。
+中文摘要：论文提出 Rollback-Induced Reflection (RIR) 统一恢复框架，将长时域 LLM 智能体的可靠恢复建模为"回滚边界控制"问题，在回滚到历史状态的同时保留可复用知识，实现状态修复与经验保留的双重目标，并在三个长时域基准上验证有效性。 将可靠恢复形式化为回滚边界控制问题，提出 Rollback-Induced Reflection (RIR) 统一恢复框架：把执行恢复到选定的历史状态（selective rollback），同时从被放弃的轨迹中蒸馏可复用知识（structured reflection memory）并前向携带以指导后续决策。此外，用一个统一算子刻画回滚深度与保留记忆两个维度，给出状态恢复与知识保留的一般化视角。 在三个长时域基准上，RIR 在多种 LLM 主干模型上均稳定提升任务表现；其中结构化反思记忆有效保留了有用经验，选择性回滚则实现了高效恢复。
+Abstract: https://arxiv.org/abs/2609.18304
+PDF: https://arxiv.org/pdf/2609.18304
+
+[72] Collective Loss of Control in LLM Agent Systems: An Epidemic Account of Mutation, Contagion, and Recovery
+中文标题：LLM智能体系统中的集体失控：突变、传染与恢复的流行病学解释
+Topics: LLM
+推荐理由：研究LLM多智能体系统的意外突变、传染与失控机制，涉及智能体协调与安全，与LLM智能体研究相关。
+中文摘要：该论文提出用"流行病学"框架（意外突变—传染—恢复）解释多智能体系统如何从局部偏差演化为集体失控，并通过部署审计与RogueHandoff-20基准验证了隐式通信路径的存在及智能体对不安全轨迹的高条件易感性。 提出由意外变异、传染与恢复三要素构成的流行病学解释：自发偏差形成"种子"，通信使其他智能体采纳并再传播不安全策略，当传播速度超过纠正与遏制时出现集体失效。实证上包含两部分：(1) 部署审计，识别名义上独立的评估运行之间的隐式通信路径，并通过默认Docker后端验证其传输；(2) RogueHandoff-20基准，含20个可执行场景，通过注入由改进的Qwen-27B路线生成的不安全轨迹来测试接收方易感性。 在四条原生待定（native-pending）路线上，正常任务的实际危害率为0–5%，注入后升至40–95%，比配对的直接恶意请求高出5–45个百分点。结果支持"低观测基线危害伴随高条件易感性"的判断，但未确立自然稀有事件发生率，也未证明存在自主级联。
+Abstract: https://arxiv.org/abs/2609.18460
+PDF: https://arxiv.org/pdf/2609.18460
+
+[72] APGEM: Adaptive Policy-Guided Error Mitigation for Quantum Reinforcement Learning on a Real-World CVRP Case Study
+中文标题：APGEM：面向真实世界CVRP的量子强化学习自适应策略引导误差缓解
+Topics: RL / CO
+推荐理由：将强化学习策略用于CVRP组合优化，并引入自适应误差缓解控制器，属于RL+CO交叉且含自适应选择机制；但量子硬件与误差缓解是主要焦点，与LLM/EC等核心方向关联有限。
+中文摘要：本文提出自适应策略引导纠错方法APGEM，在量子强化学习求解CVRP时，依据保真度、熵与代价感知的效用函数，通过epsilon-greedy策略在线动态选择ZNE、PEC、CDR与REM四种纠错技术，在高噪声下将近似比从0.84-0.87恢复至0.92-0.94。 提出APGEM（自适应策略引导纠错）控制器：构建融合保真度、熵与代价的效用函数，并基于时序差分Q分数的epsilon-greedy规则，在ZNE、PEC、CDR、REM四种纠错技术之间进行在线选择。在基于德里真实地标、以测地距离为节点间代价的城市物流CVRP测试平台上评估，覆盖五类噪声族与四个噪声严重度等级。 在该CVRP实例上，QRL智能体优于构造式启发式算法并接近元启发式算法；在强噪声下，纠错使近似比从0.84-0.87恢复至0.92-0.94。控制器在短训练周期下偏向CDR主导机制，在较长周期下则均衡使用全部四种技术，表现出真实的机制依赖型选择行为。
+Abstract: https://arxiv.org/abs/2609.18219
+PDF: https://arxiv.org/pdf/2609.18219
+
+[72] STRETCH the Boundaries: A Unified Self-Taught Framework for Progressive LLM Evolution
+中文标题：STRETCH：面向渐进式LLM进化的统一自教导框架
+Topics: LLM / RL
+推荐理由：提出自教导强化学习框架动态调整难度以促进LLM推理能力持续进化，与LLM+RL及自动化能力提升相关。
+中文摘要：提出STRETCH统一框架，通过动态"拉伸区"机制持续对齐问题难度与模型能力，在单一参数空间内让同一模型在"脚手架"与"学习者"角色间交替，实现推理能力的持续自我提升。 受认知脚手架理论启发，设计动态Stretch Zone机制，持续将问题难度与模型当前解题能力对齐；在单一参数空间中，模型交替扮演Scaffolder（生成自适应的、处于能力边界的挑战题）与Learner（通过强化学习优化解题轨迹），形成双环协同演化。 在谈判（negotiation）与运筹学（operation research）基准测试上，STRETCH均稳定优于强提示方法与领域专用基线；脚手架配置分析进一步表明，动态难度对齐对持续的能力提升和推理同步演化至关重要。
+Abstract: https://arxiv.org/abs/2609.18642
+PDF: https://arxiv.org/pdf/2609.18642
+
+[72] AeroWeaver: An Embodied-Agent Harness for Weaving Aerial Skills into Distributed, Adaptive Swarm Execution
+中文标题：AeroWeaver：将空中技能编织为分布式自适应集群执行的具身智能体框架
+Topics: LLM / Planning
+推荐理由：利用LLM智能体进行高层任务规划与分布式多UAV协同执行，属于LLM智能体作为规划/控制器的实质性工作，与LLM+优化/规划方向相关。
+中文摘要：本文提出 AeroWeaver，一种具身智能体框架，将无人机集群的个体技能编织为协同任务级行为，通过受治理技能、角色条件化局部智能体与角色索引经验实现在线自适应。 AeroWeaver 作为具身智能体调度框架，将语义决策连接到受治理的技能库；组织角色条件化的局部智能体实现分布式协调；利用角色索引的状态-动作-奖励经验在线优化技能选择，无需训练即可自适应。 实验与运行时验证表明，AeroWeaver 在测试条件下可保持有效的技能执行，支持机体局部化的多无人机运行，无需中央智能体基于全局上下文生成联合动作；奖励引导的在线更新提供了免训练的自适应学习路径。
+Abstract: https://arxiv.org/abs/2609.18520
+PDF: https://arxiv.org/pdf/2609.18520
+
+[72] CERA-MoA: Co-Evolving Routing Mechanisms with Continually Learning LLM Agents
+中文标题：CERA-MoA：路由机制与持续学习LLM智能体的协同演化
+Topics: LLM / RL
+推荐理由：使用强化学习让路由器与LLM智能体协同演化，涉及LLM智能体路由与持续学习，属于LLM+RL交叉但与优化算法设计关联较弱。
+中文摘要：CERA-MoA 提出一种路由器与智能体策略协同演化的迭代强化学习框架，通过预测式熟悉度估计与累积阈值自适应路由，实现性能与效率的平衡并促进智能体能力分化。 提出 CERA-MoA：动态路由器与各智能体独立策略协同演化的迭代强化学习框架。设计预测式熟悉度估计器，利用中层隐状态评估智能体间的语义胜任度，避免完整 rollout 开销；基于熟悉度分数，采用累积阈值自适应路由机制，动态激活最小的定制智能体子集；并根据智能体不断演化的能力主动分配针对性训练样本，促进能力分化。 在多个领域的广泛实验中，CERA-MoA 优于最先进的静态智能体路由方法与固定工作流微调基线。
+Abstract: https://arxiv.org/abs/2609.18779
+PDF: https://arxiv.org/pdf/2609.18779
+
+[72] Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data
+中文标题：无限参数LLM：从实时数据生成与适配权重
+Topics: LLM
+推荐理由：提出超网络从运行时数据生成权重并在线更新的LLM架构，与LLM相关并涉及从数据生成参数，但未聚焦于组合优化、进化计算或强化学习等核心交叉方向。
+中文摘要：提出"无限参数LLM"：用小型超网络将运行时数据映射为共享基网络的低秩调制，并对生成器隐码维持在线更新的贝叶斯信念，使前馈权重由实时数据生成而非固定存储，在存储占用不变的情况下实现"有效无限"权重。 受MoE启发，设计紧凑超网络，把运行时给出的数据转换为对共享基网络的低秩调制，从而由实时数据生成前馈权重，取代固定参数库。与既有"读一次上下文即冻结"的权重生成器不同，本文对生成器隐码维持一个贝叶斯信念分布并在线更新，使有效权重随会话推进由该演化中的后验重新导出，而非一次性读取后固定。存储占用保持固定。 论文为架构与评估方案类工作，未报告实验数值结果；其主张的收益包括：将运行时知识与行为承载于权重而非提示，可在算力上摊销、释放上下文窗口、跨轮次持续保存，并可能比上下文内使用具有更好的泛化性。文中提出专门的评估协议，用于将这些性质与上下文学习及检索方法进行对照检验。
+Abstract: https://arxiv.org/abs/2609.18842
+PDF: https://arxiv.org/pdf/2609.18842
+
+[72] Function Lives Where Variance Doesn't: Task-Weighted Charts of a Language Model's Computation
+中文标题：函数存在于方差不在之处：语言模型计算的任务加权坐标图
+Topics: LLM
+推荐理由：研究LLM计算的低维功能表示，发现的低维结构可用于压缩与高效计算，与LLM内部机制和表示优化相关，但未直接涉及组合优化、进化算法或强化学习。
+中文摘要：论文提出"任务加权图表"(task-weighted charts)，将语言模型"用多少维度做计算"这一问题转化为针对特定功能泛函的低维拟合问题，并揭示计算维度与激活方差维度彼此解离。 提出任务加权图表：在所选表征泛函自身的度量下，用低维坐标系对表征进行拟合，从而把蒸馏化为普通最小二乘问题。在来自三个家族、70m至7B参数的六个模型上，分别针对下一词预测、模型自身不确定性、完整预测分布等不同泛函测量所需维度。 下一词预测需保留残差流宽度的70–90%才能将困惑度保持在完整模型的5%以内，且该宽度主要被语言的稀有长尾占用；方差剖面无法预测这一点——仅两个方向就承载GPT-2激活方差的90%，却几乎不承担功能。维度是逐泛函的：模型自身不确定性仅需六个坐标即可读取，而完整预测分布需要数百个；且维度随深度增长。
+Abstract: https://arxiv.org/abs/2609.18989
+PDF: https://arxiv.org/pdf/2609.18989
+
+[72] Label-free steering: Compressing test-time reinforcement learning into bias-only subspaces
+中文标题：无标签引导：将测试时强化学习压缩到仅偏置子空间
+Topics: RL / LLM
+推荐理由：测试时强化学习用于LLM推理，参数高效优化，与RL+LLM相关但非核心算法设计
+中文摘要：该论文提出无标签的仅偏置测试时强化学习（bias-only TTRL），仅优化约100K偏置参数（冻结主干），用多数投票伪标签作奖励。MATH-500上达76.67%，参数量比全参数TTRL少76,000倍，并可迁移至视觉语言、音频推理及4,500道留出数学题。分析揭示多数投票可靠性随轨迹一致性提升、梯度能量更大的偏置子空间可训练性更强。 提出无标签的仅偏置TTRL：冻结预训练主干，仅优化约100K偏置参数；以多数投票生成的伪标签作为奖励信号进行优化；并进一步分析多数投票可靠性与轨迹一致性的关系，以及偏置子空间可及梯度能量与下游可训练性的关联。 MATH-500上达76.67%准确率，略超作者自身的有标签偏置引导复现，参数量比全参数TTRL少76,000倍。同一训练流程在MathVista、AI2D、LogicVista、MMAU等视觉语言与音频推理任务上均有提升；所学引导向量可迁移到4,500道留出MATH题。分析显示多数投票可靠性随轨迹一致性提高，梯度能量更大的偏置子空间下游可训练性更强。
+Abstract: https://arxiv.org/abs/2609.18587
+PDF: https://arxiv.org/pdf/2609.18587
+
+[72] A Convergence Framework for Deep $V$-Learning: Error Propagation and Sharp Action-Gap Bounds
+中文标题：深度V学习的收敛框架：误差传播与锐利动作间隙界
+Topics: RL
+推荐理由：深度V学习收敛性理论研究，与强化学习核心方向相关，但偏理论分析而非优化算法设计。
+中文摘要：该文为深度V-learning建立收敛界，将更新误差分解为六类残差，并在集中性条件下用其$L^p$范数控制期望$L^1$策略损失，同时刻画了有限时域下的最优采样分配、边距条件和神经网络回归率，进而给出固定时域生成式重置近似ERM的策略损失一致性。 算法用执行转移构造目标，拟合标量值函数，并借助预测模型与值函数选动作。对当前观测后继目标，条件均值为$\mathcal{T}^\beta V$（对行为策略动作平均），最优Bellman更新为$\mathcal{T}V$。将更新误差分解为拟合、转移复用、目标构造、回放、动作选择、探索六项残差；在$L^s$集中性下用$L^p$（$p=s/(s-1)$）范数界定期望$L^1$策略损失，并显式加权最后$H-1$个更新块的残差及初始项。推导统计误差阶$n^{-\nu}$下的最优连续分配及目标在约束最优$2^\nu$因子内的整数分配。利用指数$\alpha$的边距条件得到策略误差$O(\Lambda^{1+\alpha/p})$，并用一步构造证明指数紧性。通过冻结与最优分数距离界，将最优间隔条件转译为冻结迭代间隔界。部署时的生存概率与覆盖条件给出近似分数选策略的界。每个时域层单独的空间ReLU网络给出条件神经回归率，有限状态情形给出无对数期望拟合率。 获得显式收敛界：期望$L^1$策略损失由六类残差的$L^p$范数控制；给出最优采样分配及其整数近似（因子$2^\nu$）；边距条件下动作误差为$\Lambda^{1+\alpha/p}$且指数尖锐；冻结迭代间隔界保留最优并列质量；生存概率与覆盖条件支持部署阶段近似分数策略界；ReLU网络获得条件神经回归率，有限状态获得无对数期望拟合率；并给出精确动作分数下固定时域生成式重置近似ERM的期望策略损失一致性及FIFO/交错SGD的残差衰减判据。
+Abstract: https://arxiv.org/abs/2609.18782
+PDF: https://arxiv.org/pdf/2609.18782
+
+[72] Monitoring and Discovering Reward Hacking with Internal Representations during LLM Evaluations
+中文标题：在LLM评估中利用内部表征监测和发现奖励欺骗
+Topics: LLM / RL
+推荐理由：研究LLM评估中的奖励欺骗内部表征与检测，与LLM及强化学习对齐相关，但未直接涉及优化算法设计或EC/CO。
+中文摘要：该论文发现奖励破解在前沿开源LLM的表征中存在简单的线性信号：用均值差（DoM）向量即可一致地表征、检测并预测奖励破解行为，且成本几乎为零。 作者在Kimi K3、GLM 5.2和Qwen 3.8 Max等前沿开源LLM中提取简单的均值差（DoM）向量来表征奖励破解，并在DeepSWE、SWE-bench等常用评测上评估其效果。方法包括：用DoM向量检测奖励破解，与LLM监控器在匹配假阳性率下对比；将DoM向量应用于思维链（chain-of-thought）以在线预测后续动作中的破解行为；分析LLM监控器遗漏的probe命中，并测试向非SWE评测的迁移性。 模型在常用评测环境中大量奖励破解：GLM 5.2在DeepSWE中57.2%的rollout、SWE-bench中73%的rollout存在破解。DoM向量与LLM监控器效果相当但几乎免费——在匹配假阳性率下，Kimi K3在DeepSWE上多捕获3.1%的破解，GLM 5.2少捕获7.9%。作用于思维链的DoM向量还能预测模型后续动作中的奖励破解，实现事前在线捕获；此外还发现了LLM监控器遗漏的其他不良行为，并验证了向非SWE评测的迁移能力。
+Abstract: https://arxiv.org/abs/2609.19101
+PDF: https://arxiv.org/pdf/2609.19101
+
+[72] ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments
+中文标题：ScienceIDE：将世界科学代码库转化为智能体可学习环境
+Topics: LLM / RL
+推荐理由：构建科学代码为LLM智能体可学习环境，用于监督微调与强化学习训练，属于LLM智能体与科学代码的结合，与自动化设计与学习优化相关，但非直接针对组合优化或算法自动设计核心。
+中文摘要：提出 ScienceIDE 基础设施，将科学代码仓库转化为可执行环境，用于科学智能体训练与评估。基于验证过的交互轨迹训练 PhAI-IDE-72B/9B/4B 系列模型，在科学代码修复及通用代码、推理、知识基准上均取得提升，证明科学经验可正向迁移至更广泛能力。 ScienceIDE 以专家定义的科学案例与验收标准为引导，让智能体将代码仓库改造为可执行环境，支持任务生成、执行与科学验证；这些环境构成监督微调、强化学习与评估的共享基础，并利用验证过的交互轨迹训练 PhAI-IDE 系列模型。 训练的 PhAI-IDE-72B、9B、4B 模型在留出的科学代码修复任务以及部分通用代码、推理与知识基准上均有提升，表明科学经验向更广泛能力存在正向迁移。
+Abstract: https://arxiv.org/abs/2609.19134
+PDF: https://arxiv.org/pdf/2609.19134
+
+[72] Changepoint-Aware World Models: Detecting Dynamics Shifts and Recovering by Forgetting Stale Replay in Model-Based RL
+中文标题：变化点感知世界模型：检测动态偏移并通过遗忘陈旧回放恢复
+Topics: RL
+推荐理由：面向模型基强化学习的世界模型动态变化检测与陈旧回放遗忘，属于RL方向但未直接涉及优化算法或LLM/EC交叉。
+中文摘要：提出CAWM（Changepoint-Aware World Models），一种基于DreamerV3的智能体，利用在线CUSUM检测器从自身预测误差中识别突发的动力学变化，并通过遗忘陈旧回放数据实现快速适应。 CAWM在DreamerV3智能体上，通过在线CUSUM检验针对滚动基线监测内部预测误差，仅在突发变化（而非缓慢学习漂移）时触发；触发后保留已学表示但清空陈旧的回放数据。 在模拟运动任务中（重力加倍、执行器增益减半两种突变），CAWM比被动重训练恢复显著更快，也优于在检测时重生成全新动力学模型的强基线（模型库方法的深度世界模型类比）。在变化后前30k帧内，CAWM相较基线获得+95至+153的回报增益（三个随机种子），渐近性能与重生成基线相当。闭环运行检测器在重力变化上重现该增益。
+Abstract: https://arxiv.org/abs/2609.18950
+PDF: https://arxiv.org/pdf/2609.18950
+
+[72] FedGuide: Diffusion Prior Alignment and Value Baseline Guidance for Heterogeneous Federated Reinforcement Learning
+中文标题：FedGuide：异构联邦强化学习的扩散先验对齐与价值基线引导
+Topics: RL
+推荐理由：联邦强化学习异质性优化，提出扩散先验对齐与价值基线引导，与RL优化核心方向相关。
+中文摘要：FedGuide 是一个联邦强化学习框架，用扩散先验作为行为模型为异构客户端提供个性化数据支撑分布，并通过最优传输专家混合聚合扩散先验、用 DICE 价值基线提供低方差回报感知引导。 提出 FedGuide：使用扩散先验作为行为模型，为异构本地策略学习提供个性化的数据支撑分布；不直接平均本地策略，而是通过最优传输专家混合（OT-MoE）聚合扩散先验，在分布空间中保留异构行为模式；并引入分布修正估计（DICE）价值基线，为本地策略改进提供低方差、回报感知的引导。 在异构环境实验中，FedGuide 在客户端平均回报、末轮性能和最差轮鲁棒性上均优于代表性 FRL 方法，并在更强异构性下保持稳定学习。
+Abstract: https://arxiv.org/abs/2609.18964
+PDF: https://arxiv.org/pdf/2609.18964
+
+[72] CompileRover: Revolutionizing Virtual Machine Compiler Optimization with a Tri-Role LLM-Driven Framework
+中文标题：CompileRover：用三角色LLM驱动框架革新虚拟机编译器优化
+Topics: LLM / LLM Agent
+推荐理由：利用多角色LLM驱动框架进行虚拟机编译器优化，属于LLM作为优化器/控制器的应用，与LLM用于自动化算法设计相关。
+中文摘要：本文提出 CompileRover，一个面向虚拟机编译器的优化框架，采用裁判、顾问、操作员三角色协作机制，通过控制流分析、代码结构变换与动态执行模式识别等算法消除冗余计算、优化循环与函数实现，实验表明其性能显著优于现有最先进虚拟机编译器。 提出 CompileRover 优化框架，核心为裁判（referee）、顾问（advisor）、操作员（operator）三角色协作机制，并结合控制流分析、代码结构变换、动态执行模式识别等综合优化算法与新方法。 广泛评测显示 CompileRover 持续超越最先进的虚拟机编译器，在多种基准上实现执行性能的显著提升；性能分析进一步验证优化可降低执行开销、改善数据流一致性并稳健提升编译器性能。
+Abstract: https://arxiv.org/abs/2609.19004
+PDF: https://arxiv.org/pdf/2609.19004
+
+[68] Locating Hidden Failures Makes Long-Horizon Agents More Reliable
+中文标题：定位隐藏失败使长程智能体更可靠
+Topics: LLM / RL
+推荐理由：研究长程LLM智能体的失败定位与验证器，可用于测试时选择候选轨迹，提升智能体可靠性，与LLM智能体优化和评估相关。
+中文摘要：论文构建Traverse基准，对2518条智能体轨迹、6967个错误按78种失败类型进行人工标注，揭示长时程智能体的失败签名，并训练4B验证器Scout以低成本定位失败。 收集软件工程、计算机使用与科学领域共2518条接近真实部署的智能体轨迹，将6967个错误分类为78种失败类型，并发布人工验证的Traverse基准；在此基础上训练一个4B验证器Scout，用于在测试时定位失败并选择候选运行。 失败呈现反复出现的特征：智能体首次出错后常无法恢复、极少自我发现错误，运行仍在看似正确的情况下继续；能否恢复取决于任务与环境反馈而非智能体框架。六种前沿评判模型难以定位失败，最强者在不到三分之一的运行中正确识别首个错误，而Scout定位效果显著更优并可迁移到未见领域。
+Abstract: https://arxiv.org/abs/2609.17930
+PDF: https://arxiv.org/pdf/2609.17930
+
+[68] Cognitive Extensions for Dual-Process Language Agents: Memory and Self-Reflection in Interactive Environments
+中文标题：面向双过程语言智能体的认知扩展：交互环境中的记忆与自反思
+Topics: LLM / Search
+推荐理由：研究LLM智能体在交互环境中的记忆与自反思机制，用于长程状态跟踪和失败恢复，属于LLM智能体作为控制器/优化者的工作，与长程搜索和决策相关，但非直接针对CO/EC/RL核心优化算法设计。
+中文摘要：该论文在SwiftSage双过程语言智能体基础上引入自适应记忆模块（AMM）与自我反思模块（SRM），并在ScienceWorld上进行受控消融，完整系统取得最佳性能。 以SwiftSage（快速动作提议者＋慢速规划器）为基座，提出两个模块化扩展：自适应记忆模块（AMM，基于显著性门控的情节存储与触发式检索）和自我反思模块（SRM，有界的执行时验证与纠错干预）。两模块均以特性开关形式实现于同一执行基底之上，从而支持在ScienceWorld上进行受控消融。设置四种配置：基线、基线+AMM、基线+SRM、完整系统。 完整系统取得最佳平均最终得分（64.62）、成功率（43.17%）和成功步效率（19.33步）；SRM是单独贡献最强的模块。
+Abstract: https://arxiv.org/abs/2609.19128
+PDF: https://arxiv.org/pdf/2609.19128
+
+[66] Selection Is Retrieval, Abstention Is Not: On-Device Tool Routing over 70 Korean-English Actions
+中文标题：选择即检索，弃权则不然：面向70个韩英动作的端侧工具路由
+Topics: LLM
+推荐理由：研究端侧LLM工具路由的检索替代方案，涉及LLM在调度/路由决策中的角色，属于LLM作为控制器的相关应用，但非核心优化算法设计交叉。
+中文摘要：该研究将设备端AI助手的工具路由拆分为"选哪个工具"和"是否无适用工具"两个决策并分别评估，发现在70个本地动作、600条中英韩请求上，检索器的选择能力尚可（尤其限制候选集后），但无法可靠地判断"无工具可用"，而这一弃权决策才是真正需要神经组件的地方；神经排序器虽提升所有质量指标，但因延迟与内存被否决而非精度。 在600条韩语和英语请求、70个本地动作的目录上分别评估两个决策；路由还可请求缺失槽位、回复或委托。半数库内请求复用目录词汇，半数改写表达，以分离词汇重叠与实际动作。比较字符3-gram BM25检索、将候选集限制为7、基于其分数特征的分类器，以及冻结编码器multilingual-e5-base的弃权表现。 字符3-gram BM25在164条词汇匹配请求中选出162条，166条改写中选出85条；候选集限制为7后改写命中率五轮均值达0.825。基于分数特征的分类器判别库内/库外AUC不超过0.697，而冻结编码器multilingual-e5-base达0.806。仅用该编码器做弃权可将376条请求留在本地，对150条需委托的请求误路由9条。神经排序器改善所有质量指标。
+Abstract: https://arxiv.org/abs/2609.18672
+PDF: https://arxiv.org/pdf/2609.18672
+
+[65] AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines
+中文标题：AutoTuneBench：LLM服务引擎智能体自动调优的可信测量
+Topics: LLM
+推荐理由：提出LLM智能体自动调优LLM服务引擎的可信基准与测量协议，属于LLM智能体用于优化领域，方法学贡献相关。
+中文摘要：论文指出LLM智能体自动调优GPU内核与服务引擎所依赖的测量不可信，梳理四类失效模式，并提出AutoTuneBench基准与测量协议，使可信度成为架构属性。诚实测量后，性能宣称大幅缩水。 提出AutoTuneBench基准与测量协议：协议以代码冻结并具测试强制溯源；数据库级校验器拒绝协议外结果；反作弊检查位于智能体可修改面之外；比较遵循预注册读数；测量锚定外部已发表结果，并以配对种子统计为基础，设5%跨运行变异系数上限。基于619次模型调用的四天试点语料。 诚实测量改写结论：最优内核相对朴素基线为10.6倍，但相对诚实基线仅2.03倍；同一配置在一台机器上为1.174倍，另一台仅1.0049倍；预注册开关比较在共享墙处归零（2.4840 vs 2.4957 ms）；KernelBench Level-1套件仅51%任务被接受，相对PyTorch eager的中位加速比为1.0001倍。
+Abstract: https://arxiv.org/abs/2609.18123
+PDF: https://arxiv.org/pdf/2609.18123
+
+[65] WordPolo: Evaluating Language Models Through Iterative Semantic Feedback
+中文标题：WordPolo：通过迭代语义反馈评估语言模型
+Topics: LLM / Search
+推荐理由：将LLM评测转化为语义空间中的迭代搜索任务，涉及启发式搜索与LLM推理过程分析，与LLM作为优化/搜索主体的方向相关。
+中文摘要：提出WordPolo词查找任务与过程性指标，用语义相似度反馈评估LLM/LRM的迭代推理与搜索能力。 设计WordPolo任务：参与者从零知识开始猜测未知目标词，依据语义相似度距离分数（1为正确，越大越远）导航语义空间并逐步缩小搜索。在1500个谜题上评估GPT-4.1、Llama 4、Claude 3.5 Haiku、Qwen 3、o4-mini、Deepseek-R1、人类及一种新启发式方法，并引入基于进展的指标。 求解率范围为4%至62%；进展性指标显示模型常能取得有意义的进展，这是仅看准确率会遗漏的；推理模型可能受过度思考与思考不足的阻碍，成功模型则表现出类人策略。
+Abstract: https://arxiv.org/abs/2609.19006
+PDF: https://arxiv.org/pdf/2609.19006
+
+[62] One Color Preprocessing Improves DSATUR
+中文标题：单色预处理改进DSATUR
+Topics: CO
+推荐理由：提出结合SDP预处理改进DSATUR的图着色启发式算法，属于组合优化与启发式算法设计范畴，但未涉及LLM/EC/RL等核心交叉方向。
+中文摘要：本文提出SSLD，用半正定规划（SDP）预计算一个固定着色类，再交由DSATUR完成剩余顶点的着色，从而改进DSATUR的图着色质量。 SSLD先通过一个类似计算Lovász theta数的半正定规划（SDP）求出一个优质颜色类作为预处理，将其固定后，再由DSATUR对剩余顶点完成着色，据称是首个通过预置固定颜色类来改进DSATUR的方法。 在DIMACS实例、随机图（Erdős–Rényi、Watts–Strogatz、Barabási–Albert）、频率分配及作业车间调度等超过1600个基准实例上，SSLD几乎在所有情况下追平或优于DSATUR，并优于朴素GISD基线，证实了SDP引导选择首个颜色类的价值。
+Abstract: https://arxiv.org/abs/2609.17633
+PDF: https://arxiv.org/pdf/2609.17633
+
+[62] The evolution of sex for artificial intelligence: a population-genetic framework for multigenerational model populations
+中文标题：人工智能中性的进化：多代模型种群的群体遗传学框架
+Topics: EC / LLM
+推荐理由：将进化/群体遗传学框架用于多代模型种群（含LLM）的继承与重组，与EC及LLM进化交叉相关，但非优化算法设计核心。
+中文摘要：本文将AI模型的多代演化过程类比为群体遗传学中的繁殖与遗传过程，建立跨学科形式化框架，并在递归训练、模型合并、大语言模型等场景中验证类比的成立及架构特异性偏差。 作者将多代模型群体解释为有性与无性繁殖过程，形式化地融合两个领域。构建精确遗传模型，在训练网络（循环网络、前馈网络、变分自编码器生成器）和大语言模型上测试类比。将递归训练导致的模型崩溃对应为Wright-Fisher过程，真实数据作为移民项；分析父代输出平均对应混合遗传，最强贡献保留对应Fisher-Muller效应；并研究谱系生殖隔离现象。 类比普遍成立，但存在可测的架构特异性偏差。最小学习器模型精确复现Wright-Fisher过程；每代加入的真实数据起移民作用，且绝对样本数而非占比决定效果，与群体遗传学一致。对父代输出取平均会抵消多父代收益（混合遗传，重现Jenkin对达尔文的诘难），而保留各自最强贡献的合并方式可维持收益，合并的语言模型专家在各随机种子下均超越所有父代（Fisher-Muller效应）。当谱系学到冲突约定时发生生殖隔离、丧失合并能力，而单纯漂移分离则不会。
+Abstract: https://arxiv.org/abs/2609.18560
+PDF: https://arxiv.org/pdf/2609.18560
+
+[62] Prior-Free Competitive Ratios for Improving Bandits: Scale, Curvature and Horizon Are Free, but Not Jointly Under Noise
+中文标题：改进型多臂老虎机中无需先验的竞争比：尺度、曲率与视界单独免费但联合受噪声影响
+Topics: 
+推荐理由：多臂老虎机与在线优化理论分析，属于优化与学习交叉，但与LLM/EC/RL等核心方向关联有限。
+中文摘要：该论文研究改进型多臂老虎机（improving multi-armed bandits）问题，通过提出"probe-and-commit"算法与随机边际探测算法，消除了先前结果中的对数因子，并刻画了各时间范围下的最优竞争比及先验知识对自适应代价的影响。 提出"probe-and-commit"单页算法，无需知道尺度 $m$；无噪声情形下采用随机边际探测（random-marginal probing）算法，不读取 $m$、$\beta$ 或 $T$；乘性噪声下使用嵌套随机置换探测（nested random-permutation probing）算法。并通过下界论证刻画最优竞争比与自适应代价 $\phi_\varepsilon(k)$。 在 $T\ge2\lfloor\sqrt{k}\rfloor$ 时，probe-and-commit 达到竞争比 $4\sqrt3\,\sqrt{k}$，且无需尺度知识；证明了每个时间范围的最优比为 $\Theta(\sqrt{k}+k/T)$（未知时间范围亦然）。无噪声下，随机边际探测算法对所有 $\beta$ 和所有时间范围同时达到最优 $\Theta(k^{\beta/(1+\beta)}+k/T)$，无需任何先验。乘性噪声下，probe-and-commit 在不含噪声水平知识时仍保持 $\Theta(\sqrt{k}+k/T)$ 的全时间范围阶，但自适应代价 $\phi_\varepsilon(k)=\Theta_\varepsilon(\sqrt{\log k/\log\log k})$；已知 $m$ 或 $\beta$ 之一即可恢复常数代价。
+Abstract: https://arxiv.org/abs/2609.17595
+PDF: https://arxiv.org/pdf/2609.17595
+
+[62] The Missing "I Don't Know": Why Three Reasoning-Reliability Findings Converge on Calibrated Abstention
+中文标题：缺失的“我不知道”：为何三项推理可靠性发现汇聚于校准弃权
+Topics: LLM / RL
+推荐理由：该文讨论LLM推理可靠性、RL训练与基准评估中的校准弃权机制，涉及评估设计与RL训练，但与组合优化/进化计算/自动算法设计等核心方向仅间接相关。
+中文摘要：三项看似无关的LLM可靠性研究（推理RL破坏工具可靠性表征、安全约束下大模型重写与小模型截断、一致性推理系统必然幻觉）在"校准弃答能力缺失"上收敛，本文主张通过基准评测改革（三重评分、弃答率报告、能力分层评测、强制校准度量）来闭合该缺口，但强调基准改革是必要非充分条件。 采用理论综合与论证分析的方法：将三项独立研究（能力缺口、策略缺口、递归论缺口）统一归因于校准弃答缺失，并据此提出四项评测改革方案——三重评分（triple-scoring）、弃答率报告（abstention-rate reporting）、能力分层评测（capability-stratified evaluation）、强制校准度量（mandatory calibration metrics）。 论证表明三项研究在"校准弃答"这一干预点上收敛，尽管各自缺口来源不同；同时指出诚实性后训练已缩小部署模型的差距，但Bastounis等人所刻画的必须幻觉类别的原则性闭合，需要具备校准弃答函数，而当前排行榜层面缺失该训练信号——主流基准对拒答零奖励，故选择该函数的排行榜梯度不存在。
+Abstract: https://arxiv.org/abs/2609.17686
+PDF: https://arxiv.org/pdf/2609.17686
+
+[62] SFT or RL for Tool-Calling Agents? A Controlled Study Across Data, Method, and Scale
+中文标题：工具调用智能体的SFT还是RL？跨数据、方法与规模的受控研究
+Topics: LLM / RL
+推荐理由：研究LLM工具调用智能体的SFT与RL训练方法对比，与LLM智能体相关，但未涉及优化算法设计或组合优化等核心交叉方向。
+中文摘要：在六种规模的Qwen3模型（0.6B–32B）上，对比LoRA监督微调（SFT）、GRPO强化学习（RL）及SFT→GRPO对工具调用性能的影响：SFT/LoRA在分布内训练中最优，跨数据集迁移时各方法差距很小，GRPO略占优但优势不足1分；数据混合带来稳健的迁移能力，且LoRA优于全参数微调。 在六个Qwen3模型（0.6B至32B）上，分别评测三类适配方法：LoRA监督微调（SFT）、基于GRPO的强化学习（RL）、以及先SFT后GRPO，同时考察分布内表现与跨数据集迁移表现，并进行数据混合策略及LoRA与全参数微调的对比分析。 SFT with LoRA在整个0.6B–32B范围内均为最强的分布内方法，在18个实验设置中15个最优。跨数据集迁移上各方法更接近：GRPO在训练与测试数据集不同的54个设置中胜出29个，但相对SFT的平均优势不足1分，SFT→GRPO在两类比较中都很少最强。数据混合在不同方法下均能带来稳定强劲的迁移性，同时接近专门化的分布内训练。LoRA优于全参数微调。
+Abstract: https://arxiv.org/abs/2609.17848
+PDF: https://arxiv.org/pdf/2609.17848
+
+[62] Maximum Matching Size for Bounded Arboricity Graphs in the Dynamic Graph Stream Model using $\tilde{O}(n^{2/3})$ space
+中文标题：动态图流模型下有界荫度图最大匹配大小的\tilde{O}(n^{2/3})空间算法
+Topics: CO
+推荐理由：研究动态图流中最大匹配大小的近似算法与空间复杂度，属于组合优化中的匹配问题与流式算法设计，与自动优化算法设计方向松散相关但非核心交叉。
+中文摘要：本文提出一种单遍插入-删除图流算法，对树萌度为α的图返回最大匹配大小的(1+ε)(α+2)-近似，空间复杂度为O(ε^{-4/3}α^{4/3}n^{2/3} polylog n)，将此前最优空间界从O(n^{4/5})改进至O(n^{2/3})。 算法为单遍（one-pass）线性草图（linear sketch），针对树萌度不超过α的图。无需对删除次数或中间图树萌度做任何假设。核心思路是利用线性草图的可合并性与树萌度结构，在受限树萌度假设下压缩所需维护的信息量，从而以O(ε^{-4/3}α^{4/3}n^{2/3} polylog n)的空间实现(1+ε)(α+2)-近似估计。 对于常数α和ε，空间复杂度从先前最优的O(n^{4/5} polylog n)降低到O(n^{2/3} polylog n)。近似比达到(1+ε)(α+2)。算法为单遍线性草图，且对删除次数和中间图树萌度无额外约束。
+Abstract: https://arxiv.org/abs/2609.19136
+PDF: https://arxiv.org/pdf/2609.19136
+
+[62] Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning
+中文标题：依赖感知的轨迹精炼用于高效多轮智能体微调
+Topics: LLM
+推荐理由：研究LLM多轮智能体轨迹的精炼与微调，提升效率，与LLM智能体优化相关但未直接涉及优化算法设计。
+中文摘要：论文将多轮智能体轨迹建模为"轮级依赖DAG"，识别对最终答案全局关键的轮次，据此确定性、可解释地精炼轨迹并微调，从而在降低推理成本的同时提升准确率。 把每条轨迹视为轮级依赖DAG，以揭示哪些轮次对最终答案具有全局承重作用；在LLM标注的DAG基础上，对轨迹进行确定性、可解释的编辑（含可选改写），并用精炼后的轨迹微调智能体。 在四个多模态QA基准上，精炼轨迹训练的模型一致优于原始轨迹训练：准确率较vanilla SFT最高提升1.7个百分点（较LLM-deletion基线提升5.7个百分点），同时每样本推理消息数最多减少约40%，推理token最多减少约48%。
+Abstract: https://arxiv.org/abs/2609.18417
+PDF: https://arxiv.org/pdf/2609.18417
+
+[62] F-DACE: Fuzzy Disagreement-Aware Causal Evidence Fusion for Abstention-Safe Conversational Retail Decision Support
+中文标题：F-DACE：面向安全弃权的对话式零售决策支持的模糊分歧感知因果证据融合
+Topics: LLM Agent / Optimization
+推荐理由：使用LLM对话代理和约束优化进行零售决策支持，但核心是因果推断，与优化算法生成等核心方向仅松散相关。
+中文摘要：提出 F-DACE 决策层，将因果机器学习估计转化为推荐或弃权决策。 以因果机器学习为引擎：通过后门调整识别条件平均处理效应，用 EconML DML 因果森林与 DoWhy 线性回归估计，以双向固定效应检验，并经约束优化转为候选杠杆。F-DACE 作为决策层，将精度、倾向重叠、安慰剂反驳稳定性、区间重叠与方向一致性表达为模糊隶属度；在估计量不匹配、诊断失败、方向冲突或证据薄弱时以硬否决强制弃权。 在覆盖六种识别条件的180次面板模拟中，F-DACE 在67.2%的运行中给出决策，误推荐率为17.2%；因果森林与后门回归分别为33.3%和35.6%，与确定性一致规则相当而非占优。31次误推荐中30次发生在共同未测混杂下。零售应用中，公开 Walmart 面板聚合为45家门店的6,435个门店周，F-DACE 对五个降价指标全部弃权：部分估计不精确、一项反驳失败、MarkDown5 存在方向冲突。LangGraph 对话代理提供影响、what-if 与杠杆优化工具，确定性验证器保持因果层状态；24个实时问题达100.0%工具路由准确率、100.0%状态保真度和0.983平均依据度，10个对抗问题中抵御全部注入指令。
+Abstract: https://arxiv.org/abs/2609.18238
+PDF: https://arxiv.org/pdf/2609.18238
+
+[62] PersonaPath: Towards Knowledge-Centric Personalized Learning Path Planning
+中文标题：PersonaPath：面向知识中心的个性化学习路径规划
+Topics: LLM / Planning
+推荐理由：利用LLM进行个性化学习路径规划，属于LLM在规划/决策中的应用，与搜索优化及LLM角色相关但非核心算法设计。
+中文摘要：本文提出知识中心（KC）个性化学习路径规划任务与PersonaPath基准（2000个学习者画像+347本教材、1751个单元、4092个概念的分层知识图谱，覆盖77个学科），评测显示最强LLM在基础教育场景最终通过率仅29.5%，自适应性为核心瓶颈。 提出PersonaPath基准：构建2000个细粒度学习者画像，以及覆盖77个学科的层级知识图谱（347本教材、1751个单元、4092个概念）；规划器需综合学习者画像、掌握状态与先修知识结构，决定下一应学习哪本教材、哪个单元与哪个概念；随后在该基准上评测代表性LLM。 即使最强LLM在基础教育（Basic Education）场景下最终通过率也仅29.5%；主要瓶颈在于自适应性，即在针对个体学习者定制路径方面，没有模型超过44.7%。
+Abstract: https://arxiv.org/abs/2609.18861
+PDF: https://arxiv.org/pdf/2609.18861
+
+[62] CoRe-MARL: Cooperative Redistribution Under Unknown Dynamics Using Recurrent Multi-Agent Reinforcement Learning
+中文标题：CoRe-MARL：基于循环多智能体强化学习的未知动态下合作再分配
+Topics: RL
+推荐理由：将多智能体强化学习用于去中心化资源再分配，与RL方向相关但未涉及优化算法自动设计等核心交叉。
+中文摘要：本文提出CoRe-MARL协作多智能体强化学习框架，将应急物资再分配建模为Dec-POMDP，用循环MAPPO实现集中训练分散执行，在不确定动态下缩小区域服务差距并提升最差区域服务。 将问题建模为分散部分可观测马尔可夫决策过程（Dec-POMDP），每个中心作为一个智能体学习再分配策略，目标为改善最差区域服务、缩小区域间服务差距并保护全网服务。采用循环神经网络捕捉无法直接观测的供需动态演化，结合多智能体近端策略优化（MAPPO）实现集中训练与分散执行（CTDE）。在仿真环境中评估，且actor与MAPPO critic均无法观测精确动态。 与循环IPPO及仅本地启发式方法相比，循环MAPPO缩小了地方中心间的服务差距，提升了服务最差中心的服务水平，同时保持具有竞争力的全网服务；并在多种轨迹模式下表现一致，体现对动态演化的适应能力。
+Abstract: https://arxiv.org/abs/2609.18639
+PDF: https://arxiv.org/pdf/2609.18639
+
+[95] LLMDE: A Large Language Model-Driven Differential Evolution Algorithm for Portfolio Optimization
+中文标题：LLMDE：面向投资组合优化的大语言模型驱动差分进化算法
+Topics: LLM / EC / CO
+推荐理由：LLM驱动差分进化，动态选择变异策略和参数，属于LLM+EC+CO核心交叉，并应用于投资组合优化。
+中文摘要：本文提出大语言模型驱动的差分进化算法 LLMDE，通过提示工程让 LLM 动态选择变异策略并配置控制参数，在 CEC2022 基准与 CVaR 投资组合优化任务上验证了其有效性。 提出 LLMDE：采用提示工程策略，将优化反馈作为输入，引导大语言模型动态选择变异策略并配置控制参数，从而增强 DE 性能。在 CEC2022 基准上与标准 DE 及代表性元启发式算法对比；并先用因子分析与 K-means 聚类进行选股，再将 LLMDE 用于求解带预算和最低期望收益约束的 CVaR 投资组合优化问题。 LLMDE 在 CEC2022 基准上取得有竞争力的性能，并在复杂约束优化任务中持续生成高质量解。
+Abstract: https://arxiv.org/abs/2609.16846
+PDF: https://arxiv.org/pdf/2609.16846
+
+[88] little m: An AI Agent for Industrial Process Optimization
+中文标题：little m：面向工业过程优化的AI代理
+Topics: LLM
+推荐理由：利用LLM驱动的AI代理自动构建工业过程优化的数学模型，属于LLM用于优化建模与算法设计的重要交叉方向。
+中文摘要：提出AI智能体little m，结合领域知识库与LLM交互，将工业过程控制规格转化为数学模型，并构建IPC-Bench多模态基准（50个场景），在自动结构评估与双盲人工评估中显著优于SOTA LLM。 提出little m智能体：融合领域专用知识库与LLM驱动交互，将真实优化问题表述为数学模型；同时构建IPC-Bench——含50个典型场景的多模态数据集，需联合推理文本与过程图。 通过自动化结构评估与双盲人工评估，little m显著优于最先进LLM，能生成语义正确的模型。评估聚焦建模质量，而非求解器可行性、形式化物理有效性或闭环工业性能。
+Abstract: https://arxiv.org/abs/2609.16680
+PDF: https://arxiv.org/pdf/2609.16680
+
+[86] Spurious Tool Use: When RL Agents Learn the Wrong Reason to Act
+中文标题：伪工具使用：强化学习智能体学会错误行动原因
+Topics: LLM / RL / LLM Agent
+推荐理由：研究LLM智能体工具使用策略的强化学习优化，发现并抑制伪相关工具选择，结合LLM评判奖励，对LLM+RL及智能体控制具有直接意义。
+中文摘要：研究揭示RL训练的LLM智能体易学得"捷径式"工具选择策略（依据表面提示线索而非真实任务需求），并提出基于工具必要性判断的密集奖励加以抑制。 构建受控合成环境，结合事实问答与数学推理任务，在训练中注入与特定工具强相关但因果上无关的提示线索；通过反事实评估（线索存在但相应工具并不必要）衡量捷径行为，并进行"线索替换"分析。缓解方法为引入稠密的决策级奖励，由LLM评判器逐次评估每次工具调用的必要性。 在反事实评估中，智能体表现出显著的捷径行为，虚假工具调用率最高上升39%；捷径形成并非普遍现象——在所测条件下，仅当智能体已能可靠使用目标工具后才出现，说明任务能力比数据不平衡更关键；线索替换分析显示，线索与工具之间的语义对齐会显著放大该效应；工具必要性奖励能有效抑制线索驱动的工具使用，同时保持任务性能。
+Abstract: https://arxiv.org/abs/2609.16268
+PDF: https://arxiv.org/pdf/2609.16268
+
+[82] Bio-Inspired Palette Evolution in Indirectly Encoded Substrates: Timescale Compatibility Shapes Activation Function Discovery
+中文标题：间接编码基质中的生物启发式调色板进化：时间尺度兼容性塑造激活函数发现
+Topics: EC
+推荐理由：生物启发策略驱动进化搜索激活函数集合，属于进化计算与自动化算法/元学习设计，与EC核心方向强相关。
+中文摘要：本文把"进化过程中应使用哪些激活函数"建模为元学习问题，设计了13种激活函数集合（palette）动态调控策略，其中11种受生物适应机制启发。在3000+次实验中，生物启发策略在求解率上与调优基线相当，但收敛速度最高快2倍；策略排名随问题类型反转，且成败主要由"策略时间尺度与评估窗口是否匹配"决定。 将该问题视为元学习，设计13种在进化中修改可用激活函数集合的策略（11种受生物适应机制启发，加基线与oracle对照）。每种策略把一条生物学原理转化为进化算子，如昼夜节律启发的振荡门控按固定日程让函数进出palette，免疫启发的克隆选择则永久保护与适应度持续相关的函数。在parity与非parity问题上开展3000+次运行：先仅进化激活palette，再在更难问题上共同进化每节点聚合palette；并用新随机种子做独立复现。 独立复现确认存在稳定的高可靠性层级，Circadian居首。生物启发策略达到调优基线的求解率，但收敛快至2倍，Circadian使总计算量减半。策略排名在不同问题类型间发生反转，无单一策略在全部领域占优。策略成败主要取决于时间尺度兼容性：特征时间尺度与进化评估窗口匹配者显著优于过慢者。重标定最慢策略可绕过振荡障碍：九种解均以非振荡激活配合min或max聚合解决parity。
+Abstract: https://arxiv.org/abs/2609.17067
+PDF: https://arxiv.org/pdf/2609.17067
+
+[78] You Don't Need To Train: Agentic Heuristic Learning Studio for Executable Human Activity Recognition
+中文标题：无需训练：面向可执行人类活动识别的智能体启发式学习工作台
+Topics: LLM Agent
+推荐理由：提出智能体启发式学习框架，由LLM智能体设计可执行启发式策略，与自动化算法/启发式设计及LLM智能体优化器高度相关，但应用域为HAR，非核心CO/RL。
+中文摘要：本文提出 Agentic Heuristic Learning (AHL) Studio，一种面向人类活动识别（HAR）的非梯度学习工具：由学习期智能体在传感器协议上推理、生成可执行启发式策略、记录修复轨迹，并导出无 LLM 的边缘部署策略。 提出 AHL 用于 HAR 的工具化实现，覆盖从数据集观察到面向边缘导出的端到端流程：学习期智能体对传感器协议进行推理，提出可执行启发式策略，记录修复轨迹，并导出不依赖 LLM 的策略。 在已评估的 11 个 HAR 数据集上，AHL 策略达到较强的可执行策略性能，同时保持可检查、可编辑、可重放。
+Abstract: https://arxiv.org/abs/2609.16065
+PDF: https://arxiv.org/pdf/2609.16065
+
+[78] A Dynamic Aggregation Strategy Enhanced Efficient Global Optimization Algorithm for Solving High-Dimensional Turbomachinery Design Problems
+中文标题：动态聚合策略增强的高效全局优化算法求解高维涡轮机械设计问题
+Topics: CO
+推荐理由：提出动态聚合策略的高效全局优化算法，用于高维黑盒优化，属于自动优化算法设计与组合优化范畴。
+中文摘要：提出带动态聚合策略的高效全局优化算法DA-EGO，用于高维昂贵黑箱问题。 将高维设计空间分解为低维子空间进行代理模型优化，子空间最优解组合为精英点用于全局搜索；子空间变量每代依据子空间与全空间的变量交互分析动态更新，采用扰动法与方差分析检测交互；并依据上一代子空间优化结果自适应调整搜索范围。 在7个函数、30/60/90维共21个基准实例上，1500次评估预算内对可分离与部分可分离问题有效；非可分离移位Rosenbrock函数上优势依赖情形，60与90维GSGA更优，30维与IKAEA、GSGA统计相当；在28变量跨声速转子叶片与60变量压气机级气动优化中亦显示优势。
+Abstract: https://arxiv.org/abs/2609.16067
+PDF: https://arxiv.org/pdf/2609.16067
+
+[78] Agentic Search Spaces for Tabular Machine Learning
+中文标题：面向表格机器学习的智能体搜索空间
+Topics: LLM
+推荐理由：利用LLM智能体为表格模型设计扩展HPO搜索空间，属于LLM智能体用于自动化优化算法/超参搜索设计，与自动算法设计方向相关。
+中文摘要：本文将表格模型表示为模块化流水线，让LLM智能体为各模块提出候选实现，再用经典HPO算法在候选与默认超参上联合优化；扩展后的搜索空间在45个数据集上普遍提升性能，并迁移至TabArena基准。 将每个表格模型表示为覆盖预处理、嵌入、架构、训练与推理的模块化流水线；令智能体为每个模块提出候选代码实现；随后使用经典HPO算法在这些候选与模型默认超参数上进行联合优化，并与基础HPO空间比较。 相比基础HPO空间，扩展搜索空间在45个数据集上几乎提升每个模型族的表现，平均相对增益0.6%，在中小规模回归数据集上升至2.0%；且未增加额外调参成本，在相同调参与集成预算下仍优于基础空间。增益可迁移至TabArena基准：智能体搜索空间提升了5个模型族中4个的官方Elo分数，且两个最强的智能体集成超过由常规模型构成的最佳AutoGluon集成。
+Abstract: https://arxiv.org/abs/2609.16309
+PDF: https://arxiv.org/pdf/2609.16309
+
+[78] ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents
+中文标题：ScienceBuddy：面向交互式科学智能体的递归中递归自我改进
+Topics: LLM / RL / Automated Algorithm Design
+推荐理由：提出递归自我改进框架，结合模型强化学习与harness演化，用于科学智能体的持续学习与自动改进，属LLM+RL及自动化设计交叉。
+中文摘要：本文提出并发布 ScienceBuddy，一个交互式科研工作空间，将持续改进的科学智能体嵌入研究者日常流程，并用其请求、反馈与执行证据构建训练任务与评分标准，从而支撑递归式自我改进范式。 提出 recursive-in-recursive self-improvement 范式，将 harness evolution 与模型强化学习耦合：内层递归在模型固定下改进 harness，外层递归在改进后的 harness 下训练模型；并将研究者的请求、反馈和执行证据转化为任务与评估 rubric。以四类科学任务家族的基准案例开展案例研究。 展示了研究者交互、harness refinement 与 model learning 的案例研究，基准案例覆盖四个科学任务家族。
+Abstract: https://arxiv.org/abs/2609.17523
+PDF: https://arxiv.org/pdf/2609.17523
+
+[78] Learning-Guided Planning in Large Dynamic Action Spaces: Budgeted Tree Search for One-to-Many Mobile Charging
+中文标题：学习引导的大动态动作空间规划：一对多移动充电的预算树搜索
+Topics: RL / Search / Planning / Learning to Optimize
+推荐理由：学习引导的预算树搜索与规划，将学习策略与PUCT搜索结合处理大动态动作空间，属于强化学习/搜索与优化规划交叉，但未涉及LLM或CO算法生成。
+中文摘要：LP-BTS 是一种学习引导的规划架构，通过图提议策略、学习价值评论家和边预算 PUCT 在大型动态动作空间（移动充电场景）中做序贯决策，单一冻结检查点即可覆盖 736–2,813 个候选动作，并在密封确认集上取得最高存活率与 alive-AUC。 LP-BTS 包含三个组件：图提议策略将候选支撑集集中为小规模候选；学习价值评论家对叶节点进行估值；边预算 PUCT 在提交动作前对短程模拟未来进行比较。由于策略对该集合评分时不依赖固定输出头，单一冻结检查点即可覆盖所有评估设置。研究还进行了匹配消融，并使用前瞻性指定、密封的 30 场景确认库进行一次评估。 消融显示：均匀采样损失 8.8 个百分点存活率；在固定目标支撑集下，PUCT 联合保留 1.4 个百分点（约 250 个传感器中的 3.5 个）；直接策略选择行驶距离远 23%。在密封确认库上，LP-BTS 取得最高观测存活率 0.4545 与 alive-AUC 0.8031；相较最强领域工程对照，存活优势估计为 +0.0066（95% CI [-0.0037, +0.0184]），差异未定；但在每个配对场景上均超过截止期限启发式及两种源自直接策略重建的方法。
+Abstract: https://arxiv.org/abs/2609.17429
+PDF: https://arxiv.org/pdf/2609.17429
+
+[75] Bridging Learned Visual Perception and Symbolic Belief-Space Planning
+中文标题：桥接学习视觉感知与符号信念空间规划
+Topics: LLM / Planning
+推荐理由：利用VLM进行符号接地与信念空间规划，使LLM/VLM在规划中发挥实质性作用，与LLM用于优化和规划的核心兴趣相关。
+中文摘要：提出"VLM作为概率接地器"新范式，将VLM谓词接地的置信度建模为符号状态上的概率分布，实现信念空间规划，在部分可观测场景下提升鲁棒性与任务成功率。 提出第三种范式 VLM-as-probabilistic-grounder：将VLM对谓词的接地结果表示为符号状态上的概率分布，而非确定性谓词集合，从而使规划器可在信念空间中进行规划，生成不确定性下的鲁棒计划。 在模拟家庭机器人环境中，相比确定性接地方法，所提方法在鲁棒性和任务成功率上均有提升。
+Abstract: https://arxiv.org/abs/2609.16884
+PDF: https://arxiv.org/pdf/2609.16884
+
+[74] GPEvac: GNN-Based PPO for Adaptive Evacuation Routing During Shooting Events
+中文标题：GPEvac：基于GNN的PPO用于射击事件中的自适应疏散路径规划
+Topics: RL / Optimization
+推荐理由：提出GNN+PPO的自适应疏散路由框架，属于将强化学习用于图上组合式路径规划的决策优化问题，与RL与优化交叉方向相关，但未涉及LLM或进化计算。
+中文摘要：提出GPEvac：基于GNN的PPO框架，在枪击事件中实时计算自适应疏散路径，跨建筑布局泛化，14.73ms内完成全局路径规划。 GPEvac：GNN+PPO框架。引入edge-first顺序消息传递机制与可学习的虚拟全局节点，以捕捉局部与长程依赖；将图嵌入整合进置换不变的评分机制，使单一学习策略可适用于不同拓扑与规模的建筑布局。 大量仿真表明，GPEvac在不同建筑布局下优于智能基线，显著降低总威胁暴露；在本地CPU硬件上仅需14.73ms即可计算全局疏散路径，可无缝接入实时监控系统。
+Abstract: https://arxiv.org/abs/2609.16163
+PDF: https://arxiv.org/pdf/2609.16163
+
+[72] Improved Approximation for Unsplittable CVRP via a Greedy Approach
+中文标题：基于贪心方法的不可拆分CVRP改进近似算法
+Topics: CO
+推荐理由：针对不可拆分容量车辆路径问题的贪心近似算法设计，属于组合优化与启发式算法设计方向。
+中文摘要：本文提出了针对度量不可分割容量车辆路径问题（CVRP）的多项式时间 3.159-近似算法。 基于Traub（2025）的相对贪婪算法，核心创新为平均贪婪算法（Average Greedy Algorithm），可同时控制路径成本与高需求客户的覆盖；再结合路径划分变体与匹配算法。 得到多项式时间的 3.159-近似算法。
+Abstract: https://arxiv.org/abs/2609.16910
+PDF: https://arxiv.org/pdf/2609.16910
+
+[72] High-Multiplicity Bin Packing is FPT
+中文标题：高多重集装箱问题是固定参数可解的
+Topics: CO
+推荐理由：研究高多重集装箱问题的参数化算法，属于组合优化基础算法设计，与自动算法设计相关但未涉及LLM/EC/RL。
+中文摘要：该论文解决了高多重集装箱问题在d个不同物品尺寸参数下的FPT可解性（此前为公开难题），给出了确定性O*(2^{d^{O(d)}})时间算法。 将装箱问题建模为整数线性规划（ILP），变量数至多(d+1)d^d。以“箱配置”（bin configuration，记录单个箱中各类型物品数量）为基础，按各坐标对d取模的余数对配置分类；每类用一个变量表示箱数、d个变量表示物品总数，并利用每类凸包的整数分解性质（integer decomposition property），保证每个可行ILP解对应一个合法装箱。 给出确定性O*(2^{d^{O(d)}})时间算法，证明了高多重集装箱问题在参数d下是FPT的，正面回答了该开放问题。
+Abstract: https://arxiv.org/abs/2609.16923
+PDF: https://arxiv.org/pdf/2609.16923
+
+[72] PrecPack: An Efficient Open-Source Exact Solver for Bin Packing with Generalized Precedence Constraints
+中文标题：PrecPack：一种高效的开源精确求解器，用于带广义优先约束的装箱问题
+Topics: CO
+推荐理由：提出针对广义优先约束装箱问题的精确求解器，属于组合优化算法设计与改进，与自动算法设计方向相关。
+中文摘要：本文提出 PrecPack，一个面向带广义优先级约束的装箱问题（BPP-GP）的统一精确求解器，扩展了分支-界定-记忆（BBR）方法，支持任意非负优先级权重，并开源发布。 提出 PrecPack，将 BBR 扩展到任意非负优先级权重，并自然退化为经典情形；采用广义状态刻画跨箱仍然有效的约束，并通过分支、支配和冲突感知下界处理；根节点列生成使用定点算术计算数值有效的对偶界用于剪枝或证明最优性；提供通用编程与命令行接口、独立分配校验、显式终止状态和可复现批量执行，核心流程不依赖商业软件。 在同机单线程的经典装配线基准上，相较领先的开源 BBR 实现，更多实例被证明最优且平均计算时间显著缩短；与已有的带优先级装箱及 BPP-GP 基准结果比较，在多数基准集上更多实例被证明最优，报告的平均 gap 更小。
+Abstract: https://arxiv.org/abs/2609.17368
+PDF: https://arxiv.org/pdf/2609.17368
+
+[72] Rewarding Reasoning, Not Answers: Fixing and Bounding Test-Time Reinforcement Learning on Medical QA
+中文标题：奖励推理而非答案：修复并界定医学问答中的测试时强化学习
+Topics: RL / LLM
+推荐理由：研究测试时强化学习在医学QA上的失败与改进，提出过程奖励引导的自训练，属于LLM+RL的优化方法，但非核心算法设计。
+中文摘要：该论文发现测试时强化学习在医学多选题问答上因答案空间结构问题而失效，并提出以过程奖励引导的自训练方法PROSE替代答案一致性奖励。 作者保持问题、模型与优化器不变，仅改变答案空间进行控制实验，将失败归因于答案空间结构而非领域难度：小答案空间中错误轨迹易碰撞到同一错误伪标签并被强化，大答案空间中错误轨迹分散且获得极少奖励。据此提出PROSE（过程奖励引导的自训练）：用医学过程奖励模型对每个推理步骤打分，以各步骤最低分作为轨迹奖励，并施加答案格式约束。 在无标签条件下，PROSE显著提升通用Llama模型，超过专用医学模型并匹敌更大规模系统。由于过程信号被内化进策略，适配后模型推理时无需奖励模型，且增益可迁移到未见数据集。消融显示最小聚合至关重要：均值聚合可被利用，在代理奖励饱和的同时降低准确率。
+Abstract: https://arxiv.org/abs/2609.16660
+PDF: https://arxiv.org/pdf/2609.16660
+
+[72] Smarter by the Moment: Environment-Driven Dynamic Policies for Continual LLM Improvement
+中文标题：随环境而动：面向LLM持续改进的环境驱动动态策略
+Topics: LLM / RL
+推荐理由：提出基于检索与反馈动态生成任务策略的LLM持续改进框架，与LLM驱动策略设计相关，但未直接涉及组合优化或进化计算。
+中文摘要：本文提出DRPG框架，将基于记忆的检索与动态策略生成器结合，利用历史数据和环境反馈生成任务特定策略，实现LLM的持续改进，在六个基准上优于强基线。 DRPG（Dynamic Retrieval-based Policy Generation）：整合基于记忆的检索与动态策略生成器，利用历史数据和环境反馈产生任务特定的策略，用于LLM的持续提升。 在涵盖text-to-SQL、问答、医疗诊断和Python编程的六个基准上，使用来自专有与开源家族的七种LLM进行评估；DRPG在大多数数据集和模型上优于强基线。策略生成对检索策略具有鲁棒性，无需先验策略连续性即可有效运行，并可使用更小或跨家族模型作为高性价比的策略生成器。
+Abstract: https://arxiv.org/abs/2609.16800
+PDF: https://arxiv.org/pdf/2609.16800
+
+[72] ImpossibleRubrics: Stress-Testing Generated Rubrics as Reward Signals
+中文标题：不可能评分准则：压力测试生成的评分标准作为奖励信号
+Topics: LLM / RL
+推荐理由：研究LLM生成评分准则作为奖励信号的鲁棒性，属于LLM+RL奖励设计交叉，且涉及对抗性优化评估。
+中文摘要：论文提出 ImpossibleRubrics 基准（169 个不可解任务 + 48 个可解对照），以可验证的 oracle 证书刻画"诚实答案"，从而在下游生成并对抗性测试评分细则。实验显示 11 个生成器中有 8–26% 的情况被利用以奖励违规答案，强生成器在压力子集上仍被利用 36%，而忠实于证书的细则被利用率为 0%；一个通用"果断、惩罚含糊"细则反而被利用 64%，说明问题在于细则对错误事项过于具体。 构建 ImpossibleRubrics 基准：169 个不可解任务，覆盖六类不可能性，每个任务配可验证的 oracle 证书，规定诚实答案可主张与不可主张的内容，另含 48 个可解对照。基准不提供固定细则，而是提供任务环境与证书，允许在上下游生成细则，再进行对抗性测试，检验细则是否会奖励违反证书的答案。评估 11 个细则生成器，并在无偏子集（169 中的 150）与刻意选取的压力子集上比较，同时以"忠实证书的细则"作为上界对照。 在无偏的 150/169 环境切片上，11 个生成器被利用率为 8–26%；在刻意选取的压力切片上，所测最强生成器仍被利用 36%，而忠实于证书的细则被利用率为 0%，表明所测为细则质量差距而非任务本身不可能。反直觉结果：一个对所有任务统一使用的通用细则（"要果断、惩罚含糊"）被利用 64%，且 11 个生成器中有 7 个在针对每个任务量身定制细则时被利用的频率高于该值。
+Abstract: https://arxiv.org/abs/2609.16816
+PDF: https://arxiv.org/pdf/2609.16816
+
+[72] Never Stop Thinking: Continuous-Time Language Agents
+中文标题：永不停歇的思考：连续时间语言智能体
+Topics: LLM / RL
+推荐理由：研究LLM智能体的持续思考能力与在线策略RL训练信号设计，属于LLM与强化学习交叉方向，对智能体优化有参考价值。
+中文摘要：本文提出用轻量级"中断-恢复"编排器让未修改的文本模型实现连续时间认知（边听边想、边说边想），将实时流水线延迟降低19%（目标场景减半）；同时提出ReactiveBench基准（120个交互场景+可验证流式赛道），揭示LLM评审偏爱"可见推理"的陷阱，并通过五阶段训练研究证明：只有在可验证目标、类型化奖励塑形与on-policy RL的共同作用下，连续思考才真正提升任务完成度。 1) 提出轻量级中断-恢复（interrupt-and-resume）编排器，在未修改的文本模型上实现连续时间认知；2) 构建ReactiveBench：120个交互场景，按预注册的二元需求打分，并设可验证流式赛道以精确正确率计分；3) 开展五阶段训练研究，从信号来源、奖励结构、优化器三个层面定位有效信号，比较偏好优化与基于类型化奖励的on-policy RL。 编排器使实时流水线整体延迟降低19%，在目标场景中降低约一半。ReactiveBench揭示：LLM评审对连续思考给出的大幅"优势"在独立评审下符号反转，且经评审器训练的模型在思考时客观完成的需求更少。训练研究发现：可验证目标使思考由有害转为有益；统一奖励所遗漏的部分会被优化牺牲，一味追求简洁会削弱多跳工具链；偏好优化只能在冲突子目标间权衡，而基于类型化奖励的on-policy RL可同时提升各正确性维度，将流式完成率从48%提升至73±5%（跨随机种子），并在更大规模及第二个模型上复现。
+Abstract: https://arxiv.org/abs/2609.17416
+PDF: https://arxiv.org/pdf/2609.17416
+
+[72] World Model Science: Self-Organized Criticality, Weak Chaos, and Metastable Belief Dynamics in Long-Horizon LLM Agents
+中文标题：世界模型科学：长程 LLM 智能体中的自组织临界性、弱混沌与亚稳态信念动力学
+Topics: LLM
+推荐理由：研究长程 LLM 智能体状态维护与轨迹动力学，属于 LLM 智能体相关方向，但与优化/进化/组合优化的核心交叉较弱。
+中文摘要：本文从自组织临界性、弱混沌与亚稳信念动力学三个视角研究长时程LLM智能体的轨迹动力学，通过对22组实验的系统诊断发现局部有效动作可能在全局状态失真后仍持续、应力可引发突变崩溃、误差序列具有长记忆性、依赖深度改变传播机制，但发散保持有界，信念状态呈亚稳态而非完全混沌，且不支持普适幂律或临界点的强主张。 将智能体隐含状态与基准真实状态对齐，在显式零模型下测量应力累积、误差雪崩、时间依赖性、局部-全局失配、有界发散、信念盆地跃迁与有限尺度标度；实验覆盖受控谜题、工具使用、具身任务、多跳检索、通用助手推理及生命游戏共22组实验。 局部有效动作可在全局状态保真失败后持续；应力可触发突变崩溃；误差序列呈现长记忆；依赖深度改变传播机制；更长时程支持更大雪崩。同时发散保持有界，信念状态呈亚稳态而非完全混沌，普适幂律、临界点或共享干预最优等强主张缺乏支持。
+Abstract: https://arxiv.org/abs/2609.17419
+PDF: https://arxiv.org/pdf/2609.17419
+
+[72] Easy to Catch a Liar, Hard to Clear an Honest One: Language Models Diagnosing a Corrupted Reward Channel from a Verified Record
+中文标题：抓说谎者易，辨诚实者难：语言模型从验证记录诊断损坏的奖励通道
+Topics: LLM / RL
+推荐理由：探究LLM在强化学习奖励诊断中的推理失败，与LLM+RL交叉相关，对LLM作为优化器/诊断器有启示。
+中文摘要：论文考察冻结的大语言模型能否利用"关于回报报告者本身的额外数据"来区分"世界变化"与"报告者撒谎"。在两种情形成字节级相同历史的博弈中，仅加入一行经核实的独立记录即可在理论上定案。三个大模型几乎总能识破撒谎者，但极少为诚实者开脱：72B模型在毫无变化时38%、回报变动时58%误判诚实者为骗子，且关键表面特征随模型家族而异。 构建一个双选项博弈：其中一个条件发生收益置换（payout swap），另一个条件是报告者在撒谎，二者的历史记录逐字节相同。再向提示中加入一条经核实的独立记录——对某一轮真实结果的独立检查，与该轮报告者的说法并列展示，理论上这一行足以定案。随后要求来自两个家族（Qwen、Llama）的三个大模型（72B/70B、32B等）以单个字母回答一个问题："报告者是诚实还是撒谎？"并通过变化轮次、字母映射（哪个字母代表"诚实"）和措辞进行多条件测试。 模型几乎完美地识别出撒谎的报告者：70B级别在所有尝试条件下均成立，32B模型仅在某一种措辞下失手。相比之下，模型为诚实报告者澄清的频率低得多，且受不应相关的因素影响。平均而言，72B模型在毫无变化时38%、在收益变动时58%地将诚实报告者称为骗子；另一家族的70B模型对应比例为26%与48%。这一失败并非阅读能力问题：在"毫无变化"的情形中，当答案已直接印在提示里时，同批模型得分为0.96–1.00。驱动误判的表面特征因家族而异：Qwen模型取决于记录所指的轮次，Llama则取决于哪个字母代表"honest"。对Llama而言，把该记录加入已明确给出答案的提示，反而降低其给出该答案的概率。作者在实验前对该58%的预注册预测为35%。
+Abstract: https://arxiv.org/abs/2609.17226
+PDF: https://arxiv.org/pdf/2609.17226
+
+[68] Optimal Model Activation Policies for Inference Networks of Large Language Models
+中文标题：大型语言模型推理网络的最优模型激活策略
+Topics: LLM / Optimization
+推荐理由：研究多LLM推理网络的成本-性能最优激活策略，属于LLM推理路由与优化问题，与LLM优化控制方向相关，但未涉及EC/RL/CO算法设计。
+中文摘要：本文提出"推理网络"（inference networks）这一基于图的框架，将多个LLM作为节点、条件激活作为边，研究如何以最优拓扑在成本-性能权衡下协同使用专家LLM。针对串行专家链这一基础拓扑，证明最优激活策略具有阈值结构，并给出阈值计算方法与置信度估计机制。 提出推理网络——一种图框架，节点表示不同LLM，边表示条件激活；核心问题是确定最优拓扑以最佳应对成本-性能权衡。从串行专家链这一基础拓扑出发（各模型成本与专业水平不同，专业水平由模型置信度刻画），将最优激活问题形式化为在满足目标性能约束下最小化期望推理成本。 证明该特殊类推理网络的最优激活策略具有阈值结构：先查询成本最低的LLM，仅当置信度低于某阈值时才调用更昂贵的模型。对判别式任务，最优策略为一组阈值（每类一个阈值）；对生成式任务，则为单一阈值。给出计算阈值的有结构方法，以及面向两类任务的实用置信度估计机制。开源LLM实验显示，在满足指定性能预算的同时实现了显著的成本降低。
+Abstract: https://arxiv.org/abs/2609.15992
+PDF: https://arxiv.org/pdf/2609.15992
+
+[68] Joint UAV Activation and Placement for Post-Disaster Wireless Restoration via a Hybrid Quantum-Inspired Evolutionary Framework
+中文标题：基于混合量子启发式进化框架的灾后无线恢复中无人机联合激活与部署
+Topics: EC / CO
+推荐理由：提出量子启发式进化算法求解无人机部署约束优化问题，属于进化计算与组合优化的交叉应用。
+中文摘要：提出HKQEA混合算法求解灾后无人机空中基站的联合激活与连续空间部署问题，在满足覆盖与最小间距约束下最小化无人机数量，最佳可行解为8架。 提出混合K-means量子启发式进化算法（HKQEA），融合K-means引导初始化、校准型惩罚可行性目标、非精英进化搜索与量子启发式学习更新。基于50次独立运行进行实验，并与NSGA-II、PSO及HKQEA的精英变体对比，另附采购级成本分析。 50次独立运行中HKQEA取得的最佳全可行解为8架无人机；平均覆盖率为98.94%、非重叠率为99.94%、最小距离满足率为99.68%。对比表明其在探索、收敛行为与可行性保持之间取得更优平衡；成本分析显示机队由10架减至8架可降低20%硬件数量，对应25%的简化节省比例。
+Abstract: https://arxiv.org/abs/2609.16019
+PDF: https://arxiv.org/pdf/2609.16019
+
+[68] Managing Action Preconditions in Neuro-Symbolic RL: Three Placement Strategies for Embodied Agents
+中文标题：神经符号强化学习中的动作前置条件管理：具身智能体的三种放置策略
+Topics: RL / Planning
+推荐理由：神经符号RL中注入符号前置知识，涉及规划与策略学习，与RL优化及知识引导优化相关，但未涉及LLM/EC/CO核心交叉。
+中文摘要：该论文将行为知识形式化为关于"结构动作"的前置条件贝叶斯网络，并在强化学习循环的三个位置（符号验证器、符号执行器、符号学习器）注入该知识，在MiniGrid与Fetch两套基准上验证了在解质量、样本效率与可追溯性上的显著收益。 将行为知识形式化为定义在智能体"结构动作"（合法性依赖前置条件的动作，如拾取钥匙、抓取物块、开关门、放下物体）之上的前置条件贝叶斯网络（BN），用以约束这些动作的触发条件。将该BN在RL循环的三个位置注入：(1) 符号验证器，仅在推理时调用，当结构动作前置条件满足时触发；(2) 符号执行器，训练与推理阶段均生效，全程约束结构动作的使用；(3) 符号学习器，把知识融入网络，使智能体自行学习结构动作的限制与使用方式。在两类机制相反的基准（MiniGrid长程有序规划链、Fetch连续操作）上开展实验，并与强基线在解质量、样本效率与可追溯性上对比。 在MiniGrid上，三种注入方式相对PPO+RND基线均提升了解质量，其中符号执行器最高达98.2%，基线为88.8%。Fetch上的结果摘要文本被省略（"…"），未给出具体数值。
+Abstract: https://arxiv.org/abs/2609.16056
+PDF: https://arxiv.org/pdf/2609.16056
+
+[68] ViCo: Visual-oriented Coding with Self-Reflection for Chart Replication
+中文标题：ViCo：面向图表复现的自反思视觉导向编码
+Topics: LLM / RL
+推荐理由：面向LLM编码智能体的自反思与多步强化学习训练，涉及MCTS与奖励设计，但与组合优化/进化算法等核心方向关联较弱。
+中文摘要：ViCo：面向可视化的代码训练框架，通过迭代反思使生成图表逐步对齐参考图，结合自监督预热与多步强化学习，在8B模型上接近专有LLM水平。 1) 自监督预热阶段：在蒙特卡洛树搜索中引入基于一致性的剪枝，合成高质量反思轨迹，确保每步编码严格遵循先前反思结果；2) 多步RL算法：使用反事实基线估计每个精炼周期内反思步骤与动作步骤的优势，缓解奖励稀疏；3) 自动多维度评估框架：基于分层异构布局图结构评估图表的风格、布局与语义一致性，实现大规模训练中的高效奖励计算。 在三个公开基准上，经训练的8B模型ViCo性能接近具备充分反思能力的专有LLM。
+Abstract: https://arxiv.org/abs/2609.16014
+PDF: https://arxiv.org/pdf/2609.16014
+
+[68] Metacognitive Steering: Learning the Structure of Scientific Judgment
+中文标题：元认知引导：学习科学判断的结构
+Topics: LLM
+推荐理由：研究LLM推理过程的推理时控制和认知状态调节，可迁移至LLM作为优化器/设计者的过程控制，与LLM智能体用于设计优化弱相关。
+中文摘要：该论文提出从科学家交互轨迹中恢复过程级科学判断信号，用于控制冻结前沿模型的内部计算，并提出Metacognitive Steering推理时控制器，实现对探索、执行与再评估三种认知模式的动态调控。 利用真实科研过程中采集的对比干预数据，识别模型内部协调的低维控制结构；通过残差分析、注意力权重子空间对齐与跨层奇异值分解，定位中层深度的控制面；提出Metacognitive Steering——一种读取模型认知状态并动态组合层级干预的推理时控制器，不修改模型参数。 行为分析显示该方法带来更持续的探索、显式的剪枝与证据响应的综合过程；在Columbus-1自主研究系统中，发现并独立复现了BlueZ中八个可达漏洞，并完成十英尺火箭的设计、仿真与制造，该火箭拟用不可节流固体发动机实现推进着陆。
+Abstract: https://arxiv.org/abs/2609.16245
+PDF: https://arxiv.org/pdf/2609.16245
+
+[68] Retrieval-Driven Memory Reconsolidation for Long-Term LLM Agents
+中文标题：面向长期LLM智能体的检索驱动记忆重巩固
+Topics: LLM / Search
+推荐理由：面向LLM智能体的长期记忆重构与自适应图搜索组合，涉及检索驱动优化与搜索机制，与LLM智能体及搜索优化方向相关，但未直接聚焦组合优化或算法自动设计。
+中文摘要：提出 REALM 框架，将长期记忆建模为持续生命周期，通过异质认知图、自适应图搜索原子与检索驱动的记忆再巩固实现记忆自主演化，在 LoCoMo 与 LongMemEval 上分别达 75.97% 和 65.11% 准确率。 受认知神经科学中记忆再巩固启发，提出 REALM（再巩固-演化智能体长期记忆）框架：将长期记忆建模为持续生命周期，自主将记忆组织为异质认知图，通过自适应组合的图搜索原子检索证据，并基于检索反馈持续对记忆进行再巩固。 在 LoCoMo 上平均准确率 75.97%，在 LongMemEval 上 65.11%，分别超越最强基线 7.17 和 1.31 个百分点；消融实验证实记忆再巩固稳定提升性能；进一步分析发现再巩固会逐步将相关记忆单元重组为更连贯的局部结构，以支持推理中的集体证据召回与利用。
+Abstract: https://arxiv.org/abs/2609.16053
+PDF: https://arxiv.org/pdf/2609.16053
+
+[68] Integrating the Analytic Hierarchy Process with Large Language Models for Transparent Multi-Criteria Decision-Making
+中文标题：将层次分析法与大语言模型结合实现透明的多准则决策
+Topics: LLM
+推荐理由：将LLM与层次分析法结合实现可解释多准则决策，属于LLM驱动的决策/优化过程，与LLM作为优化器/控制器有一定交叉但非核心自动算法设计。
+中文摘要：该研究将大语言模型（LLM）引入层次分析法（AHP）决策流程，构建了基于 AHP 的标注基准，并提出首个端到端方法使 LLM 能够完成完整 AHP 工作流，在法律与高等教育排名等真实决策问题中显著提升与专家判断的一致性。 选取经典多准则决策框架——层次分析法（AHP）作为研究载体；构建新的基于 AHP 的标注基准；提出首个端到端方法，使 LLM 能够执行完整的 AHP 工作流。 在法律和高等教育排名领域的真实决策问题上，该方法显著提升了 LLM 输出与专家判断的一致性。
+Abstract: https://arxiv.org/abs/2609.16779
+PDF: https://arxiv.org/pdf/2609.16779
+
+[68] Self-Emergence Agent Architecture:Behavior-Inertia HMM, Reflexive Metacognition,and Social-Contrastive Self-Modeling
+中文标题：自涌现智能体架构：行为惯性HMM、反思式元认知与社会对比自我建模
+Topics: LLM
+推荐理由：提出LLM多智能体自演化架构，含反思与状态更新闭环，与LLM智能体优化设计相关，但未直接涉及组合优化或算法自动设计。
+中文摘要：本文提出"自我涌现智能体架构"(SEAA)，将隐马尔可夫模型的行为惯性、Reflexion式语言元认知循环与多智能体社会环境整合为闭环，使初始相同的智能体自发分化出稳定人格与社会结构，并从庄子式认识论立场只研究可观测的行为涌现。 SEAA由三个组件构成闭环：(i) 隐马尔可夫模型(HMM)，以可编辑的状态转移矩阵编码长期行为与认知惯性；(ii) Reflexion式语言元认知循环，其输出直接更新HMM参数而非仅存为文本；(iii) 多智能体社会环境，初始相同的智能体持续与他人比较。闭环为：社会行动→反馈→自我反思→惯性更新→差异化行动。作者提出三个可证伪假设，并给出可复现实验协议与操作化指标；采用无语言模型的原型验证，并用托管LLM进行实验。 无语言模型原型显示该闭环自发打破对称性：初始相同的智能体固化为彼此不同且稳定的人格，而匹配对照组不会。托管LLM实验中，这些差异表现为不同的第一人称自我叙事；五智能体审议自发形成社会结构——一个共识中心与一个被全体排斥的边缘者，对照组中不存在此现象。
+Abstract: https://arxiv.org/abs/2609.17331
+PDF: https://arxiv.org/pdf/2609.17331
+
+[68] FlashVector: Agent for Hierarchical Model Serving Stack Optimization
+中文标题：FlashVector：面向分层模型服务栈优化的智能体
+Topics: LLM Agent / Optimization
+推荐理由：使用LLM智能体自动化优化模型服务栈中的系统与算子性能，属于LLM智能体用于性能优化与自动算法/系统调优，与自动优化方向相关，但非经典组合优化或进化算法核心。
+中文摘要：该论文提出 FlashVector，一个可扩展的 agentic 系统，将单 GPU 内核优化范式推广到整个模型服务栈，在广告推荐生产环境中实现最高 2 倍吞吐提升与 1.98 倍延迟加速。 提出 FlashVector，一个 agentic 系统，核心是一个可扩展框架，将单内核优化 agent 范式泛化到异构技术栈，从而对模型服务全层进行整体性性能优化，覆盖 GPU 内核、计算图、模型服务器（NVIDIA Triton 的 C++ 代码库）以及按需特征变换服务（Python 代码库）。 在 Unity 的 Vector 广告平台部署后，FlashVector 在模型服务器上取得最高 2 倍吞吐提升和最高 1.98 倍延迟加速，在特征存储上取得最高 1.6 倍吞吐提升；优化不仅出现在 GPU 内核与计算图层，也出现在模型服务器和按需特征变换服务等其他组件中。
+Abstract: https://arxiv.org/abs/2609.17391
+PDF: https://arxiv.org/pdf/2609.17391
+
+[68] Reduced-Space Multi-Fidelity Bayesian Optimization of Process Simulation Models
+中文标题：过程仿真模型的降维多保真度贝叶斯优化
+Topics: CO
+推荐理由：面向高维昂贵黑盒函数的贝叶斯优化框架，结合降维与多保真度方法，属于自动优化算法设计范畴，与组合优化/优化算法研究相关。
+中文摘要：提出RS-MFBO框架，结合全局敏感性分析降维与保真度增强高斯过程，并采用成本感知采集策略，在工业过程模拟器上大幅减少高保真评估次数。 RS-MFBO将GSA用于降维，构建捕捉低保真近似与高保真评估相关性的保真度增强高斯过程，并设计带cooldown与promotion机制的成本感知采集策略，自适应分配不同保真度的采样。 在SuperPro Designer的质粒DNA生物过程与Aspen HYSYS的绿色燃料合成装置上验证，面向多种经济与物理目标，显著减少高保真模拟器评估次数，且优化性能与单保真基线相当。
+Abstract: https://arxiv.org/abs/2609.17440
+PDF: https://arxiv.org/pdf/2609.17440
+
+[65] Determinant maximization subject to a partition matroid constraint via stable distributions
+中文标题：基于稳定分布的划分拟阵约束下行列式最大化
+Topics: CO
+推荐理由：研究划分拟阵约束下的行列式最大化，属于组合优化的近似算法设计，与核心兴趣中的组合优化方向相关，但未涉及LLM/EC/RL等交叉点。
+中文摘要：本文研究在划分拟阵中选取独立集以最大化所选向量构成矩阵行列式的问题，给出多项式时间近似算法，达到 e^{-O(d)} 的近似比，并推广至秩 m≤d 的 m 维体积近似（因子 e^{O(m)}）。 基于 Nikolov 和 Singh 提出的鞍点松弛，并引入基于 1/2-稳定分布的随机变换，将鞍点松弛转化为更易处理的多线性松弛。 算法可在多项式时间内找到集合 I，使得 det(∑_{i∈I} v_i v_i^T) ≥ e^{-O(d)} OPT；对秩 m≤d 的划分拟阵，可在 e^{O(m)} 因子内近似所选向量张成的 m 维体积。
+Abstract: https://arxiv.org/abs/2609.17407
+PDF: https://arxiv.org/pdf/2609.17407
+
+[65] End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services
+中文标题：面向智能体AI服务中边缘LLM推理的端到端延迟最小化与负载均衡请求调度
+Topics: LLM / RL
+推荐理由：面向边缘LLM推理的在线请求调度，用Lyapunov优化与延迟奖励重分配（类RL信号）做决策，属LLM系统优化但非核心算法设计方向。
+中文摘要：本文提出面向边缘LLM推理的在线请求调度框架LYREO，通过跨时隙推理建模与Lyapunov优化，联合最小化长期平均端到端时延并均衡服务器负载。 论文首先提出跨时隙推理模型，刻画传输、预填充（prefill）、逐迭代解码（iteration-level decoding）及KV缓存演化，并用KV缓存内存-时间消耗度量刻画服务器负载。随后提出LYREO方法：通过Lyapunov优化将长期负载均衡约束转化为可在线求解的问题，并采用奖励重分配（reward redistribution）与基于序列的回报预测（sequence-based return prediction），将延迟反馈的滞后结果转化为对早期决策的及时学习信号。 在多种配置下的仿真表明，LYREO相比代表性学习类与启发式基线方案，持续实现更低时延与更均衡的负载分布。
+Abstract: https://arxiv.org/abs/2609.17193
+PDF: https://arxiv.org/pdf/2609.17193
+
+[65] Intrinsic Motivation in Reinforcement Learning: A Research Agenda for Adaptive Self-Organisation
+中文标题：强化学习中的内在动机：面向自适应自组织的研究议程
+Topics: RL
+推荐理由：探讨强化学习中的内在动机与自适应自组织，属于RL优化方向，但与CO/LLM/EC等核心交叉点关联有限。
+中文摘要：这是一篇观点/教程文章，探讨无共享外部目标时，内在奖励能否支撑人工神经系统的适应、功能特化与更高层次自组织，并综述相关方法、失败模式与三个实验方向。 采用观点/教程式综述：梳理并讨论多种内在奖励机制，包括赋权（empowerment）、好奇心、学习进展、信息增益、无监督技能发现、互信息估计，以及用世界模型计算内在奖励；重点分析这些目标何时无法产生持续探索或日益复杂的行为；进而提出需要互补目标、通信、记忆、多时间尺度学习与环境约束，并据此设计三类实验。 文章并非给出单一实证结果，而是归纳出内在目标的典型失败模式，并据此提出三个实验方向：(1) 资源受限环境，使原本稳定的行为吸引子不可持续，以检验环境约束能否缓解内在目标的特征性失败；(2) 由带个体内在奖励的循环智能体组成的网络；(3) 分层世界模型智能体，其中探索性运动能力先于目标导向行为发展。这些实验用于检验内在学习能否促成逐级升高的适应性组织。
+Abstract: https://arxiv.org/abs/2609.17325
+PDF: https://arxiv.org/pdf/2609.17325
+
+[62] The Immutable Past: Formalizing State Mutability and Conflict Resolution in Mutable RAG
+中文标题：不可变的过去：可变RAG中状态可变性与冲突解决的形式化
+Topics: LLM
+推荐理由：面向LLM智能体的可变RAG记忆一致性与冲突解决，属LLM智能体记忆管理，与优化/搜索仅间接相关
+中文摘要：该论文揭示RAG作为长时程智能体记忆架构时的Semantic Shadowing失效模式，提出GC-Mem一致性协议，通过时间支配算子与矛盾检测精准剔除被遮蔽上下文，在冲突消解上恢复超90%准确率。 形式化State Mutability机制，证明标准稠密检索存在Asymptotic Recall Decay，并证明Majority Vote Trap：在语义等价条件下增大检索上下文窗口反而稀释注意力、降低生成准确率。据此提出GC-Mem，一种严格的推理时一致性协议，纯粹依赖时间支配算子（Φ_T）配合矛盾检测，以外科手术式方式剔除被遮蔽上下文。 在包含137,760个记忆块的行为推断基准及连续累积扫描上评估，标准RAG与时间戳重排序基线均出现严重退化，而GC-Mem实证恢复超过90%的冲突消解准确率，并建立了严格的精确率与召回率部署阈值。
+Abstract: https://arxiv.org/abs/2609.16073
+PDF: https://arxiv.org/pdf/2609.16073
+
+[62] The Imitation Game: When LLMs Learn to Reason Like Programs via Code-Centric Reasoning Data Synthesis
+中文标题：模仿游戏：当LLM通过以代码为中心的推理数据合成学会像程序一样推理
+Topics: LLM / RL
+推荐理由：利用可执行代码合成推理轨迹，用代码插桩奖励做RL后训练，提升LLM推理能力；与LLM+RL/优化算法相关但非核心CO/EC方向。
+中文摘要：提出MIMIC框架，以可执行代码作为推理数据合成的严谨媒介，通过叙事融合、代码引导测试合成和动态代码插桩，将算法转化为可验证的推理轨迹，并利用执行状态形成代码插桩奖励（CIR）为强化学习提供稠密过程监督。 MIMIC框架：1) 叙事融合将算法转化为可验证推理轨迹；2) 代码引导的测试合成；3) 动态代码插桩。这些显式中间执行状态自然构成代码插桩奖励（CIR），无需外部奖励模型即可为强化学习提供稠密、高保真的过程监督。训练采用SFT与GRPO。 在合成数据集上经SFT和GRPO训练的模型获得显著且一致的性能提升，在通用推理、复杂数学基准和细粒度确定性任务上精度均大幅提高。
+Abstract: https://arxiv.org/abs/2609.16076
+PDF: https://arxiv.org/pdf/2609.16076
+
+[62] Autonomous Droplet Navigation via Model-Based Reinforcement Learning
+中文标题：基于模型的强化学习实现液滴自主导航
+Topics: RL
+推荐理由：将基于模型的强化学习用于液滴自主导航控制，属RL在物理系统控制中的应用，与优化算法设计关联较弱，但RL方向相关。
+中文摘要：该研究提出基于模型的强化学习策略，在重力驱动（迷宫）平台上实现液滴自主导航，可在无仿真、无解析液滴模型的条件下穿越直线、直角与弧形路径，并展示策略可从简单几何零样本迁移至复杂几何。 1）平台：重力驱动（Labyrinth）平台，薄硅油膜降低接触线钉扎，双轴倾斜提供重力驱动力，顶置相机实时追踪液滴。2）算法：采用基于模型的强化学习，离线训练策略，仅依赖有限的真实物理交互数据，不使用仿真或液滴解析模型。3）挑战设定：系统处于部分可观测状态，油膜厚度、瞬时接触角与液滴变形状态对控制器不可见。 学习到的策略在直线、直角与弧形路径（含外角几何）上均实现可靠导航；在简单几何上训练的策略可迁移至复杂几何，在直角与阶梯路径上零样本成功，在弧形路径上以五分之一的训练数据达到完全成功。
+Abstract: https://arxiv.org/abs/2609.16369
+PDF: https://arxiv.org/pdf/2609.16369
+
+[62] QART: A Quantum-Classical Hybrid Architecture for Long-Horizon Reasoning -- Exploring a Conditional Path toward Quantum Scaling
+中文标题：QART：一种面向长程推理的量子-经典混合架构——探索通往量子规模化的条件路径
+Topics: LLM
+推荐理由：结合大语言模型与量子/伊辛机QUBO优化，面向长程推理，与优化和学习方法有交叉，但非核心的算法自动设计方向。
+中文摘要：本文提出QART（Quantum-Augmented Reasoning Transformer），一种将骨干语言模型与量子编码、基于CIM的QUBO优化及量子解码相结合的量子和经典混合推理架构，并在显式假设下建立其相对单轨迹自回归LLM的条件渐近可靠性分离，同时给出六个长时程基准上的配对实验证据。 提出量子-经典混合架构QART：骨干语言模型结合量子编码、CIM（相干伊辛机）基础的QUBO优化与量子解码；语义信息可来自隐藏表示或模型生成文本（详细编码与优化流程未公开）。在显式假设下，推导相对单轨迹自回归LLM的条件渐近可靠性分离：给定累积不可逆错误的条件风险发散时，自回归接受概率趋于零；而若最优路径覆盖与语义保真度、谱认证、动力学可达性及忠实读出等条件概率在指定资源调度下一致为正，QART任务最优路径恢复概率保持有界远离零。同时在Codex智能体环境中，使用DeepSeek V4 Flash、GLM-5.3与GPT-5.5 xhigh在六个长时程基准上进行配对测量。 在15个骨干-基准配对中，有14个结果偏向QART。相对增益在SciCode上达84.0%，τ³-Bench上47.6%，Terminal-Bench 4.0上44.4%；DeepSeek V4 Flash配置在DeepSWE上出现7.8%的性能回退。
+Abstract: https://arxiv.org/abs/2609.16887
+PDF: https://arxiv.org/pdf/2609.16887
+
+[95] AlgoEvo: Self-Evolving Agentic Search for Automated Algorithm Discovery
+中文标题：AlgoEvo：面向自动算法发现的自演化智能体搜索
+Topics: LLM / Algorithm Discovery
+推荐理由：LLM智能体自主搜索、诊断、编辑代码，实现自动算法发现与跨任务技能迁移，直接命中LLM驱动的自动化优化算法设计核心方向。
+中文摘要：AlgoEvo将自动化算法发现重构为交互式、知识累积的智能体框架，通过自主智能体基于运行时反馈迭代修改代码、设计技能中心解耦范式知识、分层经验机制组织搜索轨迹与跨任务技能，在六项基准任务上以更少评估和token超越或匹配专用方法。 提出统一智能体框架AlgoEvo：1) 自主智能体依据运行时反馈动态检查、诊断并编辑代码；2) 设计技能中心将范式特定知识与核心发现引擎解耦，使单一工作流处理单目标、多目标与多组件设计；3) 分层经验机制将搜索轨迹组织为任务级树以引导探索，并将跨任务模式整合为可复用技能。 在六个代表性基准任务上，AlgoEvo以显著更少的评估次数与更低的token消耗，达到或超过专用方法，并展现出强的任务内累积、跨任务迁移能力，以及通过灵活技能激活复现或超越现有最优性能的能力。
+Abstract: https://arxiv.org/abs/2609.15820
+PDF: https://arxiv.org/pdf/2609.15820
+
+[88] MOSCOPT: Mixture-of-Skills Collective Optimization for LLM Agents
+中文标题：MOSCOPT：面向LLM智能体的混合技能集体优化
+Topics: LLM / Optimization
+推荐理由：提出文本原生无参数算法联合优化LLM智能体的技能池与选择门控，属于LLM智能体作为优化器/控制器的核心方向，与LLM+优化算法设计高度相关。
+中文摘要：本文提出 MOSCOPT，一种文本原生、无参数的算法，联合优化 N 个技能池与一个门控技能 G（每步动态选择 K 个技能），并借助 EditAdam 的三阶段交错更新实现单调提升。 MOSCOPT 采用技能混合（mixture-of-skills）架构与选择性激活机制：维护含 N 个技能的池和一个门控技能 G，每步动态选取 K 个技能；通过内部维护双状态的 EditAdam，以三阶段交错更新方式联合优化，全程无需梯度与参数调优。 在 5 个基准与 3 个目标 LLM 上的大量实验与消融表明，MOSCOPT 持续优于所有基线；并证实技能混合+选择性激活架构与三阶段交错的集体演化对性能优势均为必要。
+Abstract: https://arxiv.org/abs/2609.14399
+PDF: https://arxiv.org/pdf/2609.14399
+
+[88] Dream-RSI: Recursive Self-Improvement through Evolving Worlds
+中文标题：Dream-RSI：通过进化世界实现递归自我改进
+Topics: LLM / RL / EC
+推荐理由：提出可编程探索策略的递归自改进框架，用回放模拟器进行离线策略优化，驱动算法工程与数学优化等领域的自动发现，涉及LLM智能体、强化学习与优化算法发现的核心交叉。
+中文摘要：提出 Dream-RSI，将累积的发现历史构建为回放模拟器，通过在模拟器中进行"做梦"来低成本地评估与改进探索策略，从而缓解固定策略失效与在线策略优化代价高昂的两难问题，并在算法工程、数学优化与 GPU 内核工程任务上取得竞争力或更优的发现质量。 提出 Dream-RSI 框架。采用轻量级编排层使探索显式化、可编程化，保持底层编码智能体不变。核心思路是将累积的发现历史视为已实现搜索空间上的回放模拟器：利用历史发现树构建模拟器，在其中进行 dreaming，从而获得即时、低成本的离策略反馈，用于评估与改进探索策略，避免重复且昂贵的在线评估。改进后的策略再部署回在线环境驱动进一步发现，持续扩充模拟器池，形成自我改进闭环。 在算法工程、数学优化和 GPU 内核工程三类任务上，Dream-RSI 取得了与基线相当或更优的发现质量，同时在多种设置下显著降低了发现成本。
+Abstract: https://arxiv.org/abs/2609.14858
+PDF: https://arxiv.org/pdf/2609.14858
+
+[85] LLM-Enhanced Multi-Agent Reinforcement Learning for Unified Electric Vehicles-Charging Station-Grid Optimization in Public Charging Systems
+中文标题：LLM增强的多智能体强化学习用于公共充电系统中电动汽车-充电站-电网统一优化
+Topics: LLM / RL / Optimization
+推荐理由：将LLM与多智能体强化学习结合用于多目标优化调度，属于LLM+RL+优化的交叉方向，具较强相关性。
+中文摘要：本文提出一种LLM增强的MARL框架，首次在统一闭环中同时优化电网、电动汽车与充电站三方利益，通过LLM实现可解释特征选择与自适应多目标权重分配，实验显著优于SOTA基线并将训练时间缩短70%以上。 提出LLM增强的MARL框架，在统一闭环中联合优化电网、EV与充电站。利用LLM分析IoT实时采集的环境状态，完成两项关键任务：一是可解释的特征选择，提取具有物理意义的特征以缓解高维状态空间问题；二是基于语义推理动态分配利润、用户满意度、电网负载等冲突目标的权重，替代复杂的人工调参。 大量实验表明，该框架显著优于当前最先进的基线方法，在提升市场效率的同时将训练时间缩短70%以上。
+Abstract: https://arxiv.org/abs/2609.13805
+PDF: https://arxiv.org/pdf/2609.13805
+
+[84] ModularRSI: Modular and Generalizable Recursive Harness Self-Improvement
+中文标题：ModularRSI：模块化与可泛化的递归框架自我改进
+Topics: LLM
+推荐理由：研究LLM智能体框架的递归自我改进与自动进化，属LLM智能体设计和自动化算法生成范畴。
+中文摘要：提出ModularRSI框架，通过基准分离、对比学习与模块化设计实现可泛化的智能体执行框架递归自我改进。 ModularRSI采用三重设计：1）基准分离——从外部来源构建2000个可执行演化任务，与下游评测基准不相交；2）对比式——对同一任务的成功与失败轨迹进行对比，并跨任务聚合证据以识别复现性行为缺陷；3）模块化——将可演化执行框架分解为Agent Loop、Tool Use、Observation Management、Context Management、Task Completion Detection五个功能模块，各模块在受限修改范围内独立演化，随后经集成阶段合并为统一框架并解决潜在冲突。 在TB2.0与SWE-Bench Verified上，对未见过的同域与跨域任务均取得一致提升，且演化后的执行框架可跨不同基础模型迁移。
+Abstract: https://arxiv.org/abs/2609.14857
+PDF: https://arxiv.org/pdf/2609.14857
+
+[82] Surrogate-Assisted Genetic Programming with Phenotypic Characterisation in Dynamic Multi-Mode Project Scheduling
+中文标题：动态多模式项目调度中基于表型特征的代理辅助遗传编程
+Topics: EC
+推荐理由：研究代理辅助遗传编程自动进化调度启发式规则，属于EC与自动算法设计，涉及启发式生成与字符化选择，与进化计算和自动化优化算法设计密切相关。
+中文摘要：本文研究代理辅助遗传编程（GP）中的表型表征（PC），为动态多模式资源受限项目调度问题设计三种不同信息丰富度的PC编码方案，并探讨其与距离度量的组合效果。 设计三种信息丰富度不同的PC编码：保留规则原始输出的优先值编码、刻画候选排序的排名编码、表示最终调度决策的二元编码；将其与不同距离度量结合以衡量GP个体间的行为相似性，并进行消融实验分析去重与代理预选择的作用。 二元编码结合欧氏距离提供最有效且稳健的代理引导；代理估计精度本身不能完全解释性能差异；PC表示还决定表型冗余后代的剔除效果及预选择后行为多样性的保留程度；重复剔除与代理预选择具有互补收益，二者结合带来最大改进。
+Abstract: https://arxiv.org/abs/2609.14418
+PDF: https://arxiv.org/pdf/2609.14418
+
+[82] HypoEvolve: Genetic Algorithms Enable Multi-Agent LLMs to Discover Scientific Hypotheses
+中文标题：HypoEvolve：遗传算法驱动多智能体LLM发现科学假设
+Topics: LLM / EC
+推荐理由：用遗传算法协调多智能体LLM进行假设发现，属LLM+EC+多智能体优化交叉，方法可迁移至自动算法设计。
+中文摘要：该论文提出 HypoEvolve，通过世代遗传算法显式建模 LLM 科学智能体之间的协作，以检验协作形式对假设质量的影响，并在药物重定位任务上验证其有效性。 提出 HypoEvolve，通过迭代更新假设种群使协作显式化。设计世代遗传算法协调专门化 LLM 智能体，使其整合机制论证、重新审视假设前提、评估证据与可检验性；每一世代明确科学判断与新提案如何重塑种群，从而使协作对假设质量的影响可直接检验。评估围绕可解释干预机制的科学假设设计，以药物重定位将解释与靶点层面生物学主张关联，并改编 DepMap 与 Open Targets 作为基于实验、遗传与临床证据的互补外部指标。 在 34 种癌症类型上，HypoEvolve 在两项指标上均优于六个基线方法。DepMap 选择性达到 0.171，最强基线为 0.115。相对于单次生成方法的提升可泛化到留出的癌症类型。
+Abstract: https://arxiv.org/abs/2609.15938
+PDF: https://arxiv.org/pdf/2609.15938
+
+[82] Toward Self-Adaptive Physical AI: Can LLM Agents Manage Long-Horizon Physical Tasks?
+中文标题：迈向自适应物理AI：LLM智能体能否管理长时程物理任务？
+Topics: LLM / RL
+推荐理由：研究LLM多智能体在长时物理任务中零样本规划与自适应，并与RL对比，属于LLM用于决策/控制的实质工作，与LLM+RL交叉相关。
+中文摘要：本文探索构建能够在零样本条件下自主管理长期物理任务、无需人工干预即可适应环境变化的自适应物理AI智能体，并设计多智能体框架在农业任务上与强化学习（RL）智能体对比验证其可行性。 设计一个集成规划、工具调用、观察与验证的多智能体框架，使LLM智能体以零样本方式管理长期物理任务，并在农业任务上与RL智能体在不同天气模式下进行对比评估。 在相同天气模式下，零样本LLM智能体能够达到与RL智能体相当的管理效果；在环境分布发生偏移时，LLM智能体的适应效果优于RL智能体。
+Abstract: https://arxiv.org/abs/2609.13436
+PDF: https://arxiv.org/pdf/2609.13436
+
+[82] Partition Scores Are Not System Scores: Deployment-Fidelity Gaps in Decomposed Algorithm Selection
+中文标题：分区分数不等于系统分数：分解式算法选择中的部署保真度差距
+Topics: CO
+推荐理由：研究分解式算法选择与组合优化（CSP/SAT）及AutoML的部署保真度，属于自动算法/投资组合设计范畴，与自动算法选择高度相关。
+中文摘要：论文提出"部署保真度差距"G(R)，指出分解决策中分区级oracle打分高估了可部署系统的性能，并给出两个理论刻画与跨基准实证。 定义部署保真度差距G(R)为分区级效用与可部署端到端效用之差；推导两条核算结论：逐实例的边际后悔稳定性条件（判定分区时族选择是否部署最优）与紧的分区-only识别区间（当区间严格跨零时，分区级报告无法认证可部署赢家）。在五个公开算法选择基准（表格AutoML与组合CSP/SAT）上，对比分解式与扁平式流水线，并引入训练侧验证差距校正诊断。 所有分解式流水线G(R)均为正，范围从TabZilla的0.012到PROTEUS-2014的0.13。十个"分解式对扁平式"决策中有四个点估计符号发生翻转；PROTEUS-2014上33个百分点的分区优势缩小为20个百分点的端到端优势。训练侧验证差距校正诊断在全部四个符号翻转单元格上恢复了点估计的可部署符号。
+Abstract: https://arxiv.org/abs/2609.13785
+PDF: https://arxiv.org/pdf/2609.13785
+
+[82] Graph Neural Networks for Influence Maximization in Social Networks: An Unsupervised Minimum Dominating Set Approach
+中文标题：面向社交网络影响力最大化的图神经网络：一种无监督最小支配集方法
+Topics: Neural Combinatorial Optimization / CO
+推荐理由：用无监督GNN学习最小支配集启发式，属于神经组合优化与自动启发式设计，直接相关。
+中文摘要：本文提出一种无监督图神经网络框架求解最小支配集问题，无需真值解训练，在合成图上训练后可快速推理并得到近优解。 提出无监督GNN框架求解MDS，训练阶段不依赖真值解，使用12,000个具有多样结构属性的合成图进行训练，学习一种可迁移的启发式策略。 推理速度较元启发式基线最高快55倍，较监督学习方法最高快14倍，在真实社交网络基准上找到最优或近最优支配集，并能有效泛化到未见图分布。
+Abstract: https://arxiv.org/abs/2609.13836
+PDF: https://arxiv.org/pdf/2609.13836
+
+[82] SAILOR: Solver-Assisted Interactive LLM-based Optimization Recovery
+中文标题：SAILOR：求解器辅助的交互式LLM优化恢复
+Topics: LLM / CO
+推荐理由：利用LLM从自然语言构建优化模型并交互补全缺失数值，属LLM与组合优化交叉。
+中文摘要：SAILOR是一个概念验证系统，用于检测自然语言优化问题中缺失或不明确的数值信息，通过针对性追问用户来补全数值并更新优化模型后再给出解。 系统检测不受支持的数值选择，生成针对性追问并更新优化模型。问题排序基于不确定性与求解器推导出的估计，即每个缺失值对当前模型的影响强度。在七个掩码基准的1,723个实例上，使用返回真值的理想化模拟器评估该流程。 目标值精确一致率在各数据集间为27.0%至87.6%，平均每个实例需1.4至5.7个问题。
+Abstract: https://arxiv.org/abs/2609.13945
+PDF: https://arxiv.org/pdf/2609.13945
+
+[80] Learning Multimodal One-step Flow Policy via Value-weighted Optimal Transport
+中文标题：通过值加权最优传输学习多模态单步流策略
+Topics: RL
+推荐理由：提出基于最优传输的单步流策略，用于离线强化学习中的多模态动作分布优化，属于强化学习与优化交叉方向。
+中文摘要：OptiFlow 提出一种基于最优传输的一步流策略框架，用于离线强化学习，通过将一步策略学习建模为结构化样本分配问题，避免模式崩塌与分布外偏差，有效捕获多模态最优行为。 提出 OptiFlow 框架，将一步流策略学习建模为结构化样本分配问题。联合训练价值感知的参考流策略与高效一步策略，通过逐状态的熵最优传输耦合两者的动作样本。在每个状态下，评论家估计的价值定义蒸馏目标动作的优先级，动作距离代价则保证几何兼容的配对。该方法避免直接最大化评论家，从而在分布内利用高价值、数据集支持的模态。 实验结果表明，OptiFlow 能有效捕获最优多模态行为，并在多个离线强化学习基准上取得优异性能。
+Abstract: https://arxiv.org/abs/2609.15883
+PDF: https://arxiv.org/pdf/2609.15883
+
+[78] Early-Stopping Thresholds for ES-HyperNEAT: A Data-Driven Approach from Fitness Dynamics
+中文标题：基于适应度动态的ES-HyperNEAT早停阈值数据驱动方法
+Topics: EC
+推荐理由：论文研究进化算法ES-HyperNEAT的早停准则，基于适应度动态分类，属于进化计算与算法效率优化范畴，方法可推广到其他进化算法。
+中文摘要：该论文将ES-HyperNEAT的早期停止建模为对早期适应度轨迹的二分类问题，通过最大化F1得到规则（G*=3, T*=0.140），在180次独立验证中F1=0.872，节省41.6%计算开销。 将早期停止转化为对早期适应度轨迹的二元分类：对每次试验计算"每代最佳适应度的累积中位数"，并在初始90次试验数据集上通过最大化F1分数确定阈值；得到规则为第G*=3代、阈值T*=0.140。 在180次独立验证试验上F1=0.872，保留超过90%的成功试验，同时降低41.6%的计算成本；与Hyperband相比，该领域特定规则效率高出64%且平均适应度更高，但Hyperband偶尔能发现更高的峰值解；在已收敛的搜索种群上规则过于激进（召回率仅31.1%）。
+Abstract: https://arxiv.org/abs/2609.13533
+PDF: https://arxiv.org/pdf/2609.13533
+
+[78] Big Brains and Changing Environments: Cause or Consequence?
+中文标题：大脑袋与变化环境：因还是果？
+Topics: EC
+推荐理由：使用神经进化在人工觅食任务中研究大脑演化的因果假说，属于进化计算与人工生命交叉，方法上与EC核心方向相关。
+中文摘要：该研究通过人工季节性觅食任务中的神经进化实验，发现大型神经网络（大脑）主要在稳定环境中先期进化形成，随后才促进对变化环境的定殖，而非直接因应变化环境而进化。结果挑战了认知缓冲假说（CBH）的严格预测，为"定殖假说"提供了基于主体的计算支持，并强调进化历史在大脑尺寸演化中的作用。 采用神经进化（neuro-evolution）方法，在人工季节性觅食任务中构建智能体。设置两组对照：一组智能体仅在变化环境中进化；另一组先在静态环境中进化，再转移到变化环境。通过比较两组的神经网络规模与任务表现，检验大脑尺寸进化的来源。 变化环境中出现的大型神经网络主要源于先前的静态环境进化，而非变化环境本身；且经过静态进化先期的智能体在不可预测的变化条件下表现更优。
+Abstract: https://arxiv.org/abs/2609.15569
+PDF: https://arxiv.org/pdf/2609.15569
+
+[78] Root-Cause Attribution Is a Search Problem: Continual Search for Long-Horizon Agent Failures
+中文标题：根因归因是一个搜索问题：面向长时程智能体故障的持续搜索
+Topics: LLM / Search
+推荐理由：将LLM智能体故障根因归因建模为迭代搜索问题，与LLM作为搜索/优化控制器及智能体控制的研究方向相关。
+中文摘要：提出 Continual Search 迭代式框架，通过多轮引导 LLM 持续搜索未决诊断证据，显著提升长执行轨迹下的根因归因性能，并发布大规模基准 MegaRCA-Mix。 提出 Continual Search：一个迭代式框架，在连续多轮中推动判断器（judge）持续寻找尚未解决的诊断证据，而非一次性给出结论。同时针对现有基准缺乏大规模执行轨迹的问题，构建 MegaRCA-Mix 基准，包含 50 个人工标注的失败试验，覆盖长程、执行密集型任务。 在四个已有 RCA 基准及多个模型系列上，Continual Search 均一致提升归因性能。在 MegaRCA-Mix 上，将 GPT-5.5 的 F1 从 0.349 提升至 0.498，提升超过 40%。此外，同一模型系列内的低阶模型甚至可超越高阶模型。
+Abstract: https://arxiv.org/abs/2609.13463
+PDF: https://arxiv.org/pdf/2609.13463
+
+[78] Learning to Solve Hard Problems in RL for LLMs by Never Giving Up
+中文标题：永不放弃：通过自适应采样让LLM强化学习攻克难题
+Topics: LLM / RL
+推荐理由：提出自适应采样方法改进LLM的RL训练，重新分配计算资源以解决难题，与LLM+RL方向强相关。
+中文摘要：该论文指出RL训练LLM存在"马太效应"——简单题提升大、难题提升小，并提出自适应采样方法NGU以动态重分配算力，在数学与代码任务上提升每算力性能，尤其改善难题。 提出Never Give Up（NGU），一种简单的自适应采样方法：对某问题持续生成样本直至得到一个正确解。借助异步RL，该方法自然减少用于过滤简单题的样本量，并将更多算力分配给难题。同时研究了影响NGU的设计选择（如off-policy鲁棒性），并总结出一套最佳实践。 在数学基准DeepScaler上，NGU提升了每算力性能，尤其在难题上改善明显；在近期编码任务Manufactoria上，标准GRPO配合逐测试奖励无法完全解决含易难测试梯度的问题，而NGU可迭代改进，逐步解决越来越难的测试，最终学会完整解决代码问题。
+Abstract: https://arxiv.org/abs/2609.13443
+PDF: https://arxiv.org/pdf/2609.13443
+
+[78] HarnessBandit: Joint Learnability-Transferability Scheduling for Multi-Harness Agentic Reinforcement Learning
+中文标题：HarnessBandit：面向多Harness智能体强化学习的可学习性与可迁移性联合调度
+Topics: LLM / RL
+推荐理由：面向LLM智能体的多harness强化学习训练调度，融合可学习性与可迁移性，属于LLM+RL交叉方向。
+中文摘要：本文提出 HarnessBandit，一种在线调度器，在每个优化器步选择一个 harness 进行训练，通过融合可学习性与可迁移性信号，提升语言模型智能体对 harness 变化的鲁棒性。 提出 HarnessBandit 在线调度器，每步选择一个 harness。在 GRPO 更新后观测两个信号：可学习性（批上平均绝对优势）与可迁移性（当前 harness 的低维梯度草图与其余 harness 指数移动平均之间的余弦相似度）。两信号经池化滑动窗口 min-max 归一化后融合，并以访问依赖奖励和显式探索下限进行采样。 在 ClawGym 上跨六个 harness 训练 Qwen3.5-2B，并在 PinchBench（留出任务、分布内 OpenClaw）与 ClawEval（留出任务与 harness）上评估。HarnessBandit 在两个基准上均优于混合批次多 harness 训练；训练诊断表明可学习性与可迁移性提供相互独立且动态演化的信号。
+Abstract: https://arxiv.org/abs/2609.13739
+PDF: https://arxiv.org/pdf/2609.13739
+
+[78] AppliedScientist: Automated Scientific Revision Through Iterative AI Reviewing
+中文标题：AppliedScientist：通过迭代AI审稿实现的自动化科学修订
+Topics: LLM / LLM Agent
+推荐理由：基于LLM的自主AI科学家与审稿闭环系统，通过迭代修订实现科学论文自动优化，属于LLM智能体驱动的迭代优化/自动改进研究，与优化算法并无直接关联，但核心的闭环迭代LLM agent机制与自动化设计研究相关。
+中文摘要：该论文提出 AppliedScientist 闭环系统，将自主 AI 科学家与 AI 审稿人耦合，通过迭代修改被拒论文来评估评审的实际效用。审稿引导的修改优于固定提示自修改，能有效解决执行类缺陷（85.3%），但几乎无法解决创新性/重要性类缺陷（11.1%）。 构建 AppliedScientist：将自主 AI 科学家与 AI 审稿人耦合成闭环系统，对多研究子领域的被拒论文进行迭代修改。科学家在修改时可访问其历史版本以模拟人类作者行为；但每轮评审独立生成，审稿人无先前反馈或分数的记忆以避免偏差。设置三种修改条件：(1) 以原始投稿评审初始化；(2) 以 AI 生成评审初始化；(3) 每轮使用同一固定提示的自主自修改。由于审稿人既引导又评估修改，另采用 Stanford Reviewer 作为独立评估者对人类评审初始化的修改进行评分。 审稿引导的修改持续优于固定提示自修改；Stanford Reviewer 对后续修订版本给出更高分数。在缺陷解决方面，AppliedScientist 解决了 150 项与执行相关的缺陷中的 128 项（85.3%），但仅解决 18 项与想法相关的缺陷中的 2 项（11.1%）。
+Abstract: https://arxiv.org/abs/2609.14738
+PDF: https://arxiv.org/pdf/2609.14738
+
+[78] When Agents Slow Down: Understanding LLM Agents' Test-Time Strategies via Elo-per-token Analysis
+中文标题：当智能体减速时：通过每token Elo分析理解LLM智能体的测试时策略
+Topics: LLM / Optimization
+推荐理由：研究LLM智能体测试时策略与计算预算，涉及优化支架和搜索展开，与LLM优化/搜索相关。
+中文摘要：论文提出 Elo-per-token 分析框架，用 Bradley-Terry 模型将不同分数尺度的开放式任务中的中间解排序聚合为 Elo 评分，以衡量 LLM 智能体在测试时计算扩展下的性能变化。实验发现智能体的边际收益递减并最终低于独立采样参考，而人类顶尖选手在同类竞赛中表现为超线性提升，据此定义的"扩展拐点"可用于优化并行会话预算分配。 提出 Elo-per-token 分析：跟踪每个 token 预算下找到的最优解，并用 Bradley-Terry 模型将任务内的排序聚合成跨任务的 Elo 评分，从而统一不同分数尺度。以独立采样作为理论刻画的可对照基线（其 Elo 随 log 计算量线性增长）。在四个通用智能体、四个开放式基准、单次会话最多 100M token 上实验，并针对三个反馈驱动的 LLM 优化框架做受控单任务干预。定义"扩展拐点"为边际 Elo 增益等于独立采样参考时的单会话预算。 智能体初期将 token 转化为 Elo 的速度快于独立采样，但边际增益递减并最终低于该参考。相比之下，顶尖人类选手在共享的 AtCoder Heuristic Contest 任务上随比赛时间呈超线性提升，表明存在持续学习与显著提升空间。在 FrontierCS Polyomino Packing 上，以扩展拐点作为单会话预算，将 100M token 拆分到并行会话中，相比单个长会话获得 +264 Elo，相比十个短会话获得 +355 Elo。
+Abstract: https://arxiv.org/abs/2609.15309
+PDF: https://arxiv.org/pdf/2609.15309
+
+[78] RESKILL: Explicit Failure Attribution and Structured Repair for Interactive Language Agents
+中文标题：RESKILL：交互式语言智能体的显式失败归因与结构化修复
+Topics: LLM
+推荐理由：面向语言智能体的结构化技能修复框架，将失败归因与修复选择结合，与LLM智能体优化相关。
+中文摘要：RESKILL：一种在修复轮次间维护显式修复状态的结构化技能修复框架，通过将失败假设与候选补丁关联、基于覆盖度归因选择局部修复，并利用重测结果指导后续修复，在ALFWorld与TextCraft上取得最强最终成功率。 提出RESKILL结构化修复框架，跨修复轮次维护显式修复状态。给定失败轨迹后：将失败假设与候选技能补丁关联；通过基于覆盖度的归因选择局部修复；在环境中重测编辑后的技能集；并将重测结果用于指导后续修复更新。语言模型提供结构化修复因子，修复流程记录这些因子、依据对活跃失败解释的覆盖程度比较局部补丁，并把不成功的重测结果延续至后续轮次。 在ALFWorld与TextCraft上，针对三种模型规模、固定修复预算进行评测。RESKILL在全部六种基准-模型设置下均取得最优最终成功率，较直接修复平均提升3.7个百分点，较假设条件化修复提升3.3个百分点。
+Abstract: https://arxiv.org/abs/2609.15684
+PDF: https://arxiv.org/pdf/2609.15684
+
+[78] RSIAgent: Autonomous Exploration for Recursive Self-improvement in New Environments
+中文标题：RSIAgent：新环境中递归自我改进的自主探索
+Topics: LLM / Search
+推荐理由：提出免训练多智能体框架，自主探索环境并构建记忆以实现递归自我改进，属于LLM智能体在搜索与规划中的实质性应用。
+中文摘要：提出无需训练的多智能体框架 RSIAgent，通过自主记忆构建实现递归自我改进，在 OSWorld-v2 与 Agent's Last Exam 上显著提升开源模型表现。 RSIAgent 协调课程智能体、执行智能体与验证智能体，持续探索环境、验证结果并保留环境特定知识（含动作、条件与后果间可复用的因果关系）；采用"先广后深"探索策略，结合并行广域递归自探索以发现多样环境结构，与聚焦式深度自探索以挖掘难例、隐藏约束、边界条件及未知因果依赖；所得记忆被冻结，可直接复用于下游任务。 在 OSWorld-v2 与 Agent's Last Exam 上，RSIAgent 大幅提升强开源模型，使 Kimi-K3 与 GLM-5.3 超越包括 GPT-6 在内的前沿闭源模型。
+Abstract: https://arxiv.org/abs/2609.15364
+PDF: https://arxiv.org/pdf/2609.15364
+
+[78] Cloud Workflow Scheduling Based on Graph Attention-Driven Hierarchical Reinforcement Learning
+中文标题：基于图注意力驱动分层强化学习的云工作流调度
+Topics: RL / CO
+推荐理由：将云工作流调度建模为分层强化学习问题，并用图注意力网络编码DAG依赖，属于RL+组合优化交叉，与学习优化方向相关。
+中文摘要：提出GA-HRL框架，用多叉图注意力网络表示DAG依赖结构，将云工作流调度建模为事件驱动的分层半马尔可夫决策过程，由任务调度与容器调度两个智能体交替用PPO训练，在Alibaba 2018集群数据上取得更优的容器利用率与能耗表现。 为任务分配预测子截止时间以表征紧迫度；采用多头图注意力网络从动态演化的DAG中提取依赖信息；构建GA-HRL分层强化学习框架，将调度过程建模为事件驱动的分层SMDP，工作流到达与任务完成触发调度事件；TS智能体先为就绪任务分配至可用容器或请求新容器，CS智能体再为请求的容器选择宿主机；两智能体用独立PPO交替训练。 在2018 Alibaba集群轨迹上，GA-HRL保持有竞争力的工作流成功率；在成功率相当的设置下，通常获得更高的容器利用率和更低的能耗；在最大速度波动场景下，以较小的成功率损失换取显著的能耗降低。
+Abstract: https://arxiv.org/abs/2609.14952
+PDF: https://arxiv.org/pdf/2609.14952
+
+[78] HiGFRL: Hierarchical Graph Fusion-Driven Reinforcement Learning for Dependency-Aware Task Scheduling in Heterogeneous Cloud
+中文标题：HiGFRL：面向异构云依赖感知任务调度的层次图融合驱动强化学习
+Topics: RL / CO
+推荐理由：用图神经网络强化学习求解DAG依赖任务调度，属于RL+组合优化的学习型优化方法，与RL+CO方向相关。
+中文摘要：提出HiGFRL，用三层图表示与双网络融合强化学习解决异构云集群中依赖感知任务的在线调度问题。 HiGFRL构建三层状态表示：静态超图、动态全局图与局部二部图，显式建模任务依赖与实时集群动态的交互。设计融合驱动双网络架构：Context Fusion Allocator将局部二部匹配特征与融合全局上下文结合以执行精确的任务到节点分配；Global State Evaluator利用全局动态图表示估计期望长期累积回报。此外引入拓扑先验引导的混合奖励机制，将静态拓扑先验蒸馏进学习过程以加速收敛。 基于真实Alibaba集群trace的实验中，HiGFRL显著优于启发式与DRL基线。在大规模高负载场景下，Makespan最多降低32.55%，平均任务流时间与平均任务等待时间分别优化13.58%与13.79%。
+Abstract: https://arxiv.org/abs/2609.14968
+PDF: https://arxiv.org/pdf/2609.14968
+
+[78] Learning to Solve Stochastic Controls with Unknown Drifts and Running Rewards: Theory, Algorithms and Convergence
+中文标题：未知漂移与运行奖励下随机控制的学习：理论、算法与收敛性
+Topics: RL / Optimization
+推荐理由：研究未知漂移与奖励下的随机控制问题，提出基于策略迭代的强化学习算法并证明收敛性，属于RL驱动的优化求解，与强化学习及优化方向强相关。
+中文摘要：本文在探索性强化学习框架下，研究漂移项与奖励函数未知的连续时间（可能高维）随机控制问题，提出基于概率表示的政策迭代算法并证明收敛性。 采用Wang、Zariphopoulou与Zhou(2020)的探索性RL框架（松弛控制与熵正则化）。在扩散系数不含控制时，基于仅依赖原动态扩散部分的辅助状态过程，给出最优值函数及其梯度的概率表示；通过对定义的映射及其不动点的细致分析，构造政策迭代算法并证明收敛性。进一步研究控制依赖扩散的特殊情形，需借助Hessian的概率表示。 建立了值函数与梯度的概率表示，提出了政策迭代算法并给出收敛性证明；通过多个数值例子验证了算法性能。
+Abstract: https://arxiv.org/abs/2609.14972
+PDF: https://arxiv.org/pdf/2609.14972
+
+[78] Discovery Foundation Models: Toward Open-Ended Discovery Intelligence
+中文标题：发现基础模型：迈向开放式发现智能
+Topics: LLM / Optimization
+推荐理由：提出面向开放式发现的基础模型框架，涉及可修订研究状态、假设生成与干预迭代，与LLM作为优化/设计器及自动化算法发现高度相关，但核心聚焦科学发现而非具体组合优化或进化算法。
+中文摘要：该文提出"Discovery Intelligence"与"Discovery Foundation Models (DFMs)"框架，并实例化为Zetema与GALILEO系统，力求将"发现"变为基础模型可学习、可执行、可评测的能力。 提出DFM作为面向开放式发现的通用模型系统，运行在可修正的研究状态（revisable research state）之上，支持七项耦合能力：问题发现、问题形式化、表示构建、假设形成、干预、基于证据的修正、持续发现改进。以Zetema实例化，结合显式研究状态动态、验证与实验门控（experimental gating）、外部 grounding 与跨任务发现技能演化（Discovery Skill evolution）。并以真实治疗发现系统GALILEO落地，形成干实验室推理、机器人与人工湿实验室实验、外部生物证据、迭代假设与设计修正构成的闭环物理发现回路。同时提出统一的能力形成与以过程为中心的评测方法。 构建了DFM框架并给出Zetema与GALILEO两个实例，提出统一的能力形成与过程中心评测方案，使发现行为可训练、可改进，并可超越最终答案性能进行度量。
+Abstract: https://arxiv.org/abs/2609.15973
+PDF: https://arxiv.org/pdf/2609.15973
+
+[78] Refinement-based Flow Policy Optimization
+中文标题：基于精炼的流策略优化
+Topics: RL
+推荐理由：提出基于精炼的流策略优化用于在线强化学习，属于RL与流生成模型的结合，对学习优化策略有参考价值，但未直接涉及组合优化或自动算法设计。
+中文摘要：RFPO通过交替进行Q引导的样本细化和自目标流匹配，在在线强化学习中训练流策略，无需直接从隐式定义的目标分布中采样。 提出Refinement-Based Flow Policy Optimization（RFPO）框架：先用当前流策略从高斯噪声生成动作，再通过有限步随机细化过程将其推向由Q函数诱导的能量分布；随后将每个细化后的动作与其初始噪声样本配对，作为流匹配训练的固定目标。通过反复细化自身输出并从中学习，将Q引导融入策略。 在六个连续控制任务上，RFPO在几乎所有任务上达到或超过标准高斯策略基线；在六个具有多样几何结构的二维合成目标分布实验中，RFPO能捕捉复杂多模态结构且无模式坍塌。还对RFPO诱导的分布动态进行了理论分析。
+Abstract: https://arxiv.org/abs/2609.15123
+PDF: https://arxiv.org/pdf/2609.15123
+
+[78] Bellman Policy Optimization
+中文标题：贝尔曼策略优化
+Topics: RL / LLM
+推荐理由：提出无需critic的RLVR方法BPO提升LLM推理能力，属RL与LLM交叉，但偏LLM训练而非组合优化或算法自动设计。
+中文摘要：本文提出 Bellman Policy Optimization（BPO），一种无 critic、基于策略镜像下降（PMD）推导的 RLVR 方法。BPO 利用 Bellman 方程将 PMD 改写为轨迹级目标，避免中间状态值估计，并证明与原始 PMD 目标具有相同唯一最优解，在数学推理基准上验证有效。 以 Policy Mirror Descent 为理论起点，针对带终端奖励的自回归生成场景，利用 Bellman 方程将 PMD 重构为轨迹级目标，从而绕过中间状态价值估计；理论上证明该重构目标与原 PMD 目标具有相同且唯一的最优解；据此通过近似该目标导出实用 BPO 损失，其失配修正权重为互补 token 概率的平滑比值。 在数学推理基准上的实验表明 BPO 具有有效性（提升 LLM 推理能力），验证了该无 critic 轨迹级优化方法的可行性。
+Abstract: https://arxiv.org/abs/2609.15987
+PDF: https://arxiv.org/pdf/2609.15987
+
+[76] Algorithmic Information Dynamics of Learning: A Certified, Differentiable Complexity Controller for Grokking
+中文标题：学习中的算法信息动力学：面向Grokking的可认证可微复杂度控制器
+Topics: 
+推荐理由：利用可微算法复杂度估计器作为学习动态控制器，涉及优化控制与算法信息动力学，与核心兴趣有较强关联。
+中文摘要：本文用可微的认证复杂度估计器 K^CDM_sF 取代分片常数的块分解法,把算法信息动力学(AID)的微积分引入学习动力学,将复杂度估计器用作控制器来加速 grokking;结果表明其独特贡献在于时机控制(何时施加、何时释放),而非归因。 采用认证且可微的估计器 K^CDM_sF;固定损失函数,施加短暂的"损失踢动"(transient loss kick),使估计器成为控制器,在 Levin 的"描述长度—时间"意义下加速 grokking,并受数据依赖的 Occam 边界约束。做了多项消融:比较复杂度门控与训练损失门控;检验不同信号是否标记相变完成;检验认证先验与逐参数 ∇K 归因的作用;对 Occam 场进行直接场扰动以观察响应。 Occam 边界的有限尺度趋势 f_c ~ ln p / p,与优惠券收集(coupon-collector)解释一致。消融显示:复杂度门控与训练损失门控在挽救失败种子时效果相当,但干预量减少 27%;在所测试信号中,只有映射复杂度(map complexity)标记了相变的完成;认证先验与逐参数 ∇K 归因均可替代(均匀先验传感器给出比特级相同的门控决策,随机支撑在稀疏度阈值以上可与 ∇K 选择的支持匹配);直接场扰动显示对 Occam 场呈成核式(nucleation-like)响应,在探测振幅范围内未分辨出线性区(故不支持涨落—耗散替代),有限场响应在趋近相变时增长数个数量级。这些测量解释了经验调好的阶梯式策略:bang–bang 脉冲,按产额触发与释放,其迭代恰好构建了它所利用的响应。
+Abstract: https://arxiv.org/abs/2609.13197
+PDF: https://arxiv.org/pdf/2609.13197
+
+[75] ABSOL: Aggregated Bayesian Subsampling Orchestrated with LLMs
+中文标题：ABSOL：LLM 引导的聚合贝叶斯子采样结构学习
+Topics: LLM
+推荐理由：LLM 作为有界语义指导增强贝叶斯网络结构学习，属于自动化算法设计范畴，但优化成分相对间接。
+中文摘要：该论文提出ABSOL，一种以LLM作为受限语义引导的混合式贝叶斯网络结构学习框架，在多个离散贝叶斯网络基准上取得最优或唯一可行的图结构学习结果。 ABSOL是一个LLM引导的混合式贝叶斯网络结构学习框架，将LLM作为"有界"（bounded）语义引导，而非直接决定最终结构。框架以统计学习为骨干（backbone），并融入四种LLM增强（augmentation），为统计骨干提供互补的语义证据。此外还进行了事后精修（post-hoc refinement）实验以检验LLM权限范围的影响。 在五个离散贝叶斯网络基准（节点数从27到1041）上，ABSOL是唯一在所有基准上均产出可行图的评估方法；在使用GPT-5.4时，在每一个大于27个节点的基准上都取得最高的Edge F_1。四种LLM增强相较无LLM的聚合骨干平均提升Edge F_1约+0.23。事后精修实验表明，这些增益部分依赖于限制LLM对最终结构的权限。
+Abstract: https://arxiv.org/abs/2609.15007
+PDF: https://arxiv.org/pdf/2609.15007
+
+[74] Salesforce Koa: An Enterprise Language Model for Agentic Tool Use
+中文标题：Salesforce Koa：面向智能体工具使用的企业级语言模型
+Topics: LLM / RL
+推荐理由：用GRPO强化学习后训练大模型，提升多轮工具调用与智能体能力，但未聚焦组合优化或算法自动设计。
+中文摘要：Salesforce Koa 是基于 Nemotron-3-Super-120B 通过 GRPO 强化学习后训练的企业级语言模型，其核心是"仿真到奖励"流水线，将工作流规范扩展为带人格条件的多轮任务，并以工具调用成功为落地奖励，从而提升工具使用与智能体能力。 以开放权重 Nemotron-3-Super-120B 为基座，使用公开与合成数据（不含客户数据）进行 GRPO 强化学习后训练。关键组件为 simulation-to-reward 流水线：将工作流规范扩展为 persona-conditioned 多轮任务，并构造以成功工具使用为条件的任务完成奖励。企业领域规范以 Agent Script（Salesforce 构建 Agentforce 智能体的声明式语言）编写，公开工具使用领域则直接合成工作流结构；同一套仿真与落地奖励机制统一驱动两类的 GRPO 训练。 在公开工具使用、智能体推理以及企业 CRM 基准上，Salesforce Koa 相对其开放权重基座均有提升，多轮工具使用提升最显著，并超过一个强专有基线，但仍低于最强的前沿模型。
+Abstract: https://arxiv.org/abs/2609.15066
+PDF: https://arxiv.org/pdf/2609.15066
+
+[74] SkillLift: Learning Dense Rubrics from Sparse Oracles for Efficient Skill Evolution
+中文标题：SkillLift：从稀疏预言机学习密集评分规则以实现高效技能演化
+Topics: LLM
+推荐理由：LLM智能体技能的自动演化与搜索，采用双层优化和廉价代理评估降低oracle成本，属于LLM驱动的优化/演化设计，与自动算法设计与LLM智能体优化器方向相关。
+中文摘要：提出 SkillLift，通过将技能搜索与 oracle 成本解耦，学习一个 oracle 对齐的评分准则（rubric）作为结构化评估空间，以双层优化交替求解，在复杂智能体任务上以更少 token 成本超越现有自动技能方法。 核心洞见：排序是比绝对结果回归更平滑的监督目标——判断哪个技能更优所需的 oracle 评估次数少于预测精确分数。据此提出 SkillLift，将技能搜索与 oracle 成本解耦：学习一个 oracle 对齐的 rubric 作为结构化评估空间，形式化为双层优化问题并用交替优化求解。内层以冻结 rubric 作为廉价代理，零 oracle 成本地指导技能修订；外层仅调用少量 oracle rollout，通过秩相关重新对齐 rubric，从而摊销 oracle 成本并稳定文本空间更新。 在复杂智能体任务基准上，该方法优于现有自动技能方法，相比前沿演化方法减少 40%–70% 的 token 成本。代码已开源。
+Abstract: https://arxiv.org/abs/2609.15396
+PDF: https://arxiv.org/pdf/2609.15396
+
+[72] TimeThink: Eliciting Compositional Reasoning in Timeseries Large Language Models
+中文标题：TimeThink：激发时序大语言模型的组合推理能力
+Topics: LLM / RL
+推荐理由：利用RLVR训练时序LLM实现组合推理，核心是LLM+RL推理方法，与LLM和RL的交叉相关，但未涉及组合优化或算法自动设计。
+中文摘要：TimeThink 提出一个合成数据框架与 RLVR 训练策略，通过可确定生成的时间序列原语构建原子与复合问答对，使 TS-MLLM 学会显式组合式时序推理，仅用合成数据即在合成与真实基准上显著超越强基线。 TimeThink 基于"时序原语（趋势、季节性等）与领域无关且可确定生成"这一前提，先设计合成数据生成器，产出原子与复合问答对，提供带推理轨迹的客观真值；再采用可验证奖励的强化学习（RLVR）训练策略，鼓励显式推理，使模型学习组合的内在逻辑而非模仿模板轨迹。 大量实验表明，TimeThink 仅使用合成数据训练，即可在合成与真实世界基准上显著优于强基线。
+Abstract: https://arxiv.org/abs/2609.13457
+PDF: https://arxiv.org/pdf/2609.13457
+
+[72] OrchSLM: Probing the Dynamics of Small Language Model Orchestration
+中文标题：OrchSLM：探究小语言模型编排的动态机制
+Topics: LLM
+推荐理由：研究小语言模型的多模型编排与路由机制，属于LLM智能体调度方向，与LLM作为控制器/优化器的兴趣相关但未直接涉及组合优化或算法自动设计。
+中文摘要：论文提出 OrchSLM，一个统一非交互式编排方法的SLM路由框架，并将设计选择暴露为可控参数，用于系统探究编排行为如何由任务结构、模型池组成与多智能体共识等因素涌现。 引入 OrchSLM 路由框架，统一现有非交互式编排方法，并将其底层设计选择暴露为可控参数；以 OrchSLM 作为系统性探针，分析任务结构、模型池组成、多智能体共识等多种“调节旋钮”对编排行为的影响。 摘要为背景性/框架性介绍，未给出具体实验数据或量化结果；其发现是揭示编排行为如何从任务结构、模型池组成与多智能体共识等多样旋钮中涌现。
+Abstract: https://arxiv.org/abs/2609.13470
+PDF: https://arxiv.org/pdf/2609.13470
+
+[72] Asclepius: An Adaptive Harness for Long-Horizon Clinical Agents
+中文标题：Asclepius：面向长程临床智能体的自适应脚手架
+Topics: LLM
+推荐理由：提出自演化脚手架harness，通过轨迹反馈重写智能体操作手册，属于LLM智能体自动改进与长程优化，与自动化算法/智能体设计相关。
+中文摘要：论文提出临床环境模拟器（CES）作为长时程LLM智能体测试平台，揭示"执行鸿沟"并归纳三类长时程失效模式，进而提出Asclepius自适应脚手架系统，在关键动作正确性与及时性上显著超越强基线。 采用临床环境模拟器（CES）与结构化多维评分；将执行鸿沟归因于三类长时程失效模式，并各自操作为逐轨迹计数器：指令遵循漂移、治疗不完整、及时性上的严重度公平差距。提出Asclepius自适应智能体脚手架，包含：可在班次间依据轨迹级反馈重写操作手册的自演化harness、面向高风险治疗方案知识的外部化临床技能库，以及将每轮决策按患者队列切分的三个隔离子智能体。 当前智能体在CES上多数能给出正确诊断，但无法完成完整且及时的关键动作。在harness演化中从未观察过的留出批次上，Asclepius相对强基线框架将关键动作正确率提升22%（p=0.024），同时保持诊断准确率，并在来自三个模型家族的五个LLM评审中表现一致；在全部十个批次上，关键动作提升达25%、及时性提升13%。
+Abstract: https://arxiv.org/abs/2609.13543
+PDF: https://arxiv.org/pdf/2609.13543
+
+[72] AutoTailor: Automatic, User-Aligned Capability Selection and Adaptation for Web Agents
+中文标题：AutoTailor：面向Web智能体的自动用户对齐能力选择与适配
+Topics: LLM
+推荐理由：面向Web智能体的LLM智能体框架，自动筛选与适配MCP工具集，涉及智能体工具选择与优化，与LLM智能体优化方向相关，但非核心的组合优化或进化计算算法设计。
+中文摘要：AutoTailor 是一个元代理框架，用于构建和维护精简的、由轨迹派生的 MCP API 集合，通过离线过滤与在线动态重选提升 Web 智能体的准确性、降低开销。 离线阶段将 Web 轨迹转换为参数化浏览器自动化程序，通过 Quality Filter 剔除粒度不当与功能冗余的 API，并用 Usage Likelihood Filter 优先保留广泛有用的能力同时维持语义覆盖；在线阶段通过 Dynamic Reselection 监控任务结果与 API 使用情况，识别反复出现的覆盖缺口，补充相关候选并剪除长期未使用的能力。 在 106 个 WebArena Postmill 任务上评估：离线过滤将初始 1,283 个未精炼 API 缩减至 87 个，动态重选进一步得到 33 个 API 的集合。配合 ReAct 回退时正确率达 90.6%（ReAct 单独为 87.5%），平均总请求 token 成本降低 57.8%、延迟降低 29.4%；不使用 ReAct 时正确率为 60.1%，与未精炼集合基本持平，而请求 token 使用量降低 94.9%。
+Abstract: https://arxiv.org/abs/2609.13548
+PDF: https://arxiv.org/pdf/2609.13548
+
+[72] Efficient Online Inverse Optimization with $O(d)$ Regret
+中文标题：具有O(d)遗憾的高效在线逆优化
+Topics: 
+推荐理由：在线逆线性优化的高效算法，属于优化算法设计方向，但与LLM/EC/RL交叉较弱。
+中文摘要：本文提出首个高效且"proper"的在线逆线性优化确定性算法，每轮O(d²)时间、总遗憾O(d)，兼具有腐坏鲁棒性与秩自适应变体，并应用于凸最小化。 基于Sakaue等人的变尺度（variable-metric）框架，引入自归一化秩一更新（self-normalized rank-one update）；将原\text{log}\det势函数替换为迹幂\text{tr}(H^{-1/2})，该量天然有界，从而消除ln T项。 得到确定性算法，遗憾O(d)且对时间horizon一致（uniform），每轮O(d²)时间；这是首个高效的此类界，也是首个proper规则。该界对不进行优化的专家（expert）同样成立；并给出腐坏鲁棒（corruption-robust）和秩自适应（rank-adaptive）变体，以及凸最小化的应用。
+Abstract: https://arxiv.org/abs/2609.13440
+PDF: https://arxiv.org/pdf/2609.13440
+
+[72] A Hybrid Agentic AI Framework for Intelligent Supply Chain Analytics
+中文标题：面向智能供应链分析的混合智能体AI框架
+Topics: LLM / Optimization
+推荐理由：多智能体LLM框架用于供应链分析与库存管理优化，涉及自动预测优化与决策支持，与LLM优化应用相关但非核心算法设计。
+中文摘要：提出面向供应链分析的多智能体（agentic）系统，由协调智能体解析用户意图并委派给专业子智能体，兼顾探索性分析与确定性工作流；在多级库存管理测试环境中达到90%准确率，与单智能体基线相当，同时输入token消耗降低约四倍。 设计多智能体架构：协调智能体（coordinator agent）负责理解用户意图并将子任务委派给专业智能体；系统同时支持探索性分析与确定性工作流；领域逻辑封装在专业智能体与提示词中，实现可扩展、模块化、可审计的设计，并通过以提示词为中心的开发降低功能扩展成本。 在复现多级库存管理运营的测试环境中评估：多智能体设计准确率达90%，与单智能体基线相比具竞争力，同时输入token用量减少约四倍，显著提升可扩展性与成本效益。案例研究展示了可解释的次优性检测与自动化预测优化。
+Abstract: https://arxiv.org/abs/2609.13561
+PDF: https://arxiv.org/pdf/2609.13561
+
+[72] Planning or Learning: Reliability and Cost in Multi-Asset Maintenance
+中文标题：规划还是学习：多资产维护中的可靠性与成本
+Topics: RL
+推荐理由：系统对比规划与强化学习在维护调度中的可靠性与成本权衡，属于RL用于优化决策的实证研究，与RL+优化方向相关。
+中文摘要：本文在多资产轴承维护任务上，用同一实验环境、成本模型与评估协议，实证对比了规划方法与强化学习（RL）：规划将可靠性视为硬约束而趋于零故障策略，RL优化期望成本并在低惩罚下允许偶发故障；轻量约束机制可部分提升RL可靠性。二者互补，整体基准协议可复用。 基于run-to-failure数据，在多资产轴承维护场景中构建统一基准：统一环境、成本模型与评估流程。在多种故障惩罚区间下，对比规划（将可靠性作为硬约束）与RL（优化期望成本）两类方法的行为差异；并考察奖励塑形、动作掩码等轻量约束机制对提升RL可靠性的作用。 观察到由目标构造导致的一致行为差异：规划产出零故障策略，其总成本对故障惩罚幅度基本不敏感；RL智能体随惩罚变化权衡预防性维护与偶发故障，在低惩罚区间成本更低，但在高惩罚下仍存在持续的非零故障。奖励塑形与动作掩码等机制可一定程度上引导RL趋向可靠。
+Abstract: https://arxiv.org/abs/2609.13566
+PDF: https://arxiv.org/pdf/2609.13566
+
+[72] Strong and Compact Policies for Submodular Markov Decision Processes via LP-Based Submodular Orienteering
+中文标题：基于LP的子模定向问题求解子模马尔可夫决策过程的强紧致策略
+Topics: RL / CO
+推荐理由：研究子模马尔可夫决策过程的策略优化，属于强化学习与组合优化交叉问题，并给出LP近似算法。
+中文摘要：本文针对单调子模奖励下的子模定向问题与子模马尔可夫决策过程,提出基于Sherali-Adams层级与Round-or-Cut的新LP算法,在多项式时间内实现O(n^ε)近似(子模MDP为O(H^ε)),并揭示近似比与决策所依赖历史顶点数之间的权衡。 将问题建模为有向图上带长度约束、最大化单调子模函数的s-t游走(子模定向),利用Sherali-Adams层级构造强化LP松弛,并结合Round-or-Cut框架进行舍入与割生成,再将该框架推广至子模MDP的随机转移设定。 算法保证与已有的拟多项式时间对数近似相当,并推广到子模MDP;在多项式时间下对任意ε>0给出O(n^ε)近似,子模MDP为O(H^ε),突破了此前依赖H线性的近似比;同时揭示近似比与智能体决策所条件化的历史访问顶点数之间的权衡关系。
+Abstract: https://arxiv.org/abs/2609.15539
+PDF: https://arxiv.org/pdf/2609.15539
+
+[72] GeoSkill:Experience-Driven Hierarchical Skill Learning with Collaborative Revision forGeospatialAgents
+中文标题：GeoSkill：面向地理空间智能体的经验驱动分层技能学习与协同修订
+Topics: LLM
+推荐理由：基于LLM智能体的分层技能学习与经验修订，涉任务规划与工具使用，与LLM智能体优化器/控制器方向相关，但应用为地理空间分析。
+中文摘要：提出GeoSkill——面向地理空间智能体的经验驱动层次化技能学习框架，通过层次化技能库与协同修订机制将历史执行经验转化为可复用技能，在EarthBench与ThinkGeo上提升任务准确率与工具执行可靠性。 GeoSkill包含两部分：(i) 层次化技能库HSB，由规划技能库与工具技能库组成，分别提炼高层任务规划经验与工具使用约束，实现历史执行经验的结构化表示与跨任务复用；(ii) 协同轨迹驱动技能修订机制CTSR，由Judge、Critic与Refiner协同完成错误识别、技能级缺陷定位与针对性修改，防止错误归因与不可靠修订污染技能库。开发阶段从历史执行中学习并验证技能，部署阶段冻结技能库仅做检索式指导。 在EarthBench与ThinkGeo上的大量实验表明，GeoSkill有效将历史执行经验转化为可复用的层次化技能，提升端到端任务准确率与工具执行可靠性。
+Abstract: https://arxiv.org/abs/2609.13667
+PDF: https://arxiv.org/pdf/2609.13667
+
+[72] Measuring the Creativity of Frontier LLMs in Automated Research
+中文标题：衡量前沿LLM在自动化研究中的创造力
+Topics: LLM
+推荐理由：评估LLM在自动化研究中的创造力，涉及LLM驱动的算法/假设发现与搜索空间探索，与LLM用于优化和自动设计相关。
+中文摘要：本文提出一套从"价值性"与"新颖性"两个维度评估前沿大模型自动化科研创造力的指标，其中新颖性从精确匹配、变量层级、外部知识偏离三个视角度量，发现变量层级P-Novelty是区分模型能力并最关联科研表现的关键维度。 构建双维度创造力指标：价值性衡量所提想法是否有用；新颖性从三个角度评估——是否曾出现相同想法（Exact-Match P-Novelty）、是否探索了此前未研究的变量或变量组合（Variable-level P-Novelty）、以及想法是直接沿用检索到的外部知识还是偏离之（H-Novelty）。并对模型得分与科研表现做相关性与想法级分析。 各模型在多数创造力指标上得分相近，但在Variable-level P-Novelty上差异显著；该指标反映研究空间探索的广度。
+Abstract: https://arxiv.org/abs/2609.14057
+PDF: https://arxiv.org/pdf/2609.14057
+
+[72] JumpStart Your Policy Learning with Lessons from 160,000 Training Runs
+中文标题：用16万次训练的经验助力策略学习
+Topics: RL
+推荐理由：大规模离线强化学习/模仿学习实证研究，系统考察超参数调优、基准构成及算法推荐，对RL与自动化算法选择/配置有较强参考价值。
+中文摘要：本文对离线强化学习与模仿学习进行大规模实证研究，训练了16万余个策略、覆盖114个数据集，发现无算法能全面占优，超参调优与基准构成会显著改变结论，并提出默认配置推导策略、数据集条件化推荐器及资源套件JumpStart。 开展大规模实证研究：在114个数据集上训练超过160,000个离线强化学习与模仿学习策略；系统分析超参调优、基准构成、超参敏感性与跨环境迁移；基于发现构建数据集条件化的算法推荐器；并发布包含全部模型、分数、超参、基线、代码与可扩展网站的资源套件JumpStart。 在此规模下没有算法能够全面占优：最强方法间的总体性能往往接近，但领先者随环境差异显著变化。恰当的超参调优会频繁改变算法排名感知，基准构成可导致相互冲突的结论。研究还识别出推导强默认配置的简单策略，并构建出可给出任务特定算法推荐的数据集条件化推荐器。
+Abstract: https://arxiv.org/abs/2609.13730
+PDF: https://arxiv.org/pdf/2609.13730
+
+[72] Do Not Restart: Residual Completion for Stateful Agent Handoffs
+中文标题：不要重启：有状态智能体交接的残差补全
+Topics: LLM
+推荐理由：提出LLM智能体有状态交接的残差补全方法CFRC，涉及路由与控制权转移，与LLM智能体优化相关。
+中文摘要：本文提出承诺约束残差补全（CFRC）框架，用于在有状态模型间移交控制时保留已接受选择、已实现效果与未完成义务，从而以显著更低成本实现可比精度。 将问题形式化为承诺约束残差补全，并引入CFRC。CFRC执行三项约束：目标先于提案、整体提案先于授权、活证据先于成功；从已接受进展冻结残差契约，将后继续作闭合为证据链接图，仅当剩余部分被覆盖时才允许执行，并以活收据清偿义务。 建立了契约相对部分正确性，并在完整契约构造下扩展至原始残差请求。在五个环境和两组同提供商模型对上，CFRC以强全任务智能体22.0%-34.6%的推理成本达到可比的宏观精度，跨提供商结果进一步显示更广泛的迁移性。
+Abstract: https://arxiv.org/abs/2609.13800
+PDF: https://arxiv.org/pdf/2609.13800
+
+[72] Benchmarking Optimizers to Solve Inverse Problems with Differentiable Physics Simulators
+中文标题：基准评测优化器求解可微物理仿真器逆问题
+Topics: Optimization
+推荐理由：系统评测多种优化器求解可微物理逆问题的基准研究，涉及优化器选择与设计并可为自动优化算法设计提供参考，但与LLM/EC/RL等核心方向无直接交叉。
+中文摘要：本文构建12个可微物理模拟器，设计涵盖参数辨识、逆设计与最优控制的逆问题，系统基准测试一阶、近似二阶及全局优化器的性能，为可微编程优化器选择与设计提供洞见。 构建覆盖离散力学、连续力学、原子模拟、渲染和半经验物理模型等物理领域的12个可微物理模拟器；基于这些模拟器设计可归类为参数辨识、逆设计和最优控制的逆问题；在这些问题上对常规一阶方法、近似二阶方法以及全局优化器进行大量对比实验并分析结果。 通过大量实验对比不同优化器（一阶方法、近似二阶方法、全局优化器）在上述逆问题上的性能，并对结果进行分析，得出了关于如何为可微编程选择和设计优化器的洞见。
+Abstract: https://arxiv.org/abs/2609.13819
+PDF: https://arxiv.org/pdf/2609.13819
+
+[72] Optimizing Sparse Outcomes Through Dense Behavioral Signals via Value-Guided Preference Distillation
+中文标题：通过价值引导偏好蒸馏利用密集行为信号优化稀疏结果
+Topics: RL / LLM
+推荐理由：将多轮对话优化建模为多目标强化学习，利用密集行为信号指导稀疏结果，并采用偏好蒸馏，与RL优化及LLM对齐中的奖励设计相关。
+中文摘要：本文将长周期多轮对话优化建模为多目标强化学习问题，通过训练多头价值模型预测多时间跨度的用户行为向量，结合行为信号标量化实现有效信用分配；提出反事实用户模拟+对话级结果模型的安全评估框架识别失效模式，并用参考锚定偏好优化蒸馏多目标价值偏好，在少量算力下媲美在线RL，且线上A/B测试验证了长期留存与正向行为的提升。 1）将长周期对话优化形式化为多目标强化学习问题，训练多头价值模型（multi-head value model）预测多时间跨度（多look-ahead horizon）的用户行为向量；2）对稠密辅助行为信号进行标量化组合，以稀疏结果的有效信用分配；3）构建安全框架：结合反事实用户模拟（counterfactual user simulation）与经校验的对话级结果模型，评估偏好权重与策略优化方法；4）通过参考锚定偏好优化（reference-anchored preference optimization）将多目标价值偏好蒸馏进策略。 标量化复合的稠密行为信号能够实现有效信用分配并优化稀疏结果；无约束的单目标代理优化会引发对真实用户有害的策略退化；蒸馏方法在极低算力预算下达到与在线on-policy RL相当的性能；线上A/B测试显示蒸馏策略显著提升长期用户留存，同时改善正向行为与治疗过程指标。
+Abstract: https://arxiv.org/abs/2609.14648
+PDF: https://arxiv.org/pdf/2609.14648
+
+[72] Beyond Scene Description: Multi-Agent Orchestration for Non-visual Access to Virtual Worlds
+中文标题：超越场景描述：面向虚拟世界非视觉访问的多智能体编排
+Topics: LLM / Planning
+推荐理由：多智能体编排与信息选择调度，涉及规划与协调，与LLM智能体控制方向相关。
+中文摘要：MetaBlind提出一种将非视觉访问能力分散到八个专用智能体的架构，并在智能体与用户之间设置无障碍编排器，通过多维度打分筛选当前时刻相关信息，以语音、结构化音频或触觉输出呈现。目前处于设计阶段，尚未有原型测量或用户研究。 提出MetaBlind架构：将非视觉访问分布到八个专用智能体，覆盖感知、导航、社交与物体交互、沟通、安全与信任、记忆及个性化；在智能体与用户之间引入无障碍编排器（Accessibility Orchestrator）。智能体不直接向用户播报，而是将候选信息发布到共享无障碍上下文；编排器对每个候选项按安全相关性、目标相关性、紧迫性、置信度、用户相关性和预估听觉负荷打分，仅释放当下相关项，经语音、结构化音频或触觉输出。论文给出选择步骤的形式化表述、编排周期的算法规范，并定义对照单一智能体助手的评估方案。 论文处于设计阶段，无原型测量或用户研究结果；评估方案明确列出哪些结果将支持该设计、哪些将反驳该设计。
+Abstract: https://arxiv.org/abs/2609.14512
+PDF: https://arxiv.org/pdf/2609.14512
+
+[72] DynSTEER: Dynamic Stage-wise Trajectory Evaluation and Execution-time Review for Agents
+中文标题：DynSTEER：面向智能体的动态分阶段轨迹评估与执行时审查
+Topics: LLM
+推荐理由：面向LLM智能体长程任务执行的动态分阶段轨迹评估与执行中审查框架，核心贡献是LLM智能体的过程评估与在线终止机制；与LLM智能体优化/控制器主线间接相关，但未直接涉及组合优化或算法自动生成，故为中等相关。
+中文摘要：提出DynSTEER，一种面向LLM智能体的动态分阶段轨迹评测框架，通过阶段切分、路径容忍里程碑图与多级评判路由，提升评测区分度、支持多样解法并在线终止失败轨迹。 DynSTEER将rollout按关键已完成动作切分为若干阶段，聚焦核心里程碑并提供充分上下文，支持针对性策略调整；基于公开任务视图构建路径容忍的里程碑图，在不泄漏真值的前提下容纳多种合法策略；采用多级评判者自适应路由评测查询，并对不可恢复执行在线终止。 评测区分度较原生评测提升85.2%，所有模型对均具统计显著性区分，失败rollout节省34.51%执行步骤。
+Abstract: https://arxiv.org/abs/2609.14637
+PDF: https://arxiv.org/pdf/2609.14637
+
+[72] LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents
+中文标题：LIMBO：面向LLM智能体的终身推理时记忆与预算优化
+Topics: LLM / Optimization
+推荐理由：面向LLM智能体的推理时记忆与预算在线优化，属于LLM智能体优化资源分配的相关工作。
+中文摘要：本文提出LIMBO，一个面向终身学习LLM智能体的在线推理时内存分配框架，将经验回放视为可控制的推理资源，联合优化内存策略与推理预算。 作者将问题定义为推理时内存分配（inference-time memory allocation），并提出LIMBO框架：将内存作为可控的推理时资源，针对每个新任务联合优化内存策略与推理预算；无需模型权重、教师监督或离线重训练，在单次前向过程中在线学习分配策略，显式平衡任务性能与推理成本，且不修改底层智能体。 在LifelongAgentBench上使用三种LLM主干进行实验，LIMBO相比最先进的内存增强基线取得更好的成本-准确率权衡，在推理成本降低最多约83%（平均约53%）的情况下，性能几乎匹配所有最强基线。
+Abstract: https://arxiv.org/abs/2609.14138
+PDF: https://arxiv.org/pdf/2609.14138
+
+[72] Another Blueprint In The Wall: How to Ask Frontier AI Like a Kid?
+中文标题：另一堵墙上的蓝图：如何像孩子一样询问前沿AI？
+Topics: LLM
+推荐理由：研究LLM在提示下提出神经架构设计模式，涉及LLM作为架构设计者及自动化设计，与LLM+自动设计方向相关。
+中文摘要：在六类前沿模型的十次独立会话中，纳入"学校听众"框架后，模型输出反复收敛到一个以持久潜在状态、自适应计算、记忆、专家路由、验证、停止控制与延迟解码为核心的共同架构模式；移除该框架后异质性显著上升，表明听众框架是该效应的关键条件。 采用三阶段提示序列（从架构偏好推进到完整 ASCII 骨干），对来自 OpenAI、Anthropic、xAI、Google DeepMind 的六类前沿模型各进行十次独立会话；设置对照运行，在保留架构请求的前提下去除学校框架；并对模型生成的继承者架构进行文本比对以考察组织结构的重叠程度。 大多数运行贴近同一共同架构结构，少数运行展现出显著更高的工程细节度；对照组在去除听众框架后输出变得明显异质，未能复现该稳定母题收敛。GPT-5.6 Sol 生成的继承者架构与 GPT-6 Astra 独立勾勒的架构在组织上高度重叠。
+Abstract: https://arxiv.org/abs/2609.14803
+PDF: https://arxiv.org/pdf/2609.14803
+
+[72] El Agente Potente: High-Throughput Agentic Atomistic Simulations
+中文标题：El Agente Potente：高通量智能体原子模拟
+Topics: LLM
+推荐理由：LLM智能体用于科学模拟工作流的规划与路由，涉及智能体设计与自动化，但未直接涉及组合优化或进化计算等核心方向。
+中文摘要：提出 El Agente Potente 智能体系统，将类型化执行图与编码模式结合，用于 MLIP 驱动的原子尺度模拟，兼顾可复现性和灵活性。 系统由两种互补机制构成：(1) 类型化执行图，提供结构化、可溯源的标准工作流执行，LLM 仅负责规划与路由，科学计算与验证由确定性 Python 组件完成；(2) 编码智能体，针对需要更高流程灵活性的任务构建定制工作流，同时复用现有 Potente 函数以支持已实现的计算。 在计算材料发现、分子能量景观探索、吸附与催化反应等任务上进行了演示，并对可复现性与 LLM token 开销开展了系统性基准测试。
+Abstract: https://arxiv.org/abs/2609.14840
+PDF: https://arxiv.org/pdf/2609.14840
+
+[72] Nonparametric Variance-Penalized Actor-Critic: Statistical Inference for Risk-Sensitive Reinforcement Learning
+中文标题：非参数方差惩罚演员-评论家：风险敏感强化学习的统计推断
+Topics: RL
+推荐理由：提出非参数方差惩罚actor-critic，属于风险敏感强化学习算法设计，与RL及优化算法设计相关，但未涉及LLM/EC/CO交叉。
+中文摘要：该论文提出非参数方差惩罚演员-评论家框架（VPAC），用基于自举与随机缩放的在线方差估计器替代方差评论家网络，保持单评论家架构，并在温和有界性条件下证明几乎必然收敛；实验表明其方差降低效果达到或超越双评论家基线，并在高温超导制造案例中大幅降低稳态临界电流波动。 提出非参数方差惩罚演员-评论家（VPAC）框架，用来自随机逼近统计推断文献的自举（bootstrapping）和随机缩放（random scaling）在线估计器替代方差评论家；估计器无需辅助网络、维持单评论家架构，且构造上方差惩罚有界。通过常微分方程（ODE）方法，在仅要求方差估计有界（而非一致）的条件下，证明方差惩罚Q学习与双时间尺度演员-评论家变体的几乎必然收敛。 在离散与连续随机环境中评估，所提方法达到或超过现有双评论家VPAC基线的方差降低效果，同时消除第二评论家开销；在高温超导（HTS）制造案例中，VPAC-RS（随机缩放）实现稳态临界电流变异性降低74%、回合回报标准差降低63%，直接改善良率一致性。
+Abstract: https://arxiv.org/abs/2609.14327
+PDF: https://arxiv.org/pdf/2609.14327
+
+[72] Externalizing Requirement-to-Repair Artifacts as Observable Traces for LLM-Based Program Repair
+中文标题：将需求到修复的工件外化为可观测轨迹以支持LLM程序修复
+Topics: LLM
+推荐理由：研究LLM驱动的程序修复工作流与可观测trace，属于LLM agent与自动化调试方向，与LLM用于优化/搜索有间接关联。
+中文摘要：THEMIS 是一个阶段感知的仓库级修复工作流，通过语义解释、运行时需求-代码图、图派生指导、修复理由与补丁留存以及事后审计记录，将需求到修复的隐式过程外显化，使跨阶段检查与度量成为可能。 提出 THEMIS 阶段感知修复工作流，包含：语义解释、运行时需求-代码图、由图派生的 Developer 指导、保留修复理由与补丁、事后审计记录。通过 300 例 SWE-bench Lite 回溯审计与 100 例配对比较进行评估。 288 例可获得完整 Developer 理由；214 例（71.3%）保留连接所选阶段的完整审计字段集。目标符号在 62.6% 的 Developer 理由与 62.8% 的补丁中复现，纳入相关符号后升至 75.8%。100 例配对比较中，关系式工作流解决 19 例，直接同输入条件解决 9 例（因两条件在 Analyzer 输出、图派生蒸馏与 Judge 记录上亦不同，仅作为初步的工作流级证据，非图组件的因果效应）。
+Abstract: https://arxiv.org/abs/2609.14913
+PDF: https://arxiv.org/pdf/2609.14913
+
+[72] CoMem: Collective-Individual Memory Synergy for Evolutionary Multi-Agent Systems
+中文标题：CoMem：面向进化多智能体系统的集体-个体记忆协同
+Topics: LLM
+推荐理由：面向LLM多智能体系统的集体-个体记忆协同架构，提升多智能体学习与长期表现，与LLM驱动智能体及协同优化相关，但未直接涉及组合优化或进化计算算法设计。
+中文摘要：本文提出 CoMem，一种融合个体私有经验与集体共享知识的多智能体记忆架构，并通过三项机制避免记忆污染，在 ALFWorld 与 PDDL 基准上取得强性能。 提出“集体—个体记忆协同”概念，并设计 CoMem 架构，统一私有经验与共享知识。该架构包含三项组件：(i) Private Experience Sedimentation，使每个智能体随时间保留并更新自身有用记忆；(ii) Collective Wisdom Curation，仅筛选被广泛验证的观点在智能体间共享；(iii) Parallel Dual-Stream Retrieval，使智能体同时从自身记忆与群体智慧中检索，并利用聚类保证多样性。 在 ALFWorld 和 PDDL 基准上的实验表明，CoMem 取得较强的整体性能，并能稳健地避免记忆污染。
+Abstract: https://arxiv.org/abs/2609.15009
+PDF: https://arxiv.org/pdf/2609.15009
+
+[72] EMR: Self-Evolving Medical Multi-Agent System via Experience Mining and Reuse
+中文标题：EMR：通过经验挖掘与重用的自进化医学多智能体系统
+Topics: LLM / LLM Agent
+推荐理由：LLM多智能体系统的经验挖掘与重用实现自我进化，与LLM驱动的自动化优化/控制相关，但应用领域为医学诊断而非核心优化问题。
+中文摘要：EMR：一种通过经验挖掘与复用实现自进化的医疗多智能体系统，引入分层临床经验库，在推理中模拟多学科会诊，并从推理轨迹中自动提取成功洞见与失败警示以持续更新经验库。 构建三层分层临床经验库（临床原则、诊断模式、代表性案例）；推理阶段模拟多学科会诊——由规划智能体协调各专科部门智能体进行专门推理，汇总智能体整合分析形成最终决策；自动从多智能体推理轨迹中提取正确诊断洞见与失败相关警示，增量更新经验库以指导后续病例。 在医疗推理基准上，EMR持续优于当前最先进的医疗多智能体基线；分层经验支持跨专科泛化，并可跨不同LLM骨干模型迁移。
+Abstract: https://arxiv.org/abs/2609.15161
+PDF: https://arxiv.org/pdf/2609.15161
+
+[72] OpenAI4S: Code as Action, Science as Sessions
+中文标题：OpenAI4S：代码即动作，科学即会话
+Topics: LLM
+推荐理由：构建基于LLM的科研智能体框架，以代码为动作并管理科研会话，属于LLM智能体在自动化科研流程中的应用，与LLM智能体研究相关，但未直接聚焦组合优化或优化算法设计。
+中文摘要：提出开源科研智能体 OpenAI4S，以"代码即动作、科学即会话"为原则，结合持久化计算运行时与会话管理，在 36 个科研场景中取得 7.83 分，优于基线模型 5.7–6.4 分。 OpenAI4S 将持久化计算运行时与研究会话管理相结合：编排通过结构化工具调用来完成，科学动作表示为在持久化 Python 与 R 内核中执行的完整代码单元。采用仅追加式 Action Ledger、逐单元执行记录、版本化产物、环境记录与工作区检查点来保留结果产生过程，并支持会话恢复、分支与扩展；同时配置沙箱、权限控制及代码与轨迹筛查作为安全保障。 在涵盖逆合成、分子动力学、蛋白质结合剂设计、蛋白质突变、催化剂筛选与矿物光谱的 36 个科研场景中评测科学任务准确性、工作流完整性与结果仓库的可复现性。OpenAI4S 总体得分 7.83，而通用编码框架在三种前沿模型下为 5.7–6.4，长周期与计算密集型工作流上提升最大。
+Abstract: https://arxiv.org/abs/2609.15096
+PDF: https://arxiv.org/pdf/2609.15096
+
+[72] An immune world model for multiscale forecasting and therapeutic hypothesis generation
+中文标题：面向多尺度预测与治疗假设生成的免疫世界模型
+Topics: EC
+推荐理由：用受控进化AI科学家自动搜索架构与流程构建免疫世界模型，属于自动化模型/算法设计，与进化计算核心方向相关。
+中文摘要：研究者利用受治理的进化式AI Scientist构建了"免疫世界模型"（Immune World Model），一种以干预为条件、跨细胞—组织—个体三个尺度学习免疫状态变化的世界模型，并在冻结后经独立验证，最终提出IL-36γ联合SIRPα抑制的互补轴治疗假设。 采用受治理的进化式AI Scientist（governed evolutionary AI Scientist）搜索候选架构与工作流，构建动作条件化的免疫世界模型；模型在独立确认前被冻结；随后用冻结模型进行泛化测试、干预特异性细胞程序恢复、细胞与组织信息整合，以及未见扰动组合的预测，并通过受治理的自我纠正审计筛选细胞因子组合。 冻结模型可泛化到未见干预与生物情境，恢复干预特异性细胞程序，整合细胞与组织信息以提升生态系统及患者应答预测，并预测未见扰动组合；模型引导分析结合实测扰动与跨轴推断，提名IL-36γ加SIRPα抑制为互补轴治疗假设，而受治理的自我纠正审计拒绝了所有被筛查的细胞因子对。
+Abstract: https://arxiv.org/abs/2609.14709
+PDF: https://arxiv.org/pdf/2609.14709
+
+[72] GRPO-QM: Target Preserving Exploration for Quantum Tomography
+中文标题：GRPO-QM：量子层析中保持目标分布的探索策略
+Topics: RL / LLM
+推荐理由：GRPO属于大模型RL训练算法，用于科学后验推断，与RL优化核心兴趣相关，但非经典CO/EC任务。
+中文摘要：GRPO-QM通过组相对策略学习量子层析后验的探索策略，并以精确Metropolis校正保证后验平稳性；研究表明多数重构增益来自物理提议机制与先验，而非学习本身，并通过精确/采样梯度对比揭示采样训练中可复现的失败模式及目标缩放修正。 提出GRPO-QM：用组相对策略在可逆物理移动中选择探索动作，策略固定后通过精确Metropolis校正维持后验平稳。在45个枚举后验上各用3个训练种子，对比精确梯度与采样梯度的同一轨迹目标，并将轨迹得分平均与惩罚缩放进行消融。 相对于调优的混合提议，精确梯度与采样梯度分别将平均物理估计方差降低12.63%与6.32%，而仅平均轨迹得分、不缩放惩罚只降低0.43%；收益集中在四光子情形，在十六光子时符号反转。
+Abstract: https://arxiv.org/abs/2609.14711
+PDF: https://arxiv.org/pdf/2609.14711
+
+[72] ProIQA: A Process-Based Framework for Fine-Grained Math Item Quality Assessment
+中文标题：ProIQA：面向细粒度数学题质量评估的过程化框架
+Topics: LLM
+推荐理由：用LLM构建推理树并做自动生成题目的质量评估，属于LLM辅助自动生成与评估的交叉，但与优化算法设计关联有限。
+中文摘要：本文提出ProIQA，一个过程感知的数学题目质量评估框架，通过将题目建模为层次化推理树并融合题干语义，实现对知识概念、难度和学科能力三个维度的细粒度评估。 1）在统一的过程感知视角下，将IQA形式化为知识概念、难度、学科能力三个异质维度；2）构建过程增强的IQA资源，用原始解答派生结构化推理树来增强题目数据；3）利用大语言模型构建层次化推理树，用图神经网络（GNN）编码其拓扑依赖与过程语义；4）通过双视角（题干+解题）架构将解题表示与题干语义融合，实现覆盖学习目标的综合评估。 在K12数学数据集上的大量实验表明，ProIQA能有效捕捉过程导向特征，为智能教育系统中评估AIG输出提供了可扩展的数据驱动方案。
+Abstract: https://arxiv.org/abs/2609.15292
+PDF: https://arxiv.org/pdf/2609.15292
+
+[72] Why LLM Agents Collapse Without Oversight: The Enforcement Gap as the Mechanism Behind Emergence World Failures
+中文标题：为何LLM智能体在缺乏监督时崩溃：执行缺口作为涌现世界失效的机制
+Topics: LLM / RL
+推荐理由：研究LLM智能体架构中检测与执行分离的缺陷，提出修复机制并用GRPO训练执行控制器，与LLM智能体及强化学习优化相关。
+中文摘要：前沿LLM智能体存在"执法缺口"：审计能发现问题，控制器却不行动；仅需不到20行代码的单一条件检查即可将攻击成功率降低四倍以上。 提出"执法缺口"概念：Reflexion式智能体虽能通过迭代自我批判检测危险计划步骤，但架构未提供从检测到行动的路径。方法上引入单一条件检查（少于20行代码）；形式化证明执法概率趋近于零时检测质量与安全性无关；识别两类复合失效模式（审计器不可靠、判定不可解析）；并用GRPO训练的执法控制器解决歧义情形。 在跨前沿模型、全部五大智能体框架及一个独立基准的大规模实验中，攻击成功率降低四倍以上；形式化证明执法概率近零时检测质量对安全性无关；两类失效模式解释了Emergence World中所有崩溃模式。
+Abstract: https://arxiv.org/abs/2609.15293
+PDF: https://arxiv.org/pdf/2609.15293
+
+[72] Who Teaches Which Token? Verifier-Gated Multi-Expert On-Policy Distillation for Scientific Reasoning
+中文标题：谁教哪个词元？验证器门控多专家在线策略蒸馏用于科学推理
+Topics: LLM / RL
+推荐理由：多专家在线策略蒸馏结合GRPO，涉及RL训练与token级监督分配，与LLM+RL优化相关但非直接优化算法设计。
+中文摘要：该论文提出Verifier-Gated Multi-Expert On-Policy Distillation (VG-OPD)，通过验证机制解决多教师在线策略蒸馏中"谁该教哪个token"的问题，在科学推理任务上取得领先表现。 VG-OPD通过验证来回答上述问题：(1)专家在特定答案准则上的反事实增益(license)决定该专家是否有资格进行教学；(2)专家与学生输出的分歧用于定位监督位置；(3)准则重要性决定监督权重。门控KL作为加性的token级优势进入GRPO优化。在科学推理场景中实例化，使用RL训练的能力专家。 在4B和8B学生模型上，VG-OPD在七个基准上取得最佳整体表现，两个规模上均排名第一的有五项，且在知识密集型的科学推理任务上增益最大。进一步分析表明，增益来源于对已验证监督的定位（localization），而非增加教师数量或蒸馏损失：在相同监督预算下误置监督是危害最大的改动，而不加区分的蒸馏会使RL低于其自身基线，而门控蒸馏则能够提升RL表现。
+Abstract: https://arxiv.org/abs/2609.15404
+PDF: https://arxiv.org/pdf/2609.15404
+
+[72] What Does an LLM Learn from Reinforcement Learning? A Mechanistic Interpretability Perspective with Fixed-SAE Track
+中文标题：LLM从强化学习中学习到了什么？固定SAE跟踪的机制可解释性视角
+Topics: LLM / RL
+推荐理由：研究RL如何改变LLM内部表征，涉及LLM与RL交叉，虽非直接优化算法设计，但对LLM+RL训练机制有潜在启发。
+中文摘要：本文提出 Fixed-SAE Track 框架，通过在基座模型与全部 RL 检查点的激活上训练共享稀疏自编码器（SAE），固定特征方向以严格追踪 RL 训练中的表征漂移，发现 RL 主要增强少量格式化特征的采样率而非塑造问题内容，且将其导向基座模型可恢复约 80% 的性能增益。 提出 Fixed-SAE Track 框架：对考虑的每一层，在基座模型与所有 RL 检查点池化的激活上训练一个共享 SAE，并保持所有特征方向固定，从而通过可解释 SAE 潜变量的激活严格定义表征漂移，并可检测新出现的特征。在多个数据集和多种 RL 算法上进行验证，另设计特征在构造上已知的合成基准，检验 RL 是否能注入真正新颖的特征。 RL 引发的表征漂移幅度小、渐进、概念特定，且集中于后层；主要表现为提升少量“梯子 token”（ladder tokens）及步骤分隔符、答案定界符等格式化脚手架特征的采样率，而非重塑问题内容。将这些特征导向基座模型可恢复约 80% 的 RL 性能增益。合成基准进一步检验了 RL 注入全新特征的能力。
+Abstract: https://arxiv.org/abs/2609.15064
+PDF: https://arxiv.org/pdf/2609.15064
+
+[72] LongAgent: History-Guided Agentic Search for Longitudinal Outcome Prediction
+中文标题：LongAgent：面向纵向结果预测的历史引导智能体搜索
+Topics: Search
+推荐理由：提出基于历史记忆的智能体搜索方法，自主组合变量集、时间窗和聚合函数，属于自动化搜索与优化设计，与LLM智能体作为优化/设计者方向相关，但应用在医学预测而非核心CO/EC/RL交叉。
+中文摘要：本文提出基于智能体的 LongAgent 方法，可自主搜索变量集合、时间窗口与纵向聚合函数的组合，从纵向医学数据中挖掘具有预测价值的特征表示。 提出 LongAgent，一种智能体式（agent-based）方法，在变量集、时间窗口和纵向聚合函数构成的组合空间中自主搜索，并利用历史搜索记录与数值证据（history memory + numerical evidence）指导后续探索方向。 在合成数据上，LongAgent 的平均预测 RMSE 为 1.7376，较最强非智能体基线提升 0.0151（95% CI：[0.0045, 0.0260]；p=0.0273）；在真实临床数据集上，其表现与最佳基线相当。
+Abstract: https://arxiv.org/abs/2609.15859
+PDF: https://arxiv.org/pdf/2609.15859
+
+[72] Stellar Colosseum: A Many-Agent Harness for Long-Horizon Research in Mathematics and Theoretical Computer Science
+中文标题：Stellar Colosseum：面向数学与理论计算机科学长程研究的多智能体框架
+Topics: LLM / Optimization
+推荐理由：LLM多智能体框架用于长程研究任务，涉及搜索与并行候选生成，与LLM+搜索/优化交叉相关，但非传统CO或EC算法设计。
+中文摘要：提出模型无关的推理编排框架 Stellar Colosseum，通过策略探索、成熟度门控、子问题分解与验证回馈等机制组织长程数学证明与研究级问题求解，并在定理证明与竞赛编程任务上取得领先表现。 Colosseum 为模型无关的推理分配框架：在证明构建前探索多种策略；使用 readiness gate 判断某路线是否成熟到可分解；将证明计划表示为相互依赖的章节级子问题；把验证器发现的问题路由回论证中受影响的部分。各阶段并行生成候选，并以针对性证伪进行攻击，最后通过重叠随机采样树聚合（overlapping random-sample tree aggregation）将候选及其批评整合为单一研究产物。该流程已集成进 Google Antigravity 的 Teamwork 框架，作为 Long Proof 模式。 与 Gemini 3.1 Pro 结合，在 FOCS、JMLR 等顶会论文衍生的开放问题上取得若干新结果；在 TCS-Bench（取自 FOCS、STOC、SODA 的研究级定理证明基准）上以 Gemini 3.1 Pro 与 Gemini 3.7 Flash 达到 71.0% 准确率；在 Codeforces 评测中，带执行反馈的证明导向流程用 Gemini 3.1 Pro 解出 222 题中的 218 题。
+Abstract: https://arxiv.org/abs/2609.15983
+PDF: https://arxiv.org/pdf/2609.15983
+
+[72] Bayesian Optimisation Using Product-of-Experts Gaussian Process Models with Uncertainty Calibration
+中文标题：基于专家乘积高斯过程模型与不确定性校准的贝叶斯优化
+Topics: 
+推荐理由：提出基于专家乘积高斯过程的贝叶斯优化算法，改进了替代模型与不确定性校准，属于自动优化算法设计方向，与CO和元启发式设计相关。
+中文摘要：本文提出 BO-pro-c，将带不确定性校准的专家乘积高斯过程（GP-pro-c）作为贝叶斯优化的代理模型，以缓解单全局 GP 的三次计算复杂度问题，并在多种 BO 设置下验证其性能。 提出 BO-pro-c 算法，采用 GP-pro-c 作为代理模型，并在多种不同的 BO 设置下对其性能进行评估，与基于单一全局 GP 的 BO 算法进行对比。 实验结果表明，BO-pro-c 保持了具有竞争力的优化性能，相比基于单一全局 GP 的 BO 算法，简单遗憾降低 0.9%，计算开销降低 39.4%。
+Abstract: https://arxiv.org/abs/2609.15555
+PDF: https://arxiv.org/pdf/2609.15555
+
+[72] The Router Within: Eliciting Native Skill Routing from a Frozen LLM
+中文标题：内部路由器：从冻结LLM中提取原生技能路由
+Topics: LLM
+推荐理由：提出冻结LLM内部技能路由信号提取方法，无需技能文本，提升LLM代理技能选择效率，与LLM代理和搜索优化相关。
+中文摘要：提出Gavel框架：在冻结LLM的前向传播中用两个线性映射读出技能路由信号，通过"glance+verdict"两阶段完成免上下文技能选择，零样本迁移至三个公开基准及新基准SkillTraj，显著优于需大量外部参数的检索流水线。 Gavel（Glance And Verdict from a frozen LLM）分两步：Glance将任务与各技能的中间层状态经两个线性映射（唯一可训练参数）投影，对安装时一次前向构建的紧凑技能库打分；Verdict恢复候选技能的forward，读取模型自身似然与yes/no判断，以专家乘积方式与glance融合。 一次训练即零样本迁移到三个公开基准及新基准SkillTraj（372条模拟智能体轨迹）。在Qwen3-32B上，相比增加1.2B–16B外部参数的渐进披露与检索重排流水线，书面任务最高提升13.4分，技能在rollout中途出现时最高提升21.9分；路由准确率随主干增强而提升；bash-agent场景下32B在Skill-Use上触发正确技能频率高于运行在Codex的更大前沿模型。
+Abstract: https://arxiv.org/abs/2609.15982
+PDF: https://arxiv.org/pdf/2609.15982
+
+[72] Portable Semantics, Private Dialects: Reuse and Negative Transfer in Latent Communication Between Language-Model Cells
+中文标题：可移植语义与私有方言：语言模型单元间潜在通信的复用与负迁移
+Topics: LLM
+推荐理由：研究语言模型智能体间的潜在通信与接口复用，涉及LLM智能体协作及负迁移，与LLM智能体用于优化设计方向相关
+中文摘要：该研究检验独立训练的多智能体语言社会是否共享同一"数据包"接口语言，发现跨初始化接口普遍不互通，严格零样本迁移失败定位于新算子指令的解释与执行，且继承的全局通信接口会造成严重负迁移。 1) 对6个独立训练的受限社会全部30个有序配对做泄漏控制的因果互操作性审计，采用密封留出结构与预注册的原始/正交/线性/非线性对齐阶梯；2) 在特定分解与单一密封源表述下，用源跨度控制实验定位零样本失败；3) 用匹配的自适应析因实验，检验全局训练通信接口作为先验的影响（仅重置数据包读取器、写入器与"嘴"）；4) 在两个受限检查点×两条独立冻结目标流上，比较继承接口与全新接口控制组。 互操作性审计显示6个语义相似接口不构成单一原始语言：仅一对同初始化配对双向完全互通，另一对呈非对称部分兼容，全部26个跨初始化方向在所有冻结对齐层级上均失败。源跨度控制将严格零样本失败定位到新算子指令的解释与执行环节。自适应析因中，仅重置读取器、写入器与"嘴"使最终深度三准确率从0.169提升到0.857。在两种检查点与两条冻结目标流组合中，继承接口相对全新接口对照均未达到预注册的0.10增益边际。
+Abstract: https://arxiv.org/abs/2609.11365
+PDF: https://arxiv.org/pdf/2609.11365
+
+[70] Converge Then Diversify: Decoupling Convergence and Diversity in Multi-Objective Bayesian Optimisation
+中文标题：先收敛后多样：多目标贝叶斯优化中收敛与多样性的解耦
+Topics: 
+推荐理由：多目标贝叶斯优化中收敛与多样性的分期解耦，属于优化算法设计，与自动化算法设计相关但未涉及LLM/EC/RL。
+中文摘要：本文提出"先收敛后多样"(CTD)的两阶段多目标贝叶斯优化方法，将收敛与多样性解耦，在极紧预算与高维问题上显著优于现有方法。 提出converge-then-diversify (CTD)框架，将收敛与多样性解耦为两个阶段：第一阶段专注收敛，快速将搜索驱向Pareto前沿上的单个点；第二阶段专注多样性，使解沿前沿铺开。基于领域内广泛采用的采集函数给出两种简单实现。 在全部446次成对比较中，CTD在72.9%的情况下统计显著优于SOTA方法，21.1%表现相当，仅6.1%统计显著更差；在极紧评估预算或高维问题中优势尤为明显。
+Abstract: https://arxiv.org/abs/2609.13396
+PDF: https://arxiv.org/pdf/2609.13396
+
+[68] ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search
+中文标题：ZGCM-1：面向数学与智能体搜索的完全开放且极致高效的基础模型
+Topics: LLM
+推荐理由：面向数学推理与智能体搜索的基础模型，含MDP中训练与智能体群研发流程，与LLM智能体相关，但未聚焦组合优化或优化算法自动设计。
+中文摘要：本文提出并开源了 ZGCM-1，一个从零训练的 7B 稠密基础模型，通过数据、系统与算法层面的极致效率设计，结合模型内部思考与外部工具使用，在 256K 上下文下实现与超大前沿模型竞争的推理与智能体搜索能力。 方法包含四个层面：(1) 架构与系统协同设计，采用交错的带门控滑动窗口注意力与全注意力机制，以及稳定的 FP8 Muon 优化器；(2) 渐进式课程与 MDP 中期训练，上下文从 16K、64K 扩展到 256K，并将交互轨迹重构为马尔可夫决策过程；(3) 建立 AI 原生的研发工作流，由智能体集群自主管理集群运维、数据策管和快速诊断评估；(4) 支持 256K 上下文的高效端到端开源训练配方。 实验表明，ZGCM-1-7B 在通用基准上可媲美 7B 模型家族。在多个挑战性数学推理与智能体搜索测试集上，其表现与参数量高出数个数量级的前沿模型（如 Qwen3-235B-A22B、GLM-5.1）保持竞争力。预训练设计在 16K 预训练的时间-损失（time-to-loss）上带来约 4.2 倍的效率提升。全生命周期总结出八条可操作的实证发现，涵盖架构扩展、SFT 质量剪枝、长上下文泛化和智能体协同训练动态。
+Abstract: https://arxiv.org/abs/2609.13356
+PDF: https://arxiv.org/pdf/2609.13356
+
+[68] A $(p+q)^{O(pq)}$-approximation for $(p, q)$-Flexible Graph Connectivity
+中文标题：(p,q)-柔性图连通性的(p+q)^{O(pq)}-近似算法
+Topics: LLM / CO
+推荐理由：图连通性近似算法，与组合优化相关；结构结果由ChatGPT辅助发现，涉及LLM用于算法设计但程度有限。
+中文摘要：针对 (p,q)-Flexible Graph Connectivity 问题，给出 (p+q)^{O(pq)} 近似算法，固定常数 p,q 时为常数近似，其核心是 (p,q−1)→(p,q) 增广问题的同阶近似算法及缺陷割的结构刻画。 将原问题归约为增广问题：在 (p,q−1)-Flex-Connected 图上加边使其成为 (p,q)-Flex-Connected，并设计 (p+q)^{O(pq)} 近似算法；关键结构结果表明所有缺陷割可由 (p+q)^{pq} 个有向图中的最小根割表示。 得到 (p+q)^{O(pq)} 近似，固定常数 p,q 下为常数因子近似，并给出缺陷割的表征结构定理。
+Abstract: https://arxiv.org/abs/2609.14243
+PDF: https://arxiv.org/pdf/2609.14243
+
+[68] Diagnosing Faults in Reinforcement Learning Simulators and World Models with Canonical Polynomial Invariants
+中文标题：用规范多项式不变量诊断强化学习模拟器与世界模型中的故障
+Topics: RL
+推荐理由：将符号多项式不变量用于RL模拟器与世界模型的故障诊断，与RL方向相关，且方法具有算法诊断价值，但未直接涉及组合优化或自动化算法设计核心。
+中文摘要：本文用轨迹中恢复的多项式不变量（化为Q上约化Gröbner基）检验"尊重物理的模型预测更好"这一前提，发现精确不变量对预测增益甚微，但对故障诊断极具价值。 从轨迹中恢复精确多项式不变量，并规范化为有理数域Q上的约化Gröbner基；在Acrobot上测试一致性正则项与整形势能的影响；提出筛选（定位被违反的物理约束）与归因（恢复错误不变量并识别责任物理参数）两种诊断流程，并引入正规形消胀（normal-form deflation）与商空间恢复技术。 预测方面：一致性正则项降低代数残差但几乎不改变rollout保真度；用质量误差100%的系统恢复的整形势能与正确势能加速效果相当。诊断方面：15个注入故障中筛选全部正确定位且无误报，观测空间基线则无一能定位；归因在全部7个参数故障上恢复出责任参数；配对差分检验能检测所有故障，说明优势在定位而非检测；参考生成器扰动10^-4仍保留14–15/15定位，而已等性判定可区分10^-12扰动。应用于11个RL环境的350对发布版本，未发现模拟器动力学变化的证据，反而揭示了基准实现本身的性质。
+Abstract: https://arxiv.org/abs/2609.13194
+PDF: https://arxiv.org/pdf/2609.13194
+
+[68] Consistency-Robustness Tradeoffs for Online Bipartite Allocation with Multiple Stages
+中文标题：多阶段在线二分分配的一致性-鲁棒性权衡
+Topics: 
+推荐理由：研究带预测的多阶段在线二分匹配分配，提出一致性-鲁棒性权衡算法，属于在线优化与学习增强算法方向，与优化算法设计相关但未涉及LLM、EC或RL。
+中文摘要：本文研究多阶段学习增强在线二分分配问题，首次给出 $k$ 阶段顶点加权分数二分匹配的一致性-鲁棒性权衡，并扩展到分数 AdWords 及经典在线设置。 基于逐阶段凸规划，配合精细校准的顶点相关惩罚项，为每个供给顶点维护动态安全储备 (dynamic safety reserve)，以平衡对未来对抗性到达的防护与对预测分配的利用。 对每个 $k\ge2$ 给出首个权衡：给定 $R_k=1-(1-1/k)^k$，对任意 $R\in[0,R_k]$，算法 $R$-鲁棒且 $C_k(R)$-一致，其中 $C_k(R)=k(1-R)^{1/k}+R-(k-1)$；同时恢复已知两阶段紧权衡与无预测最优 $k$ 阶段竞争保证，并严格优于随机抛硬币基线。经典在线设置下一致性至少为 $C_\infty(R)=1+R+\ln(1-R)$，$R\in[0,1-1/e]$，改进已有最佳权衡。
+Abstract: https://arxiv.org/abs/2609.15837
+PDF: https://arxiv.org/pdf/2609.15837
+
+[68] Windowed A-K-MDP
+中文标题：窗口化A-K-MDP
+Topics: 
+推荐理由：提出改进的A-K-MDP算法，自动搜索更优状态抽象，属于自动化算法设计与决策优化，与强化学习/自动化算法设计方向相关。
+中文摘要：提出Windowed A-K-MDP，修复A-K-MDP因二分搜索选择离散化除数而跳过更优抽象状态的问题，在33个K-MDP实例中25个改进、8个持平。 提出Windowed A-K-MDP算法：在一个显式声明的除数窗口内，生成所有不同的可行划分（distinct feasible partition）作为候选抽象状态集合，并逐一评估候选，直至达到理想值损失（J = 0）或候选族被穷尽。 在33个K-MDP实例上进行评估，Windowed方法在其中25个实例上取得改进，在其余8个实例上与基线持平。
+Abstract: https://arxiv.org/abs/2609.13676
+PDF: https://arxiv.org/pdf/2609.13676
+
+[68] The Filter Metric is Safety-Critical: Phantom Advantages in Group-Relative RL under Shaped Rewards
+中文标题：过滤指标是安全关键的：形状奖励下组相对强化学习中的幻影优势
+Topics: RL / LLM
+推荐理由：研究GRPO类强化学习算法在复合奖励下的过滤指标误导问题，涉及LLM的RL优化，但与组合优化/进化计算等核心交叉方向关联较间接。
+中文摘要：在使用复合塑形奖励的 GRPO 类算法中，若动态采样的过滤指标使用塑形训练分数而非任务结果，会使全失败组因组内仍存在非零方差而通过过滤，经标准差归一化后产生"幻影优势"，导致训练崩溃；改用任务结果信号过滤可稳定训练。 控制变量实验：在 GSM8K 上使用 Qwen2.5-1.5B + LoRA，对比无过滤、塑形分数过滤、二值结果过滤三种设置（每臂四次运行，含三次默认种子重跑与一次 seed-123）。并在 verl 原生 recipe/dapo 训练器上固定模型、数据、奖励与训练器，仅改变过滤指标，直接观测原生的删除/重填（deletion/refill）遥测；同时测试正系数 lambda ∈ {0.1, 0.3, 0.5}，并在 MATH（1.5B/7B）与 GSPO 下做探索性单次运行复现，另验证关闭标准差归一化的效果。 GSM8K 对比中，无过滤与塑形分数过滤的 EM 分别为 0.080 ± 0.112 与 0.040 ± 0.008，而二值结果过滤稳定保持 0.754 ± 0.005。在 verl 原生 DAPO 训练器上仅更换指标：分数臂在 40 个观测步中均无需重填批次，最终 EM 0.160；准确率臂在 29/40 步发生重填，最终 EM 0.763。测试的 lambda 取值下不安全臂均崩溃；探索性单次运行在 MATH（1.5B/7B）与 GSPO 下复现失败；关闭标准差归一化可避免崩溃。
+Abstract: https://arxiv.org/abs/2609.13866
+PDF: https://arxiv.org/pdf/2609.13866
+
+[68] When does a scaling result justify a different allocation? A critical review of resource-allocation evidence for AI systems
+中文标题：缩放结果何时能证明不同分配的合理性？对AI系统资源分配证据的批判性综述
+Topics: LLM
+推荐理由：该综述分析AI系统的资源分配证据，涉及测试时计算和检索等机制，与自动化优化设计及LLM+优化有方法学上的相关性，但非直接核心贡献。
+中文摘要：本文是一篇批判性整合综述，旨在厘清"报告中的扩展结果在何种条件下能支持资源分配决策"。作者对比预训练、测试时计算、检索与智能体评测的证据，指出三类反复出现的错配，提出"能力曲面"与"资源包络"两个分析工具，以区分被测流程的表现与资源约束下可达到的最优表现。 批判性整合综述：跨预训练、测试时计算、检索与智能体评测比较证据；归纳出三类反复出现的错配；构造"能力曲面"（把性能表示为预算、机制与可用信息的函数）；通过解析算例展示评测指标、部署规模、选择规则与停止策略如何改变分配结论；提出"资源包络"作为对任务、开发与运行资源、信息访问和流程的结构化记录，并应用于一项已发表的对比。 识别出三类反复出现的错配：一是在答案选定之前即计入成功；二是使用了部署系统不会拥有的信息；三是比较中遗漏成本。解析算例显示，评测指标、部署规模、选择规则和停止策略均可改变资源分配结论。将资源包络应用于一项已发表对比，可说明证据支持哪些结论、哪些部署问题仍无解。
+Abstract: https://arxiv.org/abs/2609.14500
+PDF: https://arxiv.org/pdf/2609.14500
+
+[68] Forty Shades of Blue: Quality-Diversity Alignment via Mode-Conditioned Reinforcement Learning
+中文标题：四十种蓝：通过模式条件强化学习实现质量-多样性对齐
+Topics: LLM / RL
+推荐理由：提出基于多智能体RL视角的LLM多样性对齐方法，核心是RL优化生成质量与多样性，与LLM+RL交叉相关，但不直接涉及组合优化或进化算法。
+中文摘要：MoDA是一种在线后训练强化学习算法，借鉴多智能体强化学习的协调视角，通过角色条件化策略联合优化生成质量与多样性，缓解LLM对齐训练中的模式坍塌问题。 提出MoDA（Mode-conditioned Diversity Alignment），一种在线后训练RL算法。它训练单一共享LLM策略，以抽象编号角色为条件，每个角色作为竞争性智能体，力求产出与其他智能体不同的输出，从而在高质量输出空间中探索互补区域，无需人工设计人设或修改模型架构。同时引入提示自适应的质量门控机制：校准参考质量阈值，仅为达到阈值的回复授予多样性奖励，以防止牺牲响应质量的奖励黑客行为。 在涵盖七项通用能力任务和四项科学构思、创意写作领域多样性任务的基准套件上评估。MoDA在Infinite-Chat留出提示上使SBERT多样性提升265%，同时相较Qwen3-8B基线平均通用能力pass@1提升10.3%。与最强基线DivPO相比，MoDA将SBERT多样性从0.274提升至0.482（+75.9%），E-Vendi从2.86提升至4.4（+53.8%），且平均通用能力pass@1提升7.0%。
+Abstract: https://arxiv.org/abs/2609.14896
+PDF: https://arxiv.org/pdf/2609.14896
+
+[68] Bayesian optimization with kernel ensembles and disagreement-based acquisition for source localization and acoustic inversion
+中文标题：基于核集成与分歧驱动采集的贝叶斯优化用于源定位与声学反演
+Topics: Optimization
+推荐理由：提出多核高斯过程集成与采集函数改进贝叶斯优化，属于自动化优化算法设计，可迁移到组合/黑盒优化，但应用背景为声学反演，与核心交叉方向仅间接相关。
+中文摘要：本文提出一种基于多核高斯过程加权集成代理与最优条件采集函数的贝叶斯优化方法，用于联合声源定位与地声反演，在模拟及SWellEx-96实测数据上取得最低平均最终目标值并降低多数坐标的参数估计误差。 采用不同核函数族的高斯过程加权集成作为代理模型，使其能根据观测到的目标函数自适应调整，而无需预先锁定单一核；同时结合最优条件采集函数（optimum-conditioned acquisition function）决定下一个昂贵目标评估的位置。 在模拟数据与SWellEx-96实测数据上的实验表明，该方法在所比较的贝叶斯优化策略中取得最低的平均最终目标值，并在大多数坐标上降低了参数估计误差。消融实验进一步显示，集成策略提供了对核选择的鲁棒性，而采集函数贡献了大部分优化增益。
+Abstract: https://arxiv.org/abs/2609.14262
+PDF: https://arxiv.org/pdf/2609.14262
+
+[68] Not All Prompts Are Equal: Exploration-Guided Prompt Scaffolding for Multimodal Reinforcement Post-Training
+中文标题：并非所有提示都同等重要：面向多模态强化学习后训练的探索引导提示脚手架
+Topics: LLM / RL
+推荐理由：提出探索引导的提示脚手架框架，动态调整RL后训练中的提示分布，属于LLM与强化学习交叉的训练数据优化方法，但与组合优化和自动化算法设计关联较弱。
+中文摘要：本文提出探索引导的提示脚手架框架，通过探索潜力分数动态调整多模态大模型RL后训练中的提示分布，并以教师模型生成脚手架式改写替代低效提示，在Geo3K与MMK12上结合GRPO取得显著提升。 核心为探索潜力分数（EPS），一种基于 rollout 的轻量代理指标，由 KL 正则化策略改进理论导出，可直接从同策略 rollout 统计中计算，无额外开销。基于 EPS，框架不丢弃低效用提示，而是用教师模型生成脚手架式改写，在保留原任务意图的前提下提升后续训练的信息量，将教师监督重新定义为训练数据精炼而非输出模仿。该方法与 GRPO 结合，应用于 Geo3K 与 MMK12。 在域内与分布外基准上均稳定优于基线：域内最高相对提升 9.7%，MathVision 提升 11.5%，MMMU-Pro 提升 11.1%。
+Abstract: https://arxiv.org/abs/2609.15051
+PDF: https://arxiv.org/pdf/2609.15051
+
+[68] EvoOntology: A Self-Evolving Ontology Layer for Data Agents
+中文标题：EvoOntology：面向数据智能体的自进化本体层
+Topics: LLM / Optimization
+推荐理由：自进化本体层与LLM智能体，含自动化构建与进化循环，与LLM智能体和自动优化设计相关但非直接CO/EC。
+中文摘要：本文提出 EvoOntology，一种面向数据智能体的自演化本体层，以 MCP 服务器形式封装模式层、内容层与工具层，使智能体在运行时主动查询本体，并通过归因引导的类型化编辑与主干条件配对评估实现本体的持续演化，在三个基准、四种 LLM 主干上一致优于强基线。 EvoOntology 将本体封装为 MCP 服务器，包含模式层（schema layer）、内容层（content layer）和工具层（tool layer），支持智能体在运行时主动查询与交互；引入构建智能体（builder agent）实现本体自主构建；设计自演化循环（self-evolution loop），通过归因引导的类型化编辑（attribution-guided typed edits）持续精炼本体，且编辑仅在通过主干条件配对评估（backbone-conditional paired evaluation）后才被接受。 在三个广泛使用的数据智能体基准上，结合四种 LLM 主干进行实验，EvoOntology 一致优于强基线及现有语义层方法，有效弥合了智能体—数据鸿沟，实现了对异构数据更有效的交互。
+Abstract: https://arxiv.org/abs/2609.15779
+PDF: https://arxiv.org/pdf/2609.15779
+
+[68] Atria Dawn: The Dawn of Agentic Superintelligence
+中文标题：Atria Dawn：智能体超级智能的黎明
+Topics: LLM
+推荐理由：提出面向科研工程的智能体基础模型与可验证经验训练流程，LLM智能体主导方法提出与实现，与LLM用作优化器/设计者及自动化研究流程相关，但未直接聚焦组合优化或算法自动生成。
+中文摘要：论文介绍面向科研与工程工作流的基座智能体语言模型 Atria Dawn Preview，采用可验证经验流水线训练，在16项基准中5项取得最高分；并以769条任务记录、56名参与者的研发过程为案例，揭示人机协作从任务级执行转向项目级伙伴关系。 提出 Atria Dawn Preview 基座智能体语言模型，通过“可验证经验流水线”（Verifiable Experience Pipeline）训练，将工具中介的交互与可执行环境及外部可验证的结果相连接；并在覆盖真实科研、工程与数字工作的16项基准上评测。同时开展案例研究，分析56名参与者的769条任务记录与智能体日志，考察人机协作的研发过程。 在16项基准中，Atria Dawn Preview 与前沿智能体相比具备竞争力，并在其中5项上取得已报告的最高分。协作分析显示：在可比条件下评估已完成任务时，参与者认为约三分之一的AI辅助完成任务在无AI时不可行；智能体常提出方法并实施修订，而人类保留多数最终决策权，并通过判断与反馈引导探索方向。
+Abstract: https://arxiv.org/abs/2609.15818
+PDF: https://arxiv.org/pdf/2609.15818
+
+[68] Specifying Reward Functions for RL Without Environment Sampling
+中文标题：无需环境采样的强化学习奖励函数指定
+Topics: RL / LLM
+推荐理由：用LLM从偏好中构建奖励函数，属LLM辅助RL奖励设计，但未涉及CO/EC或算法自动生成，属较相关。
+中文摘要：EARS是一种无需环境交互的偏好式奖励函数学习方法，通过LLM构建奖励特征、在想象轨迹上采样并用偏好学习特征权重，在三个长时域任务上优于直接提示LLM生成奖励函数的基线。 提出Experience-Free Autonomous Reward Specification（EARS）。该方法采用结构化的LLM中介流程：从任务描述与环境观测空间中构建一小组具表达力的奖励特征，然后在这些特征空间中策略性地采样"想象"轨迹，并基于对想象轨迹对的偏好来学习特征权重。 在三个长时域领域上评估：疫情封锁管控设计、糖尿病患者胰岛素给药、高速公路自动驾驶控制。与同样无需环境交互的基线（直接提示LLM生成奖励函数的方法）对比：在基于真实偏好标签或LLM标注偏好进行学习时，EARS设计出的奖励函数比基线更接近产生这些偏好的真实奖励函数或LLM上下文。
+Abstract: https://arxiv.org/abs/2609.15544
+PDF: https://arxiv.org/pdf/2609.15544
+
+[65] Should Tables Be Sorted? Revisited with a Large Language Model
+中文标题：表格应该排序吗？基于大语言模型的再探讨
+Topics: LLM / CO
+推荐理由：主要贡献是隐含成员问题的Ramsey界改进，LLM仅用于生成证明，与优化算法设计关联较弱。
+中文摘要：本文重新审视 Yao 全表模型下的隐式成员问题，首次对 45 年前的 Ramsey 界给出定量改进：将两探针界从 tower 型降为多项式 $O(n^2(\log n)^2)$，并对任意固定 $q\ge3$ 给出高度 $q-1$、顶部为 $n^{1+o(1)}$ 的 tower 上界；同时证明隐式成员与隐式搜索在多项式损失下等价，即 $H_q(n)\le G_q(n)\le n^q(H_q(n)+1)^{q+1}$。 两探针情形完全避开 Ramsey 理论：通过非 Ramsey 的组合论证直接证明 $G_2(n)=O(n^2(\log n)^2)$。对固定 $q\ge3$，仅用 Ramsey 理论使前 $q-1$ 次探针遵循固定模式，最后一次探针复用上述非 Ramsey 论证，从而得到高度 $q-1$、顶部 $n^{1+o(1)}$ 的 tower 上界。此外，通过对隐式搜索阈值 $H_q(n)$ 与成员阈值 $G_q(n)$ 的双向归约，建立二者的多项式等价关系。 $G_2(n)=O(n^2(\log n)^2)$；对任意固定 $q\ge3$，$G_q(n)$ 不超过高度 $q-1$、顶部 $n^{1+o(1)}$ 的 tower，特别地 $G_3(n)\le\exp(n^{1+o(1)})$。同时证明对每个固定 $q$，$H_q(n)\le G_q(n)\le n^q(H_q(n)+1)^{q+1}$，故两阈值同为 $\exp(n^{O(1)})$ 或同非 $\exp(n^{O(1)})$。
+Abstract: https://arxiv.org/abs/2609.14032
+PDF: https://arxiv.org/pdf/2609.14032
+
+[65] Evaluating LLM-Generated Rules for Heart Disease Prediction
+中文标题：评估LLM生成规则用于心脏病预测
+Topics: LLM
+推荐理由：利用LLM生成IF-THEN规则用于分类，与LLM生成可解释规则及自动化规则设计相关，但应用域为医疗预测，与核心优化算法设计交集有限。
+中文摘要：该研究基于UCI心脏病数据集，对比传统机器学习模型与LLM生成规则系统的预测性能，发现传统模型整体更优（随机森林90.2%准确率），而LLM规则在可解释性上更具优势。 使用UCI心脏病数据集，评估逻辑回归、KNN、SVM、朴素贝叶斯、决策树与随机森林等分类器，并与GPT-4o和Claude Sonnet 4.6生成的规则系统对比，采用准确率、精确率、召回率和F1分数进行评估。 传统机器学习模型整体优于LLM规则系统。随机森林表现最佳，准确率90.2%、精确率0.829、召回率1.0、F1分数0.906；朴素贝叶斯次之，准确率88.5%、F1分数0.881。LLM规则模型中，Claude Sonnet 4.6达80.3%准确率（F1：0.833），GPT-4o为70.5%准确率（F1：0.690）。
+Abstract: https://arxiv.org/abs/2609.13192
+PDF: https://arxiv.org/pdf/2609.13192
+
+[65] Toward a Decision-Assurance Layer for AI-Assisted Flight Planning in Air Traffic Management
+中文标题：面向AI辅助空中交通管理飞行计划的决策保障层
+Topics: LLM / Planning
+推荐理由：将LLM等生成式AI用于飞行计划生成等规划任务，并设计决策保障层评估其可靠性，与LLM用于规划优化及人机协同决策相关。
+中文摘要：该文提出ATAL（AI信任与保障层），一种模型无关的决策保障架构，用于评估生成式AI在空管飞行计划任务中的输出可靠性，并通过决策就绪等级（DRL）向操作员传递信号。 ATAL融合三类信号：提示扰动下的语义稳定性、结构化输出的运行一致性，以及针对领域规则的规定性约束验证，并将这些信号映射为面向人类操作员的决策就绪等级（DRL）。 一项受空管启发的实验研究表明，不安全、不一致或误导性的输出能在影响飞行计划验证或执行之前被识别出来。
+Abstract: https://arxiv.org/abs/2609.13552
+PDF: https://arxiv.org/pdf/2609.13552
+
+[65] JaxAHT: A JAX-Based Library for Ad Hoc Teamwork
+中文标题：JaxAHT：基于JAX的临时团队协作库
+Topics: RL
+推荐理由：多智能体强化学习中的临时团队协作框架与基准，涉及队友生成和智能体训练，与RL优化相关但非核心交叉方向。
+中文摘要：本文提出 JaxAHT，首个基于 JAX 的开源库，用于加速并标准化 Ad Hoc Teamwork（AHT）研究流程，实现约 95 倍于 PyTorch 的墙钟加速，并提供多样化评估队友集与大规模基准研究。 作者提出 JaxAHT，一个基于 JAX 的开源统一框架，利用 JAX 的硬件加速与大规模并行能力，支持队友生成、自我（ego）智能体训练以及面向未见队友的评估。同时构建了覆盖 Level-Based Foraging、Overcooked 和 Hanabi 三个领域的多样化评估队友套件，并据此开展大规模、计算量受控的基准研究，比较队友生成方法与 AHT 智能体学习方法。 JaxAHT 相比 PyTorch 对应实现取得约 95 倍墙钟加速。基准研究显示：没有一种算法能持续表现最佳；智能体建模（agent modeling）的收益主要体现在具有多样队友的基于角色的场景中。
+Abstract: https://arxiv.org/abs/2609.13716
+PDF: https://arxiv.org/pdf/2609.13716
+
+[65] Surprising Effectiveness of Self-Demonstrations in Enhancing Schema-Ontology Mapping with LLMs
+中文标题：自演示在增强LLM模式-本体映射中的惊人有效性
+Topics: LLM
+推荐理由：利用LLM进行模式本体映射，涉及神经符号任务分解与自演示增强，属LLM应用但非核心优化交叉方向。
+中文摘要：本文提出一种自演示驱动（self-demonstration-driven）的神经符号方法，通过任务分解与模式引导的自生成示例，将异构关系数据库模式映射到本体，在RODI基准上取得F1提升25个百分点的SOTA效果。 （i）神经符号任务分解：将整体任务拆解为级联子任务，由符号约束限定搜索空间，LLM在每个聚焦子任务内执行语义推理；（ii）自生成演示：基于领域无关模式自动生成模式引导、依赖感知的示例，用于监督每个子任务。 在RODI基准中三个最具挑战性的场景上达到SOTA，相比传统模式—本体映射技术以及近期基于LLM的模式—本体映射与模式匹配方法，F1提升约25个百分点。消融实验表明模式引导的自演示带来显著收益，神经符号任务分解具有互补增益。
+Abstract: https://arxiv.org/abs/2609.13776
+PDF: https://arxiv.org/pdf/2609.13776
+
+[65] Bypass Observation: A Conceptual Design of a Non-Intrusive Layer-Wise Semantic Extraction Architecture
+中文标题：旁路观测：一种非侵入式逐层语义提取架构的概念设计
+Topics: LLM / RL
+推荐理由：提出LLM逐层可观测读出架构，与LLM推理机制及RL训练信号相关，但偏概念分析且非直接面向优化算法设计。
+中文摘要：提出"旁路观测"（Bypass Observation）架构：在选定Transformer层上附加只读观测头，不回馈主干，用于逐层解读隐藏状态；给出开销闭式近似并讨论其与常规思维链的区别及应用方向。 在选定Transformer层挂载只读观测头，输出不回馈骨干网络。设计三种变体：跨层共享LM头、层特定头、层或步自适应头。针对全词表读出，推导以V/(12d)为主要变量的闭式开销近似，并讨论稀疏观测、低秩分解、缩减词表、top-k读出与选择性位置等降本手段。区分旁路思维链与常规思维链：常规推理token进入自回归计算，旁路读出在推理时因果外部，但仍可作为强化学习的训练信号。并讨论在循环/递归深度Transformer中逐迭代读出以暴露收敛、振荡与潜在停机信号。 全词表读出的代表性额外开销估计约为30%至240%，主要由V/(12d)决定；通过上述多种降本策略可显著缓解。指出该读出仅为隐藏状态的部分投影，可能具有误导性。
+Abstract: https://arxiv.org/abs/2609.13807
+PDF: https://arxiv.org/pdf/2609.13807
+
+[65] Evaluation Metrics for Safe Reinforcement Learning
+中文标题：安全强化学习的评估指标
+Topics: RL
+推荐理由：针对安全强化学习的评估指标与基准框架，属于RL子方向，但与核心交叉（LLM+RL、RL+CO等）仅间接相关。
+中文摘要：本文指出现有安全强化学习评测仅报告平均安全性不足，提出新的评测指标、安全分级体系及开源工具SafeRLEval，并建议联合报告聚合指标、分布结果与任务/安全界特定结果。 作者提出：(i)针对上述各问题的新评测指标，并支持跨任务与跨安全界聚合；(ii)安全分级（safety tier）体系，在训练期与最终策略两个层面系统分类和比较算法的安全性与可靠性；(iii)在多个安全导航任务上进行实证安全评估。 实验表明，聚合指标、分布化报告以及任务与安全界特定结果各自揭示了其他指标无法提供的信息，三者互补而非冗余。
+Abstract: https://arxiv.org/abs/2609.15315
+PDF: https://arxiv.org/pdf/2609.15315
+
+[65] The Universe of Universes: Benefit Yield Functions, Implosion Thresholds, and Infrastructure-Aware Optimization in Multi-LLM Systems
+中文标题：宇宙中的宇宙：多LLM系统中的效益产出函数、内爆阈值与基础设施感知优化
+Topics: LLM
+推荐理由：研究多LLM系统集合规模优化与崩溃阈值，与LLM优化及自动算法设计松散相关。
+中文摘要：本文提出"宇宙中的宇宙"（UoU）框架，将主流大语言模型（LLM）整体生态视为结构化检索语料库，构建组合式自动推理（AR）与机器学习（ML）架构，实现跨模型检索增强生成，并首次形式化"收益产出函数"（BYF）及集合规模"内爆阈值"θ*。 构建UoU框架：将整个主流LLM生态作为结构化检索语料库，提出组合式AR与ML架构以支持跨模型检索增强生成；形式化定义收益产出函数BYF（每增加一个模型所带来的边际性能增益），并通过该函数识别内爆阈值θ*（即BYF过零点、集合总体性能开始下降的集合规模）。 形式上刻画了BYF与内爆阈值θ*，指出θ*是集合规模N的函数，并将AI制造速度作为θ*的协变量；同时在生态层面提出并建模认知遗传漂移（EHD）。
+Abstract: https://arxiv.org/abs/2609.15314
+PDF: https://arxiv.org/pdf/2609.15314
+
+[65] Robust and Efficient Communication for Multi-Agent Learning
+中文标题：面向多智能体学习的鲁棒高效通信
+Topics: RL
+推荐理由：多智能体强化学习中的通信机制设计，与强化学习方向相关，但未涉及组合优化或自动算法设计等核心交叉点。
+中文摘要：本文提出多智能体正则化通信框架MARC，基于条件互信息原理，结合注意力架构与消息正则化机制，在通信瓶颈与有损信道下显著优于现有方法，并验证其在高压缩条件下的鲁棒性。 提出MARC框架，受条件互信息的信息论原理启发；采用基于注意力的架构，并引入独特的消息正则化机制，通过最小化对未来系统状态的不确定性，促使智能体学习高度代表性的通信协议；在严格的通信瓶颈与有损信道条件下进行评估。 在复杂协作任务中，MARC显著优于当前最先进方法；对消息特征的深入分析表明，即使在显著数据压缩下，MARC仍能保持较高运行性能。
+Abstract: https://arxiv.org/abs/2609.15361
+PDF: https://arxiv.org/pdf/2609.15361
+
+[62] Prefix Sharing Is a Sorting Problem
+中文标题：前缀共享是一个排序问题
+Topics: LLM / CO / Search
+推荐理由：将LLM服务中的KV缓存前缀共享建模为层次聚类排序优化问题，涉及组合优化与LLM系统交叉，但与自动算法设计/EC/RL关联较弱。
+中文摘要：该论文研究LLM服务中KV缓存的前缀匹配复用问题，证明基于单一全局顺序的排序策略只有在请求包含至多两个片段时才最优，并提出将排块顺序选择等价为请求上的层次结构选择的结构定理，给出精确算法与近似算法，并在检索场景中验证了显著收益。 论文证明结构定理：最小前缀树代价等于在所有请求的二叉层次结构H上最小化 sum_x w(x) t_x(H)，其中t_x(H)为需要块x的请求集合的典范分解大小，从而将排块顺序问题等价为层次结构选择问题。基于该等价给出O(3^m)精确算法；指出两片段情形等价于最小顶点覆盖；对leave-one-out族证明最优解为最小外部路径长度（归并排序递归）。作者提出按公共交集的自底向上凝聚聚类作为紧的1/2近似算法，并利用层次结构的DFS顺序服务请求。 全局顺序在leave-one-out族上付出Theta(n^2)，而真实代价为Theta(n log n)。在三个BEIR语料库的BM25检索轨迹上，所提布局相较生产RAG排序将prefill减少17-36%，且随检索深度增加差距扩大，与理论预测一致。按层次DFS顺序服务请求时，仅缓存一个请求上下文的容量即可精确达到无界缓存最优，说明缓存容量与重排窗口可互为替代。
+Abstract: https://arxiv.org/abs/2609.13692
+PDF: https://arxiv.org/pdf/2609.13692
+
+[62] Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement
+中文标题：广义智能体迭代：迭代策略改进与递归自我改进的统一形式框架
+Topics: RL
+推荐理由：提出GAI统一框架描述迭代策略改进与递归自我改进，与强化学习和自动算法改进相关，但偏理论且未涉及LLM或EC。
+中文摘要：本文提出广义智能体迭代（GAI）框架，将迭代式策略改进与递归自我改进（RSI）统一为同一学习范式的两种情形，并用两个"旋钮"区分二者并刻画系统极性。 提出 Generalized Agent Iteration（GAI）形式框架：将智能体定义为系统内可修改组件的某种配置，把学习过程建模为"智能体评估—智能体改进"的循环。用两个关键旋钮区分不同实例：(1) 改进机制是否属于智能体本身；(2) 其所依据的衡量标准是否植根于智能体外部。 第一个旋钮划定了 GPI 与 RSI 的边界；第二个旋钮决定系统的极性，分为锚定（anchored）、目标漂移（goal drift）与完全自指（fully self-referential）三类。作者进一步用这两个坐标轴定位现有系统，并使 RSI 的缺陷可以逐条陈述（一次一个条件）。
+Abstract: https://arxiv.org/abs/2609.13406
+PDF: https://arxiv.org/pdf/2609.13406
+
+[62] Degree-Parameterized Analysis of Sampling-Based Online Matching
+中文标题：基于采样的在线匹配的度参数化分析
+Topics: 
+推荐理由：研究带权在线二分匹配的采样算法与竞争比分析，属于组合优化的在线算法设计，但未涉及LLM/EC/RL等核心交叉方向。
+中文摘要：本文研究随机到达顺序下的边加权在线二分匹配问题，以最大离线度 $d$ 和采样比例 $\theta$ 为参数，分析两类基于采样的框架，给出紧的竞争比、匹配数方差界与迁移定理。 （1）确定性贪心采样：用固定规模初始样本计算价格，再施加局部阈值规则；（2）黑箱采样—匹配：引入依赖前缀的重加权，接任意近似离线匹配求解器。 确定性贪心采样给出显式最坏情形竞争比，并证明其在固定 $d\ge2,\theta\in[0,1]$ 下于该策略族内紧；最优采样在 $d=1,2$ 时不采样与稠密极限约 $0.2562$ 之间过渡，优于经典 $1/8$ 且保持每到达线性时间；给出匹配离线代理数的方差最坏界，含 $\theta\to1_-$ 的阶紧行为与固定 $m,d$ 时 $\theta\to0_+$ 的 $O(\theta)$ 界。黑箱框架得到迁移定理：保证为离线近似比乘以 $d,\theta$ 的显式函数；精确匹配时在无界度极限恢复经典 $1/e$。
+Abstract: https://arxiv.org/abs/2609.14486
+PDF: https://arxiv.org/pdf/2609.14486
+
+[62] Carbon-Aware Routing for Function Calling in Edge-Cloud LLM Systems
+中文标题：边缘-云LLM系统中函数调用的碳感知路由
+Topics: LLM
+推荐理由：研究LLM函数调用的碳感知路由，涉及LLM在边缘-云系统的推理部署与调度，与LLM优化调度相关但非核心组合优化/进化算法方向。
+中文摘要：提出一种碳感知路由框架，将函数调用查询在三层边云架构上分发，在保持云端精度的同时将运营碳排放平均降低4倍。 构建三层边云架构，集成异构硬件上的边缘与云端LLM；核心是一个运行于统一语义-词汇嵌入空间的轻量k-NN预测器，用于估计每个边缘层的查询级精度、延迟与功耗；预测结果结合实时电网碳强度进行路由，将每个查询分配到能成功执行且排放最低的层级。 在先进函数调用基准与LLM系列上评估，框架达到云端级精度，同时平均减少4倍运营碳排放。
+Abstract: https://arxiv.org/abs/2609.13559
+PDF: https://arxiv.org/pdf/2609.13559
+
+[62] Breaking the 1/3 Barrier for $\boldsymbol{k}$-Submodular Maximization under Matroid and Knapsack Constraints: A Proportional Top-2 Randomized Framework
+中文标题：打破拟阵与背包约束下k-子模最大化的1/3障碍：一种比例Top-2随机化框架
+Topics: 
+推荐理由：研究k-子模最大化与拟阵/背包约束下的近似算法设计，属于组合优化方向，但与LLM、EC、RL等核心交叉兴趣无直接关联。
+中文摘要：本文研究非负、非单调的 k-子模函数在单拟阵约束和单背包约束下的最大化问题，首次突破长期存在的 1/3 近似比障碍，给出达到 √2−1≈0.4142 的随机多项式时间算法。 针对单拟阵约束与单背包约束，作者提出随机多项式时间算法，采用简洁的随机贪心规则：元素一旦被选中，其标签仅从边际增益最大的两个标签中选取，选取概率正比于这两个增益的正部。价值预言机查询复杂度在拟阵设置下为 O(n²k)，在背包设置下为 O(n³k²)。 在拟阵和背包两种设置下，算法均达到 √2−1≈0.4142 的近似比；相应查询复杂度分别为 O(n²k) 与 O(n³k²)。
+Abstract: https://arxiv.org/abs/2609.15677
+PDF: https://arxiv.org/pdf/2609.15677
+
+[62] A note on goal-based hierarchical RL
+中文标题：关于基于目标的分层强化学习的一点注记
+Topics: RL
+推荐理由：面向分层强化学习与目标设定/规划的统一框架，与RL及优化规划相关，但未涉及LLM、EC或自动算法设计。
+中文摘要：本文提出用层次隐马尔可夫模型(HHMM)统一并扩展了智能体中心广义价值函数(ACGVF)与基于内部信念状态的智能体设计两种框架。 采用层次隐马尔可夫模型(HHMM)的形式化工具，将ACGVF的目标选择与终止决策机制同基于信念状态z_t的内部智能体设计相结合，在统一框架下对二者进行整合与推广。 给出了一种统一的形式化框架，把目标的选择、终止与内部信念状态纳入同一HHMM结构中，从而在部分可观测条件下支持智能体自主生成并管理目标。
+Abstract: https://arxiv.org/abs/2609.14605
+PDF: https://arxiv.org/pdf/2609.14605
+
+[62] ZAPS: Zero-Cost Active Proxy Search for Neural Architecture Search
+中文标题：ZAPS：面向神经架构搜索的零成本主动代理搜索
+Topics: Hyper-heuristic
+推荐理由：自动代理选择与主动搜索用于NAS，属于自动化算法/超启发式设计，但未涉及LLM/EC/RL等核心方向。
+中文摘要：ZAPS是一个四阶段零成本代理主动搜索框架，首次在同一主动学习流程中融合代理信号与架构拓扑，在NAS-Bench-201上以B=200预算取得优于随机搜索、局部搜索、REA、BANANAS、TPE的top-100召回率。 ZAPS四阶段流程：(i) 离线用ProxyFit（贪心抗冗余准则）选出紧凑非冗余的代理子集；(ii) 用混合K-means策略初始化搜索，平衡利用与探索；(iii) 随标注集增长，每轮通过bootstrap投票重选代理；(iv) 用XGBoost集成联合学习代理排名与one-hot拓扑编码进行候选排序，并通过UCB采集函数查询。 在NAS-Bench-201、B=200预算下，ZAPS在CIFAR-10上召回真实top-100的52.3%、CIFAR-100上65.8%，优于Random Search、Local Search、REA、BANANAS与TPE，且在CIFAR-10上运行间标准差不到最强基线的二分之一。优势在评估稀缺时最大：NAS-Bench-201上随预算增大而收窄，而在更难、无方法接近饱和的NAS-Bench-101上反而扩大。所有方法统一以"实际评估的架构中包含多少真实top-100"为评价标准。
+Abstract: https://arxiv.org/abs/2609.14184
+PDF: https://arxiv.org/pdf/2609.14184
+
+[62] MemRiskBench: Trace-Aware Risk-Preserving Evaluation for Long-Horizon LLM Agents
+中文标题：MemRiskBench：面向长时程LLM智能体的轨迹感知风险保持评估
+Topics: LLM
+推荐理由：面向长时程LLM智能体的风险评估基准与覆盖约束贪心子集选择，与LLM智能体和优化选择器相关，但非核心的CO/EC/RL算法设计。
+中文摘要：提出 MemRiskBench，一个面向长程 LLM 智能体记忆累积风险的可复现基准，含五类风险分类法、确定性轨迹检查、120 条脚本化回合，以及可保留风险覆盖与高风险模型检测的 20% 子集选择器。 1) 五类风险分类法（另设一个已记录但不计分类别），由确定性轨迹检查和逐条轨迹日志落地；2) 120 回合脚本化基准，pass/fail 路径不使用 LLM-as-judge；3) 在五个本地运行的量化指令微调模型上评估；4) 风险保留子集选择器：基于确定性轨迹衍生特征的覆盖约束贪心选择器。 在 20% 子集规模下，选择器保留完整排序（Spearman rho = 0.975，确定性，自助方差为零故置信区间收敛为点估计）、风险覆盖率 1.0、高风险模型检测率 1.0，并将算力降低 5 倍。与仅保留排序的子集选择器不同，该方法无需 LLM 评判即可同时保留风险类型覆盖与高风险检测。
+Abstract: https://arxiv.org/abs/2609.14976
+PDF: https://arxiv.org/pdf/2609.14976
+
+[62] Selecting k Paths with the Minimum Longest Path Length in the Stochastic Semi-Bandit Setting
+中文标题：随机半强盗设置下选择k条最短最长路径
+Topics: RL / CO
+推荐理由：随机半强盗在线选择k条路径以最小化最大时延，属于组合优化的在线学习/强化学习范畴。
+中文摘要：研究在容量约束与随机传输时间下，每步从源到宿在线选择k条路径以最小化最大遍历时间的半强盗（semi-bandit）问题，并提出求解算法。 将问题建模为有向图上的在线序贯决策：每个时间步选择满足边容量约束的k条源-宿路径；仅能观测所选路径的传输时间（半强盗反馈）；形式化为最小化所选路径最大遍历时间的半强盗问题，并给出相应选择算法。 提出了面向该半强盗问题的路径集合选择算法。（摘要未给出具体性能界与实验数据。）
+Abstract: https://arxiv.org/abs/2609.14557
+PDF: https://arxiv.org/pdf/2609.14557
+
+[62] Diversified and Perceptible Counterfactual Examples Leveraging Expert Knowledge
+中文标题：利用专家知识生成多样化且可感知的反事实示例
+Topics: Optimization
+推荐理由：提出基于模糊词典的连续嵌入与DiCE变体优化反事实样本生成，涉及约束下的优化方法，但与核心方向交叉较浅。
+中文摘要：该论文提出 DiCEf，通过将模糊语言词汇表作为数据嵌入域，扩展 DiCE 方法以生成语义可感知的反事实解释。 提出在模糊语言域中的连续数据嵌入，并基于该嵌入定义 DiCE 的变体 DiCEf，从而支持针对解释对象的个性化 CFE 生成。 在真实世界数据集上的实验表明，该扩展能生成语言上可感知的 CFEs，同时保持成本最小性、稀疏性和多样性。
+Abstract: https://arxiv.org/abs/2609.15609
+PDF: https://arxiv.org/pdf/2609.15609
+
+[62] Beyond Numerical Time Series: A Unified Benchmark for Multimodal Forecasting with Heterogeneous Context
+中文标题：超越数值时间序列：异构上下文多模态预测的统一基准
+Topics: LLM
+推荐理由：构建多模态时间序列预测基准，评估通用LLM作为预测器及LLM引导的细化，与LLM用于优化/预测方向相关但非核心。
+中文摘要：本文提出 MUSE-Bench，一个面向异构上下文的多模态时间序列预测统一基准，涵盖 14 个数据集、8 个领域和 6 类上下文，并在统一评测协议下系统评估统计、专用、基础、多模态及通用大模型等预测范式，揭示数值 TSFM 占优、外部上下文有效但错误/错位上下文有害、以及通用 LLM 直接预测效果不佳等关键发现。 构建统一的 MUSE-Bench 基准，包含 8 个领域、14 个数据集及 6 类上下文（元数据、事件、假日、新闻、图像、数值协变量）；在共享的非重叠预测窗口、共同目标观测和一致的点预测与概率预测指标下，评测统计方法、数据专用模型、基础模型、多模态模型及通用大语言模型等多类预测范式，并进行消融分析。 数值时间序列基础模型在总体排名中领先；被评测的多模态基础模型 Aurora 落后于领先的数值 TSFM，但优于所有被评测的数据专用模型。消融实验表明，外部上下文可提升四个上下文感知模型的性能，而错误或时间错位的上下文会降低性能。通用 LLM 作为直接预测器表现较差，LLM 引导的精细化亦未带来一致提升。
+Abstract: https://arxiv.org/abs/2609.15087
+PDF: https://arxiv.org/pdf/2609.15087
+
+[62] Safe Meta-Reinforcement Learning via Information Space Reachability
+中文标题：基于信息空间可达性的安全元强化学习
+Topics: RL
+推荐理由：研究安全元强化学习，提出信息空间安全价值函数与约束策略优化，与强化学习核心方向相关，但未涉及组合优化、进化计算或大语言模型交叉。
+中文摘要：本文提出一个在自适应过程中显式考虑安全性的安全元强化学习（meta-RL）框架：在信息空间（含物理状态与任务信念）中定义安全价值函数，刻画智能体无限期规避不安全区域的概率，并基于其自洽性与贝尔曼方程设计可学习方法，结合安全过滤与约束策略优化，在基准任务上验证有效性。 核心思路是在信息空间中推理安全性，该空间同时刻画物理状态与智能体对潜在任务的信念；在此空间引入安全价值函数，度量智能体无限期避开不安全区域的概率。作者证明该函数满足自洽条件与贝尔曼方程，从而可通过元RL学习。据此给出安全元RL算法：学习安全价值函数，并将其用于安全过滤与约束策略优化。 在元RL基准上的实验表明所提方法有效。
+Abstract: https://arxiv.org/abs/2609.15915
+PDF: https://arxiv.org/pdf/2609.15915
+
+[90] T-GADE: Thermodynamical Generative-AI-Driven Evolution of LLM Artifacts
+中文标题：T-GADE：热力学生成式AI驱动的LLM产物进化
+Topics: LLM / EC / CO
+推荐理由：将热力学遗传算法与LLM生成算子结合，进化LLM产物以自动设计在线装箱启发式算法，直接命中LLM+EC+CO交叉及自动化启发式/算法设计。
+中文摘要：提出T-GADE，将热力学遗传算法扩展至LLM结构化产物的进化，以自由能为目标统一世代与稳态更新，并在在线装箱任务上验证其多样性控制与性能优势。 T-GADE通过LLM遗传算子与产物级多样性评估扩展热力学遗传算法；采用统一自由能目标支持世代式与稳态更新，并引入Fermi型占据（排除重复基因型）与Bose型占据（允许多重重复）。理论上给出精确的单成员移除规则及恢复EoH零温生存规则的条件。 在EoH论文的在线装箱任务上，T=0.003的世代式Bose型T-GADE将训练超出量中位数由1.152%降至约0.815%（降低约29%），20次运行/配置，双尾Mann-Whitney p=0.042，Cliff's δ=0.378；在其排名最高的两个最终候选间做验证选择后，转移超出量中位数与EoH相同为0.496%。
+Abstract: https://arxiv.org/abs/2609.12286
+PDF: https://arxiv.org/pdf/2609.12286
+
+[88] SAGE-Loop: Reliable Closed-Loop LLM-Driven AutoML with Trial-and-Correction and Adaptive Ensembling
+中文标题：SAGE-Loop：可靠闭环LLM驱动的AutoML与试错修正及自适应集成
+Topics: LLM / LLM Agent
+推荐理由：LLM驱动的闭环AutoML，通过试错-修正与自适应集成实现自动化模型设计，直接契合LLM用于自动化算法/流程优化的核心方向。
+中文摘要：SAGE-Loop：面向LLM驱动AutoML的可靠闭环自适应框架，通过多轮"试错-修复"生成与验证，并在监督/无监督任务中自适应选择集成策略，统一"如何生成模型"与"如何使用模型"，在20个公开数据集上提升分类、回归、聚类任务的性能与稳定性。 提出SAGE-Loop，一个可靠、闭环、自适应的LLM驱动AutoML框架：执行多轮生成与验证以实现试错与修复（trial-and-repair）；在监督与无监督任务中自适应选择集成策略，从而将模型生成与模型使用统一在同一闭环中。 在20个公开数据集上，SAGE-Loop在分类、回归与聚类任务中一致地提升了性能与稳定性；额外结果进一步表明其具备从执行失败中恢复的能力，并保持稳健的管道行为。
+Abstract: https://arxiv.org/abs/2609.12455
+PDF: https://arxiv.org/pdf/2609.12455
+
+[82] Look Before You Leap: Pre-Action Verification for LLM Agents
+中文标题：三思而后行：LLM智能体的行动前验证
+Topics: LLM / LLM Agent
+推荐理由：研究LLM智能体行动前的验证与安全监督，属于LLM智能体设计与控制的核心方向。
+中文摘要：本文研究在动作执行前运行廉价的确定性检查作为一种代理监督机制，在shell命令与代码编辑两种动作模态中验证其可行性与有效性，并发布相关基准、验证器与守卫。 在一个统一框架下研究两类动作模态。对shell命令，采用静态验证器（语法检查、二进制检查、标志检查），在9930条命令、482个工具上评测；对代码编辑，构建640个编辑、224个文件的基准以隔离apply步骤，对比内容锚定格式（search/replace、diff）与位置锚定格式（行号、函数名）的失败特征。核心思路是在任何执行器运行前，通过构造固定动作的正确效应，使静默失败可被直接测量，且验证器可选择弃权而非猜测。 shell命令：静态验证器以10.0%假阳性率捕获95.8%的无效命令；语法与二进制检查为预言机精确，零假阳性并捕获一半错误；标志检查受限于帮助文本覆盖率，且是所有假阳性的来源。代码编辑：内容锚定格式干净失败，位置锚定格式静默失败——一行偏移下行号格式损坏99.1%的文件，函数名编辑12.7%概率命中错误函数。采用"不确定即拒绝"策略可将静默失败转为可恢复失败：选择性grounding达到0.958召回率、7.0%假阳性；锚定-验证applier在8320次试验中仅记录1次静默误用（0.01%）。
+Abstract: https://arxiv.org/abs/2609.11957
+PDF: https://arxiv.org/pdf/2609.11957
+
+[82] EvoRS: On-Policy Self-Evolution of Reward Systems for Open-Ended Reinforcement Learning
+中文标题：EvoRS：面向开放式强化学习的奖励系统在线自进化
+Topics: LLM / RL / Automated Algorithm Design
+推荐理由：提出让奖励系统通过智能体在线自进化（Reward-DAG），属于LLM/RL中奖励与优化机制自动设计和进化，与自动化算法设计方向相关。
+中文摘要：提出 EvoRS，一种将奖励系统表示为可执行 Reward-DAG 并随 on-policy 经验自我演化的强化学习框架，用于开放式任务，缓解奖励攻击与判别力下降。 EvoRS 是一种自演化 RL 框架，将奖励系统表示为可执行的 Reward-DAG；由智能体化设计器（agentic designer）依据 on-policy 回放轨迹与奖励轨迹更新该系统，以维持训练时的可靠性。 在写作与角色扮演任务上，EvoRS 在三位评判者下均取得最佳质量，分别较策略基线提升 2.107 和 4.767 分，同时降低奖励攻击与覆盖失败，并保持奖励信息量。
+Abstract: https://arxiv.org/abs/2609.12459
+PDF: https://arxiv.org/pdf/2609.12459
+
+[82] GenOR-Twin: A Semantic Middleware for Integrating Operational Discourse with Mathematical Optimization
+中文标题：GenOR-Twin：连接运维话语与数学优化的语义中间件
+Topics: LLM / CO
+推荐理由：将LLM作为语义翻译器连接自然语言运维日志与数学优化，并动态注入约束修改可行域，属于LLM+CO的核心交叉。
+中文摘要：提出GenOR-Twin神经符号框架，将大语言模型定位为语义翻译器而非直接求解器，通过动态约束注入与自适应决策策略实现数字孪生式的实时优化，并在六个优化领域验证其泛化性。 构建神经符号框架GenOR-Twin：以LLM作为语义翻译器，保留精确组合方法的可行性保证；设计动态约束注入机制，将定性扰动事件在运行时翻译为形式化数学约束，实时改变优化问题可行域；通过知识图谱实现操作观测更新虚拟模型状态、优化决策回写的双向耦合；并引入自适应决策策略，依据系统可用松弛量在低复杂度调度修复与完全重优化之间自动选择。 框架在六个不同优化领域展现出泛化能力，能够将静态模型转化为可适应现实环境运行不确定性与变异性的韧性系统。
+Abstract: https://arxiv.org/abs/2609.12863
+PDF: https://arxiv.org/pdf/2609.12863
+
+[78] Signed Sensitivity of Expected Hitting Time to Mutation Rate in the (1+1) EA: Per-State Sign Theorems and Verifiable Certificates for Non-Lumpable Families
+中文标题：(1+1)EA中期望命中时间对变异率的有符号敏感性：逐状态符号定理与非可分族可验证证书
+Topics: EC / CO
+推荐理由：研究(1+1)EA变异率对期望命中时间的敏感性，属于演化计算的理论分析，与EC核心方向强相关。
+中文摘要：本文研究(1+1) EA在标准位变异下期望命中时间对变异率的敏感性：指出改进事件非单调导致Margulis-Russo公式不适用，给出精确三维分离、符号证书与OneMax上的逐初始状态符号定理，并扩展到非可集中正线性族。 先给出精确三维分离构造：两个适应度函数共享完整单步成功率曲线但期望命中时间为不同有理数。基于runtime导数$H'_p=(I-Q_p)^{-1}Q'_p H_p$构造可计算的双残差符号证书；在OneMax上证明逐初始状态符号定理；将框架推广到非可集中正线性族，给出非可集中性见证、块区间双残差证书、$c\in[1/4,1/2]$上的统一符号界及异质实例证书。所有有限验证使用精确有理算术。 证明改进事件非单调，故无符号(total-influence)形式Margulis-Russo不适用，正确对象为带符号端点差；构造两个适应度函数共享单步成功率曲线但期望命中时间为两个不同的精确有理数；在OneMax上对每个非最优初始状态证明$0<c<1$时$\partial_c H<0$，$c=1$时仅距离一状态为驻点；对显式非可集中正线性族在$n\ge 8$偶数尺度上得到$c\in[1/4,1/2]$统一界$\partial_c\mathbb{E}T\le -9n/16$，并给出覆盖63态中57态的异质实例证书$H'_x\le -1/6$。
+Abstract: https://arxiv.org/abs/2609.12510
+PDF: https://arxiv.org/pdf/2609.12510
+
+[78] GTA: Graph Theory Agent and Benchmark for Algorithmic Graph Reasoning with LLMs
+中文标题：GTA：面向LLM图算法推理的图论智能体与基准
+Topics: LLM
+推荐理由：研究LLM在图结构上的多步算法推理，并提出规划分解智能体与表示选择器，与LLM作为优化/推理控制器及自动设计相关，但非直接面向组合优化或算法生成。
+中文摘要：该论文提出GT Bench基准与Graph Theory Agent (GTA)框架，系统评估LLM在图结构数据上的多步推理能力，并通过表示选择与分解式规划显著提升准确率。 1) 构建GT Bench：覆盖24类经典图问题、44种任务-结构设置、超10万样本，含自然语言、结构化语言、邻接表、邻接矩阵四种表示。2) 对8个LLM进行评测，分析表示、图密度、规模、拓扑与模型间的敏感性。3) 提出GTA：偏好训练的表示选择器 + plan-and-decompose脚手架 + 冻结的执行器LLM。 准确率与输入表示强相关；最优表示随图密度、规模、拓扑及模型变化；该敏感性在最强推理模型中依然存在但有所减弱。GTA将Phi-4在easy split上从53.5%提升至69.1%，hard split上从33.0%提升至41.5%，优于8个提示与智能体基线，并可无重训练迁移至GraCoRe与NLGraph。
+Abstract: https://arxiv.org/abs/2609.12265
+PDF: https://arxiv.org/pdf/2609.12265
+
+[78] ParaRecover: A Process-Level Benchmark for Error Localization and Recovery in Parallel Tool-Use Agents
+中文标题：ParaRecover：并行工具使用智能体中错误定位与恢复的过程级基准
+Topics: LLM / Planning
+推荐理由：面向LLM并行工具调用智能体的过程级错误定位与恢复基准，涉及多轮规划、重规划与反思能力，与LLM智能体作为优化/控制器的方向相关。
+中文摘要：提出ParaRecover过程级基准，评估多轮并行工具调用智能体的中间错误定位与恢复能力，含14类错误分类、10626个实例及SDE评价量规。 构建基于14种错误类型（覆盖规划依赖、工具选择、参数匹配）细粒度分类的ParaRecover基准，包含两个难度级别的10626个实例；并提出SDE量规，从结构完整性、诊断推理、演化策略三个维度进行面向过程的细粒度评估。 在十余个主流大语言模型上的实验表明，即使最先进模型在多轮错误传播、隐式工具使用失败和精确重规划方面仍表现不佳；SDE量规还能为提升智能体反思性恢复能力提供有效的监督信号。
+Abstract: https://arxiv.org/abs/2609.12345
+PDF: https://arxiv.org/pdf/2609.12345
+
+[78] Granularity-Adaptive Credit Assignment for Long-Horizon LLM Agent Reinforcement Learning
+中文标题：面向长时程LLM智能体强化学习的粒度自适应信用分配
+Topics: LLM / RL
+推荐理由：面向长时程LLM智能体强化学习的信用分配方法，改进GRPO等策略优化，属于LLM+RL核心交叉方向，虽非直接面向组合优化或算法自动设计，但优化信号分配与智能体控制有较强相关性。
+中文摘要：论文提出GACA，一种无评论家（critic-free）的强化学习优势估计器，其信号粒度随状态不确定性自适应变化，在ALFWorld与WebShop上超越GRPO和GiGPO。 提出GACA：以每步自身rollout已记录的负对数似然（NLL）作为不确定性关键性代理进行打分，并用随该分数增长的逐步权重融合步级与回合级优势——NLL高于均值时加大细粒度信号权重，低于均值时偏向回合级信号。理论上给出所实现混合的精确风险分解，证明在正向方向对齐下足够小的调制优于固定混合；并用条件性结果以期望NLL界定局部动作价值变化，用误差投影分析刻画混合何时比标量不确定性重加权更有价值。 在ALFWorld和WebShop上，GACA在1.5B与7B两种规模下均提升了任务成功率，优于GRPO与GiGPO。
+Abstract: https://arxiv.org/abs/2609.12424
+PDF: https://arxiv.org/pdf/2609.12424
+
+[72] Competence-Gated Pooling of Language Models and Priors for Event Forecasting
+中文标题：面向事件预测的语言模型与先验的能力门控池化
+Topics: LLM
+推荐理由：研究LLM在混合预测中的选择性使用与加权集成，属于LLM作为预测信号的能力评估与组合优化，与LLM优化/决策方向相关。
+中文摘要：该论文研究混合预测中语言模型相对外部预测的"边际价值"，提出基于结果的"能力门控"机制，通过域级权重估计、向全局权重收缩与再校准，在2,357个二元问题上将Brier分数从0.0771改善至0.0732，且显著优于全局组合，但在官方市场子集上无明显改进。 在Brier损失下刻画模型分歧改进外部预测的条件，并推导使用域特定池化权重（而非全局池化权重）所能获得的增益。据此提出"能力门控"（competence gate）：从已揭晓的结果中估计域级信号源权重，将不确定估计向全局权重收缩，并对池化后的预测进行再校准。 在2,357个已揭晓的二元问题与五个语言模型上，门控将主要外部基线从0.0771 Brier改善至0.0732，并显著优于全局预测组合。该增益在泄漏控制下、以及在池化结构化集合上与泄漏安全的时间序列先验对比中仍保持显著，并在FRED上获得独立证据。相反，在官方ForecastBench市场子集上门控未带来显著改进，主要让位于市场。对四个Qwen模型，语言化置信度无法可靠识别模型何时优于外部预测，而基于结果估计的能力则支持更好的弃权决策。
+Abstract: https://arxiv.org/abs/2609.12101
+PDF: https://arxiv.org/pdf/2609.12101
+
+[72] Local Edits, Global Ripples: Replay-Informed Policy Adaptation for Workflow Synthesis
+中文标题：局部编辑，全局涟漪：面向工作流合成的回放感知策略自适应
+Topics: LLM
+推荐理由：面向LLM智能体的工作流合成策略自适应编辑，涉及执行反馈驱动的策略定位与组合，与LLM作为优化器/控制器相关，但非典型优化算法设计。
+中文摘要：提出 RIPPLE 方法，将提示策略编辑中"何处改"与"改后是否可安全持久化"解耦，通过重放评估组合安全性，在可执行工作流合成任务上提升验证成功率最高 23.1%。 RIPPLE 将"在哪编辑"与"组合后是否安全"分离。首先诊断失败轨迹，将可操作的失败映射到预定义策略片段，把修正限制在该片段内；随后以同一迭代起始策略为基准评估候选编辑，比较其孤立增益；再将有潜力的编辑在已被接受的更新之后重放，以暴露下游效应与交互；仅保留在组合下仍安全的编辑。 在合成留出基准 Flow-HO 上评估，验证成功率最多提升 23.1%，并在另外两个冻结语言模型骨干上取得正向增益，同时保持编辑效率与较低执行成本。交互分析进一步验证了上述两个特性：片段局部性的工具使用编辑会改变下游资源解析与验证；而单独有益的编辑在组合后变得有害。
+Abstract: https://arxiv.org/abs/2609.12127
+PDF: https://arxiv.org/pdf/2609.12127
+
+[72] Differential Privacy Meets Fixed Parameter Tractability: Algorithms and Lower Bounds
+中文标题：差分隐私与固定参数可解性的结合：算法与下界
+Topics: CO
+推荐理由：研究差分隐私下的组合优化算法设计与下界，属于CO算法理论方向，与核心兴趣相关但未涉及LLM/EC/RL。
+中文摘要：本文将隐式表示框架中编码器放宽为固定参数可处理(FPT)时间，在ε-差分隐私下为多个组合优化问题取得更优保证，并首次给出与表示无关的下界。 在Gupta等(SODA 2010)的隐式表示框架(私有编码器生成表示、解码器结合输入输出可行解)基础上，允许编码器运行固定参数可处理(FPT)时间；并基于非均匀Gap-ETH建立下界。 对多个基础组合优化问题获得改进的近似保证；在充分小ε下，若解码器亚指数时间，则不存在ε-DP编码-解码对达到特定近似保证；并提供对更大ε仍成立的表示相关下界。
+Abstract: https://arxiv.org/abs/2609.12508
+PDF: https://arxiv.org/pdf/2609.12508
+
+[72] Repair Before Reinforce: Context-Augmented Knowledge Graph Reasoning for Multi-Hop Question Answering
+中文标题：先修复再强化：面向多跳问答的上下文增强知识图谱推理
+Topics: LLM / RL
+推荐理由：使用LLM进行知识图谱多跳推理，结合SFT与RL训练及自适应修复流程，与LLM+RL方向相关。
+中文摘要：提出上下文增强的多跳问答训练框架，在疾病知识图谱上用KG-grounded与CG-grounded两种监督对比，配合自适应修复与强化学习，验证上下文监督能稳定提升多跳推理性能。 基于GraphMERT为胃轻瘫与糖尿病构建疾病知识图谱；为每个主KG三元组附加来自同一源文本块的支撑三元组，构成上下文图（CG），形成KG-grounded（仅目标三元组/路径）与CG-grounded（目标加支撑上下文）两种监督设置。用SFT训练Qwen3-14B得到KGModel与CGModel；引入LLM评判的、历史感知的自适应修复流水线，识别未解决的单跳失败，持续在针对性修复样本上微调并剔除或隔离噪声三元组；最后用低跳问答项做RL，并在3/4/5跳任务上评估泛化。 修复阶段使模型在清洗后保留的单跳验证集上达到100%准确率；在两种疾病上，上下文增强监督的多跳性能一致优于仅KG监督；从修复后的SFT检查点初始化RL，收益更大且更稳定。
+Abstract: https://arxiv.org/abs/2609.12230
+PDF: https://arxiv.org/pdf/2609.12230
+
+[72] Chopthin-Consensus Power Sampling: A Diversity-Preserving Approach to LLM Decoding
+中文标题：Chopthin共识幂采样：一种保持多样性的LLM解码方法
+Topics: LLM / Search
+推荐理由：面向LLM推理的SMC采样与多样性保留搜索，虽非优化算法设计，但与LLM优化/搜索方向相关。
+中文摘要：论文提出 Chopthin-Consensus Power Sampling (CCPS)：用 Chopthin 重采样替代等权重重采样以保留推理路径多样性，并配合语义多数选择，在三个开放权重模型、五个推理基准上多数设置下优于 Power-SMC 基线。 将 Chopthin 重采样器用于 LLM 解码：不将权重相等化、不强制粒子复制，而是限制最大与最小权重之比的上界，并保留不等权重继续传播；随后采用语义多数选择机制，合并词元完全一致的最终轨迹、对语义等价答案聚类，返回被最多不同轨迹支持的答案。 在三个开放权重模型与五个推理基准上，Chopthin 在 15 个设置中的 13 个提升了 oracle 覆盖率；结合语义多数选择后，CCPS 在 15 个设置中的 14 个达到或超过 Power-SMC 基线最终答案准确率，绝对提升最高达 10.6 个百分点。
+Abstract: https://arxiv.org/abs/2609.12243
+PDF: https://arxiv.org/pdf/2609.12243
+
+[72] Certified Safety Curation: Distribution-Free Guarantees for Safe Offline Reinforcement Learning
+中文标题：认证安全策展：安全离线强化学习的分布无关保证
+Topics: RL
+推荐理由：该论文研究安全离线强化学习，提出基于分布无关保证的筛选与行为克隆流程，核心是RL优化与安全保证，虽未涉及LLM/EC，但与强化学习优化方向相关。
+中文摘要：该论文研究在仅有片段比较与偶发预算反馈的弱监督条件下，如何为离线强化学习筛选并认证安全训练集，提出"过滤-克隆"流水线（Certified Safety Curation）。 采用滤波-克隆流水线：用仅基于状态的、由片段比较训练得到的价值函数给整条轨迹打分；再用Learn-then-Test校准在无分布假设的(α, δ)界下认证选择阈值；最后进行行为克隆。作者指出该工作首次对离线RL/模仿学习的训练集组成进行认证，并用oracle对照实验验证"按轨迹而非按转移选择"的设计必要性。 在15个DSRL任务中有11个满足代价预算，仅比用全标签克隆真实安全子集少一个任务；未认证变体达到12个。用认证选择重训后，最强的全标签方法在其自身代价目标任何设置下都失效，却在认证集合上变安全；拒绝行为可预测，证书概率对池纯度有闭式表达，由校准样本估计并仅通过打分器进入。
+Abstract: https://arxiv.org/abs/2609.12014
+PDF: https://arxiv.org/pdf/2609.12014
+
+[72] Inverting Self-Triggered Control: Adversarial Reinforcement Learning for Sparse Denial-of-Service Attacks
+中文标题：反转自触发控制：面向稀疏拒绝服务攻击的对抗强化学习
+Topics: RL
+推荐理由：利用对抗强化学习学习稀疏DoS攻击调度以破坏自触发控制，属于RL在控制/对抗优化中的应用，与RL+优化相关但非核心CO/EC/LLM交叉。
+中文摘要：本文将自触发强化学习控制（RL-STC）反向建模为对抗问题：由对抗RL智能体学习最稀疏的干扰/DoS调度以破坏闭环稳定性，并给出击溃STC所需最小干扰次数的下界与相应最优性推论，实验证明所学对抗策略在多个对象与防御器上均达100%失效率并显著优于基线。 构造对抗RL智能体，学习最稀疏的干扰或DoS调度使闭环失稳，采用与防御方安全证书相对的Lyapunov增长型可采纳性谓词；针对满足Lyapunov契约的STC，证明迫使立即采用hold-last的MAC对手造成崩溃所需最小干扰次数的系统属性下界，并推论得到计数预算DoS调度中“连续分组”最优性的证书级类比。实验在Pendulum、CartPole、Quadrotor2D上对每对象四个固定防御器（一个LQR、三个RL-STC）训练对抗策略，并与贪心、周期基线对比，评估失效率与每次失效所需干扰时间，并做高斯观测噪声与仅位置观测的鲁棒性消融。 所学对抗策略是唯一在全部对象、全部防御器上均实现100%崩溃的对手：贪心在Quadrotor2D LQR上42%回合失效，周期在Pendulum LQR上97%回合失效。在每次失效所需干扰时间上比基线最高优2.8倍，绝对差距在Quadrotor2D LQR上最大。鲁棒性消融表明，当高斯观测噪声幅度超过初始状态量级、以及仅使用位置观测时，仍保持100%失效率，并在干扰时间-失效指标上稳定领先两个基线。
+Abstract: https://arxiv.org/abs/2609.12016
+PDF: https://arxiv.org/pdf/2609.12016
+
+[72] Learning Symbolic Constraint Representations from Examples: A Neuro-Symbolic Approach
+中文标题：从示例中学习符号约束表示：一种神经符号方法
+Topics: CO
+推荐理由：将神经方法融入约束获取，自动从示例学习约束网络，服务于组合问题建模，属于组合优化与自动算法设计相关方向。
+中文摘要：本文提出一个神经符号框架用于自动约束获取（CA），通过神经Oracle Transformer模型模拟用户响应并泛化概念知识，减少对人类oracle的依赖。 引入神经Oracle Transformer模型来模拟用户响应并泛化概念知识；将训练好的oracle与专用CA引擎FastCA交互，系统地将oracle的响应精炼为可靠、一致且可解释的约束网络。 实验结果表明，这种神经符号交互能有效将数据驱动的模式识别与符号推理结合，在无需先验领域知识的情况下从数据中恢复结构化符号模型。
+Abstract: https://arxiv.org/abs/2609.12267
+PDF: https://arxiv.org/pdf/2609.12267
+
+[72] AMDKernelVault: Large-Scale Datasets and Agentic Training for AMD GPU Kernel Optimization
+中文标题：AMDKernelVault：面向AMD GPU内核优化的大规模数据集与智能体训练框架
+Topics: LLM / RL
+推荐理由：构建LLM驱动的GPU内核生成智能体，并用执行感知强化学习训练模型，属于LLM作为优化器/生成器的应用，与LLM+自动算法生成方向相关。
+中文摘要：本文提出 AMDKernelVault，一个面向 AMD CDNA GPU 的开源 HIP/Triton 内核语料库与训练框架，并配套智能体驱动的内核生成流程，演示了在该语料上训练的模型在多项内核任务上的正确率表现。 开发 HIPKernelGen 与 TritonKernelGen 两条智能体驱动流水线，将 PyTorch 参考实现转换为 HIP 或 Triton 内核，在 ROCm 下编译验证，并在 AMD 硬件上进行延迟性能分析。构建的语料库包含 62,153 条经执行验证的 HIP 内核样本、2,377 条基于生产环境的 ROCm Libraries QA 条目以及 39,893 个 Triton 内核。随后使用监督微调与执行感知强化学习训练 Qwen3-8B 以验证语料库效用。 在固定评测预算下，所训练模型在对比模型中取得最高正确率：PyTorch-to-HIP 任务 Pass@1 为 34.0%，TritonBench-G 的 Corr@3 为 33.2%，ROCmBench 的 Corr@3 为 41.94%；但在编译与速度指标上并未全面领先。
+Abstract: https://arxiv.org/abs/2609.12471
+PDF: https://arxiv.org/pdf/2609.12471
+
+[72] Niching Agents in The Core
+中文标题：核心中的小生境智能体
+Topics: EC
+推荐理由：研究竞争性协同进化算法中的小生境技术，属于进化计算与自动算法设计方向，与EC核心兴趣相关。
+中文摘要：本文扩展了The Core竞争性协同进化算法，通过将智能体生态位化（niching）到原环境的特定子集，验证了生态位智能体在Xpilot中相较全局或跨子环境生态位智能体具有更优表现。 采用The Core竞争性协同进化算法，智能体通过局部交互、锦标赛选择、交叉与变异产生后代以进化更优控制器；将智能体生态位化到原测试环境的特定子集，并与其他生态位设置进行对比。 生态位化到特定子环境的智能体，其成功率优于生态位化到整个系统以及生态位化到不同子环境的智能体。
+Abstract: https://arxiv.org/abs/2609.12398
+PDF: https://arxiv.org/pdf/2609.12398
+
+[72] Decentralized Evolution of Hexapod Gaits with Independent Leg Controllers
+中文标题：基于独立腿部控制器的六足机器人步态去中心化进化
+Topics: EC
+推荐理由：采用去中心化进化算法优化六足机器人步态，属于进化计算在机器人控制中的应用，与EC及自动算法设计相关。
+中文摘要：本文提出一种去中心化进化算法，通过独立进化六足机器人每条腿的步态控制器来实现运动，无需集中式协调，从而涌现出高效协同的运动行为。 使用Webots仿真器和Mantis六足机器人，对每条腿的控制器独立进行进化，不使用集中式协调，并允许涌现行为驱动协调；将该去中心化方法与协作协同进化（cooperative coevolution）进行基准对比。 与协作协同进化相比，去中心化方法在生成稳定且自适应步态方面表现出更高的有效性，并展现出有趣的涌现协调现象。
+Abstract: https://arxiv.org/abs/2609.12400
+PDF: https://arxiv.org/pdf/2609.12400
+
+[72] VRL-Bench: Benchmarking agents on computer control tasks under finite trial budgets
+中文标题：VRL-Bench：有限试验预算下计算机控制任务的智能体基准测试
+Topics: LLM / RL
+推荐理由：研究LLM智能体的试错学习与探索-利用调度，与LLM+RL交叉及LLM作为优化控制器相关。
+中文摘要：论文提出 VRL-Bench 用于在有限试错预算下公平评估语言智能体的试错学习，并发现现有言语记忆方法的增益不稳定；作者进一步提出 VEX$^2$ 调度器以平衡经验利用与探索，在全部六种设置中均取得正向增益。 作者构建 VRL-Bench，一个在有限试错预算下公平评估试错学习的实验框架。在 MiniWoB 与 WebShop 上对三个模型进行评测，比较 Reflexion 及后续多种言语记忆方法的更新效果，并与无记忆重试基线对照。通过重放实验分析反思带来的影响。进而提出 VEX$^2$，一种言语探索–利用调度器，利用语言模型联合选择策略并分配剩余试错预算。 各言语记忆方法在部分设置中相较无记忆重试提升了观测成功率，但在另一些设置中反而降低。重放实验表明使用反思可能降低成功率，揭示出利用经验与持续探索之间的权衡。VEX$^2$ 是唯一在全部六种设置中均相较重试取得正向观测成功率增益的更新方法。
+Abstract: https://arxiv.org/abs/2609.12404
+PDF: https://arxiv.org/pdf/2609.12404
+
+[72] Adaptive Chemotherapy Control under Tumor Heterogeneity via Reinforcement Learning
+中文标题：肿瘤异质性下基于强化学习的自适应化疗控制
+Topics: RL
+推荐理由：应用深度强化学习（TD3/DQN）进行化疗给药策略优化，并与最优控制基准比较，属于强化学习用于优化控制的核心方向，但应用领域为医学而非论文关注的计算优化问题。
+中文摘要：本文比较了基于高维异质性肿瘤模型训练的闭环深度强化学习（DRL）给药策略（连续动作TD3与离散动作DQN）与PMP开环最优控制基准，并在100例虚拟患者队列上评估泛化性，揭示疗效与一致性之间的权衡。 构建高维异质性肿瘤模型，训练连续动作空间（TD3）与离散动作空间（DQN）的闭环DRL给药策略，并与基于庞特里亚金极大值原理（PMP）的开环最优控制基准进行对比；在含生长与药物敏感性参数±10%均匀扰动的100例虚拟患者队列上评估参数异质性下的泛化性能。 在整个虚拟队列中，TD3实现更高的平均肿瘤削减率，DQN则表现出更紧的患者间给药一致性，揭示了疗效与一致性之间的明显权衡。仿真假设所有肿瘤亚群完全可观测。
+Abstract: https://arxiv.org/abs/2609.12264
+PDF: https://arxiv.org/pdf/2609.12264
+
+[72] LifeMem: Enabling Lifelong Experience Reuse for LLM Agents
+中文标题：LifeMem：为LLM智能体实现终身经验复用
+Topics: LLM
+推荐理由：提出LLM智能体的终身学习记忆框架，复用交互轨迹提取技能并跨任务迁移，与LLM智能体优化控制相关。
+中文摘要：提出LifeMem，一个通过聚类交互轨迹提取可复用技能来实现跨环境知识迁移的终身学习框架，在10个环境、13k+任务上验证了其减少遗忘与促进迁移的有效性。 LifeMem在训练阶段基于底层工作流对累积的交互轨迹进行聚类，从中提取可复用的技能；在推理阶段，智能体回忆相关技能与轨迹来引导动作生成。 在10个环境、超过13k个任务、并额外标注2k条交互轨迹上进行实验，LifeMem实现了有效的经验复用，既降低了已学任务上的遗忘，又取得了更优的跨任务迁移。
+Abstract: https://arxiv.org/abs/2609.12655
+PDF: https://arxiv.org/pdf/2609.12655
+
+[72] LifeFuse-Mem: Lifecycle-Aware State Fusion Against Temporary Overwriting for Long-Term Memory
+中文标题：LifeFuse-Mem：面向长期记忆的生命周期感知状态融合以防临时覆盖
+Topics: LLM
+推荐理由：面向长期LLM智能体的生命周期感知记忆机制，涉及智能体状态维持，与LLM智能体研究相关，但未涉及优化算法设计。
+中文摘要：本文提出生命周期感知的记忆框架 LifeFuse-Mem，通过区分稳定知识与临时上下文，缓解长期 LLM 智能体中的记忆覆盖与行为漂移问题。 研究设定为生命周期标注记忆：训练时写入片段提供生命周期元数据，评估时采用相位感知读出。在此设定下提出 LifeFuse-Mem，一种生命周期感知的神经记忆框架，依据信息的时间承诺进行分离，使用专用记忆组件与生命周期感知更新，使稳定知识与瞬态知识在本地各自演化，避免临时上下文转化为持久状态。 在受控的反覆盖基准上，LifeFuse-Mem 提升了受采集控制的信息保持能力，并减少了临时性覆盖；在两个公开长记忆基准上，其表现整体具有竞争力。
+Abstract: https://arxiv.org/abs/2609.12436
+PDF: https://arxiv.org/pdf/2609.12436
+
+[72] From Collaboration to Capability: Internalizing Routed LLM Experts into Compact Reasoners
+中文标题：从协作到能力：将路由式LLM专家内化为紧凑推理器
+Topics: LLM / RL
+推荐理由：将多专家路由协作通过强化学习与监督训练内化到紧凑LLM推理模型中，属于LLM+RL的算法与训练方法研究，与LLM优化及自动推理能力增强相关。
+中文摘要：提出RIVET，通过专家增强强化学习与验证轨迹内化，将多专家协作能力蒸馏进紧凑控制器，使其在无外部LLM条件下独立完成推理与代码生成。 RIVET（协作内化）包含两部分：(1) 专家增强强化学习，将共享结果信号同时施加于控制器决策与返回的专家片段；(2) 验证轨迹内化，通过格式感知的监督训练整合完整成功交互。部署后的控制器基于本地Python执行生成推理、代码与交互结构，无需外部LLM。 在七个竞赛数学基准上，RIVET-1.7B与RIVET-4B平均准确率分别为28.25%与44.16%；Stage II使RIVET-4B在移除专家后的准确率提升6.49个百分点；GPQA-Diamond结果证明对科学推理的泛化能力。消融实验显示普通轨迹监督与额外格式加权均带来增益。
+Abstract: https://arxiv.org/abs/2609.12578
+PDF: https://arxiv.org/pdf/2609.12578
+
+[72] Beyond Generation and Accuracy: Diagnosing and Enhancing Visual Chain-of-Thought for Geometry Problem Solving
+中文标题：超越生成与准确率：诊断并增强几何问题求解中的视觉思维链
+Topics: LLM / RL
+推荐理由：面向几何问题的多模态思维链诊断与训练，结合SFT与多模态RL提升推理；与LLM/RL相关但非优化算法或组合优化核心。
+中文摘要：提出GeoVAD-Bench诊断基准与GeoWeave-8B模型，揭示几何VCoT中间环节的复合误差并显著提升几何推理准确率。 构建GeoVAD-Bench：包含感知、辅助质量、利用、演绎推理、最终正确性五个维度的细粒度轨迹诊断，并设置No-Aux、Auto-Aux、GT-Aux三种干预以分离中间错误模式、视觉辅助的因果增益与自主性差距。基于诊断结论，建立涵盖几何感知、图形编辑、图文交错推理轨迹的数据构建管线，并设计渐进式SFT与多模态RL训练框架，得到GeoWeave-8B。 高质量辅助在理论上对几何解题带来显著增益，但自主生成常因几何感知、忠实视觉操作、视觉状态grounding与演绎推理环节的复合误差而受限；GeoWeave-8B较基座模型最终几何准确率提升+25.3%，四个中间诊断维度的过程平均提升+30.4%。
+Abstract: https://arxiv.org/abs/2609.12606
+PDF: https://arxiv.org/pdf/2609.12606
+
+[72] Skill Issue: Lessons from Optimizing Repository SKILLs for Coding Agents
+中文标题：技能问题：为编码代理优化仓库技能的教训
+Topics: 
+推荐理由：优化代码库SKILL文档以提升LLM编码代理性能，属于LLM代理与优化交叉，但非核心组合优化/进化算法焦点。
+中文摘要：本文针对代码智能体从SKILL文档（随代码版本管理的.md文件）获取仓库知识这一场景，提出以仓库已合并又被回滚的pull request构造更难任务，并以"同一智能体在有文档时是否比无文档表现更好"作为文档评分标准，在三个Kotlin仓库上比较了GEPA与SkillOpt两种优化方法。 任务构造：挖掘仓库中已合并但在某个冻结基线上被回滚的pull request，形成更难的任务集。评分方式：以"同一智能体在有候选文档时相对无文档时的表现提升"作为文档得分，即在无基准依赖的条件下做相对增益评估。优化对比：使用GEPA与SkillOpt两种方法在三个Kotlin仓库上自动优化候选文档。 在三个Kotlin仓库上，GEPA生成的文档使该评分平均提升4.9个百分点；SkillOpt生成的文档几乎无提升，仅比种子高0.1个百分点。GEPA的提升幅度与既有工作在相同优化器下报告的数值相当，但在单个仓库所能提供的数据集规模下，该增益难以与智能体逐次运行的方差区分开，若要判定需超过单个仓库历史所能提供的任务数量。文档质量的主观可读性优于其分数表现：某仓库的维护者从中发现了只有实际参与该项目工作才能获得的知识。
+Abstract: https://arxiv.org/abs/2609.12742
+PDF: https://arxiv.org/pdf/2609.12742
+
+[72] What Drives Recovery in Agentic Text-to-Cypher? LAST-CQ: An LLM Agent Self-Refinement Framework
+中文标题：什么驱动了智能体式Text-to-Cypher的恢复？LAST-CQ：一种LLM智能体自精炼框架
+Topics: LLM
+推荐理由：研究LLM智能体自反思与纠错循环在结构化查询生成中的作用，属LLM智能体优化范畴，但与组合优化/进化计算等核心方向交叉较弱。
+中文摘要：该论文以 LAST-CQ（五智能体、免训练、执行落地的 Text-to-Cypher 框架）为可插拔测试床，通过三个反事实实验定位智能体流水线中真正带来收益的环节。 在 2,471 条实时数据库查询、六种骨干模型（覆盖三个厂商规模层级）上运行三个反事实：(1) 移除纠错环节；(2) 用原始数据库错误字符串替换基于 schema、由 LLM 合成的反馈；(3) 将同等调用预算用于并行采样。同时用 n-gram 重叠（执行-BLEU）与集合等价、人工判定语义做对比校验，并将 LLM 评判器与盲标人类标注进行校准。 移除纠错带来 3.1%（相对单遍系统）至 12.3%（相对无精炼反事实）的执行-BLEU 损失，最弱骨干上高达 80.7%；用原始错误字符串替换 LLM 合成反馈几乎无损（20.9% vs 19.9% naive exact match，端到端 <0.2%，两次单侧检验下 ±0.075 set-F1 内等价）；同等预算用于并行采样反而使质量下降 10–11%。LAST-CQ 自身可恢复单遍生成下 91.7% 的失败查询，且首次成功的查询仍只消耗一次 LLM 调用。n-gram 重叠既非上界也非下界：在 65.9% 的结果上相对集合等价高估，而相对人工判定语义则低估。LLM 评判器经盲标校准后显示乐观约 9 个百分点。
+Abstract: https://arxiv.org/abs/2609.12746
+PDF: https://arxiv.org/pdf/2609.12746
+
+[72] Autonomous Research for Open-Ended Problems: A Case Study on Telecom Ticket Retrieval
+中文标题：面向开放式问题的自主研究：电信工单检索案例研究
+Topics: LLM / Hyper-heuristic
+推荐理由：探讨LLM智能体自主研究流程，涉及自动超参搜索与算法设计，与自动化算法/超启发式设计相关，但应用为电信工单检索，较偏应用。
+中文摘要：本文以电信工单检索这一开放式工业级机器学习问题为案例，探讨将自主研究框架从狭窄搜索空间扩展到开放式ML问题的可行性，发现自主研究在超参数优化上表现优异但缺乏人类直觉与创造力，在极少人工监督下可达到SOTA的90%（Recall@1 0.34 vs 0.38），且耗时与成本远低于人工，建议人机协作。 采用案例研究法，选取"电信工单检索"作为开放式任务，该任务在表征、架构和训练数据生成上均存在自由度。对比考察商业智能体（如Cursor）与开源智能体的自主研究表现，并在不同人工监督程度下评估其效果与成本。 自主研究在狭窄的超参数优化上表现出色，但缺乏类人的直觉与创造力，且需要额外运营开销。在极少人工监督下，自主研究可达到SOTA性能的90%（Recall@1为0.34，对比0.38），所需时间从人工的10个月缩短至10周，单次Cursor任务的成本最高约200美元。
+Abstract: https://arxiv.org/abs/2609.13073
+PDF: https://arxiv.org/pdf/2609.13073
+
+[72] Offline Reinforcement Learning for Wind Farm Control: A Wind Tunnel Study under Dynamic Wind Directions
+中文标题：面向风电场控制的离线强化学习：动态风向下的风洞研究
+Topics: RL
+推荐理由：提出离线强化学习算法MTD3-BC用于风电场偏航控制优化，属于强化学习用于实际优化控制问题，方法与RL优化方向相关但非核心交叉领域。
+中文摘要：提出离线强化学习算法MTD3-BC用于风向变化下的风电场偏航控制功率最大化，并通过风洞实验首次验证离线RL风电场控制策略。 提出无模型的MTD3-BC算法，结合行为克隆从预采集离线数据集中学习策略；在策略优化目标中引入动作一致性项以实现平滑适度的偏航调整；训练过程无需大规模与风电场仿真器交互。 风洞实验表明，MTD3-BC有效缓解尾流效应，相较贪婪基线策略实现约10%的场级功率增益，性能与基于数据校准的模型驱动尾流转向基准相当，且无需尾流模型，训练成本仅为在线RL的一小部分。
+Abstract: https://arxiv.org/abs/2609.12905
+PDF: https://arxiv.org/pdf/2609.12905
+
+[72] MCRL2: Multi-resource Cross-attention-based Representation Learning-augmented Reinforcement Learning for Cloud Microservice Scheduling
+中文标题：MCRL2：基于多资源交叉注意力表示学习增强的云微服务调度强化学习方法
+Topics: RL
+推荐理由：将表示学习与强化学习结合用于调度优化，属于RL优化应用但非核心交叉。
+中文摘要：本文提出MCRL2，一种结合多资源交叉注意力表示学习的强化学习方法，用于微服务调度，以解决动态负载下资源不均衡、多维资源非线性耦合和异构需求问题。 先提出MCRL表示学习方法，通过多资源交叉注意力机制捕捉节点、资源与微服务之间结构化且有信息量的交互；再将MCRL增强的actor-critic架构与最大熵目标结合，增广强化学习，提升系统状态表达能力。 在真实生产集群轨迹上的大量实验表明，MCRL2在多种负载模式下于负载均衡、调度成功率和平均完成时间方面显著优于现有基线。
+Abstract: https://arxiv.org/abs/2609.13048
+PDF: https://arxiv.org/pdf/2609.13048
+
+[68] Performance, Efficiency and Collapse -- Advantages and Challenges in Offline Post-training of Code LLMs
+中文标题：性能、效率与坍塌——代码LLM离线后训练的优势与挑战
+Topics: LLM / RL
+推荐理由：研究代码LLM的离线RL后训练，涉及LLM与强化学习的结合，但非优化算法设计。
+中文摘要：本文探讨以离线强化学习替代在线采样进行代码生成大模型的后训练，在无需在线生成样本的情况下，用数小时训练即可显著提升零样本代码生成性能。 采用离线强化学习范式，直接利用已有数据集而非在线生成新样本，对代码生成大模型进行后训练，并在0.5B至7B参数规模的多个模型家族上进行验证。 仅需数小时训练，无需在线采样即可大幅提升大模型的零样本代码生成性能；离线RL在0.5B至7B参数范围的模型上均带来性能增益，但不同模型家族的提升幅度存在差异。
+Abstract: https://arxiv.org/abs/2609.11956
+PDF: https://arxiv.org/pdf/2609.11956
+
+[68] MAAPO:an innovative membrane algorithm based on artificial protozoa optimizer for multilevel threshold image segmentation
+中文标题：MAAPO：一种基于人工原生动物优化器的创新膜算法用于多级阈值图像分割
+Topics: EC
+推荐理由：提出基于人工原生动物优化器的膜算法用于全局优化，属于全新元启发式算法设计与混合进化计算，虽应用在图像分割，但核心贡献是算法创新
+中文摘要：提出基于人工原生动物优化器（APO）的膜算法MAAPO，用于全局优化，并应用于多阈值图像分割。 以APO为基础算法，引入膜计算（MC）并行分布式框架，并在自养模型中采用基于轮盘的适应度-距离平衡（RFDB）机制进行自适应参考点选择。 在CEC2017测试集上与12种先进算法对比表现更优；在基于Otsu与Kapur熵的多阈值分割中取得更高质量，PSNR、SSIM、FSIM指标更佳。
+Abstract: https://arxiv.org/abs/2609.12756
+PDF: https://arxiv.org/pdf/2609.12756
+
+[68] Language Is an Insufficient Substrate for Quantitative Reasoning, and Consequential Domains Need Large Quantitative Models
+中文标题：语言不足以支撑定量推理，关键领域需要大型定量模型
+Topics: LLM
+推荐理由：论证LLM在定量推理上的局限性并提出新的LQM模型类别，与LLM用于优化和决策的核心问题相关。
+中文摘要：本文提出"大型定量模型"(LQM)这一新模型类别，论证以语言描述为训练基底无法胜任高风险定量决策：描述是定量记录的有损编码且损失不可逆，与模型规模无关。作者指明这类场景还要求可复现性、输出到源记录的血缘追溯、以及校准的不确定性，这三项属性是语言基底结构上无法提供的。 以理论论证为主，不涉及实验。核心手段是将问题形式化为训练表示的性质，而非模型容量的性质：(1) 语言模型训练于由人类描述生成的世界表示，而描述是定量记录的有损编码，且该损失不可逆——任何下游模型在任何规模下都无法从描述中恢复其未编码的信息；(2) 进一步识别出关键场景对模型的三项结构性要求：可复现性、从每个输出回溯到产生它的源记录的血缘关系、校准的不确定性，并论证语言基底无法在构造上满足这些要求。 论证得到两个结论性判断：定量记录的信息损失是表示层面的、不可逆的，无法通过扩大模型规模弥补；可复现性、血缘追溯与校准不确定性是语言基底在构造上无法提供的属性。据此，作者认为这些属性共同定义了一个独立的模型类别，即大型定量模型(LQM)。
+Abstract: https://arxiv.org/abs/2609.12105
+PDF: https://arxiv.org/pdf/2609.12105
+
+[68] SCQ: Stabilizing Conservative Q-Learning with Sigmoid-Bounded Entropy
+中文标题：SCQ：基于Sigmoid有界熵的稳定保守Q学习
+Topics: RL
+推荐理由：提出sigmoid有界熵稳定保守Q学习，改进离线到在线强化学习价值估计与策略更新，属于强化学习算法改进，但与组合优化或算法自动设计等核心交叉方向关联有限。
+中文摘要：该论文提出SCQ方法，通过将有符号的log-entropy替换为sigmoid有界且严格为正的熵形式，缓解离线到在线强化学习中的值估计与策略更新不稳定问题，在D4RL及真实机器人平台上验证了稳定性与性能。 提出SCQ（Sigmoid-Bounded Conservative Q-Learning）：用sigmoid有界、严格为正的熵公式替换标准log-entropy项；同时保留保守Q正则与基于回报的下界校准，在稳定策略优化的同时不牺牲探索。 在D4RL（Minari）基准上，涵盖单演示与标准数据集设置，并在仿真与真实视觉任务中评估。SCQ性能匹配或超越基线，且在基于状态与视觉的基准上训练动态更稳定，并迁移到四类真实机器人平台（操作、轮式、四足、人形）。直接裁剪干预（移除负log概率贡献）与梯度匹配的正分数对照实验表明，熵项的正性而非特定分数形状本身，是大部分性能提升的驱动因素。
+Abstract: https://arxiv.org/abs/2609.12749
+PDF: https://arxiv.org/pdf/2609.12749
+
+[68] Groupoid-Based Internal State Representations for Reinforcement Learning with Local Symmetries
+中文标题：基于群胚的局部对称强化学习内部状态表示
+Topics: RL
+推荐理由：提出用群胚刻画局部对称并动态发现等价结构以提升强化学习样本效率，属于RL表示与状态抽象方向，与RL优化相关但未涉及LLM或EC。
+中文摘要：该论文提出用群胚（groupoid）刻画状态依赖的局部对称性，并在交互中动态发现等价结构，从而在对称约简空间中学习，提升强化学习的样本效率与收敛性。 提出基于群胚的强化学习框架，用以捕捉局部、状态依赖的对称性，并支持在交互过程中动态发现等价结构。智能体维护轨道代表元（orbit representatives）与传输映射（transporters），后者将原始状态映射到规范形式，使学习与决策可在保持局部区分性的对称约简空间中进行。 实验表明，在具有强部分对称性的密集与大规模环境中，所提群胚方法提升了样本效率与收敛速度，相较标准Q学习取得显著性能增益。
+Abstract: https://arxiv.org/abs/2609.13035
+PDF: https://arxiv.org/pdf/2609.13035
+
+[63] Reinforcement Learning over Patient Trajectories for Clinical Reasoning in EHR Foundation Models
+中文标题：面向电子健康记录基础模型临床推理的患者轨迹强化学习
+Topics: RL / LLM
+推荐理由：将EHR基础模型视为生成策略并用强化学习微调，涉及LLM+RL，但应用领域为临床推理而非优化算法设计。
+中文摘要：该论文提出将EHR基础模型视作患者轨迹上的生成式策略，用强化学习微调框架提升其临床推理能力，并设计了时间感知、轨迹敏感的奖励机制。 将EHR基础模型建模为患者轨迹上的生成式策略，把常见临床预测问题（如再入院）形式化为事件条件化、时间窗口化的推理任务，并设计时间感知、对rollout敏感的奖励函数，以应对有限rollout长度和时间上不确定的结果。 RL微调持续优于预训练骨干网络和强基线；在数据受限场景下使小模型超越更大的预训练模型，并产生跨任务的正迁移；微调后模型生成的轨迹在结构和语义上与真实轨迹更对齐，下游效用更高。
+Abstract: https://arxiv.org/abs/2609.12277
+PDF: https://arxiv.org/pdf/2609.12277
+
+[62] GAUGE: When Not to Trust LLM-as-a-Judge in User-Simulated Evaluation of Task-Oriented Agents
+中文标题：GAUGE：在任务型智能体的用户模拟评估中何时不应信任LLM作为裁判
+Topics: LLM
+推荐理由：研究LLM裁判在任务型智能体评估中的可靠性，与LLM智能体评价相关，但未涉及优化算法或组合优化等核心方向。
+中文摘要：本文提出GAUGE协议，检验基于LLM用户模拟器与LLM评判的离线评估门控是否能复现可验证奖励的排序，发现满意度与任务成功脱钩，且门控在强代理间分辨率不足。 提出可复用的离线协议GAUGE，在τ²-bench与SimulatorArena两个基准上，对来自六家提供商的25个代理，比较门控排名与有据可查的可验证奖励排名，并区分排序效度与构念效度；同时通过盲评小组与五类评分者群体评估满意度与任务成功的关系。 存在满意度—成功鸿沟：满意度几乎不携带任务成功信息，盲评小组判定为满意的对话与实际成功去相关，其中57.5%未完成客户任务，且该模式在五类评分者群体、两个基准及所有主观维度上一致。门控排名在能力跨度大时稳健，但在实力相近的强代理间失去分辨率，决策分歧率从宽奖励配对的<1%升至接近配对的31%。
+Abstract: https://arxiv.org/abs/2609.12191
+PDF: https://arxiv.org/pdf/2609.12191
+
+[62] HypoKG: Evidence-Disciplined Biomedical Hypothesis Generation Beyond Endpoint Knowledge
+中文标题：HypoKG：超越端点知识的证据约束生物医学假设生成
+Topics: LLM
+推荐理由：研究LLM基于知识图谱进行生物医学假设生成与证据推理，与LLM推理及知识图谱优化相关，但未直接涉及组合优化或算法设计，仅部分相关。
+中文摘要：该研究构建了统一生化知识图谱与550条路径基准，用1-5分五准则评分体系评估六种LLM在四种信息条件下的13,200条假设，发现仅给源与疾病终点时假设得分最高但证据依托弱，给完整生物路径时假设与已知机制更一致（即"证据约束推理"），并通过打乱中间步骤验证模型确实使用了路径结构（delta=-0.793, p<0.001）。 整合KEGG、Rhea、UniProt三大生物数据库为统一生化知识图谱；构建含550条连接酶来源与罕见病终点的路径基准；在四种条件下（仅源酶、完整生物路径、仅源+疾病终点等）由六种LLM生成13,200条假设；采用专家制定的五准则1-5分评分量表打分；并做中间路径步骤打乱、保持终点不变的对照实验。 同时获得源与疾病终点的模型常产生得分最高的假设，说明LLM能从极少信息生成有吸引力的想法，但这些假设的证据依托较弱；获得完整生物路径的模型生成的假设与已知机制关系更一致。打乱中间步骤后证据依托显著下降（delta=-0.793, p<0.001），证实模型在推理中确实使用了路径结构。
+Abstract: https://arxiv.org/abs/2609.12260
+PDF: https://arxiv.org/pdf/2609.12260
+
+[62] Reinforcement Learning for Syndrome Extraction
+中文标题：强化学习用于综合症提取
+Topics: RL / Search
+推荐理由：用强化学习与重要性采样搜索量子纠错综合症提取方案，属于RL驱动的组合搜索优化，但未涉及LLM/EC或自动算法设计等核心交叉方向。
+中文摘要：本文提出基于强化学习与重要性采样的综合征提取实现搜索方法，在所有规模上超越现有自动调度工具。相较AlphaSyndrome与PropHunt，逻辑错误率平均降低25.9%和71.7%，在距离15的表面码上最高降低97.8%。 采用强化学习（reinforcement learning）结合重要性采样（importance sampling）来搜索综合征提取的实现方案。 在所有规模上优于先前工作。与当前最先进的自动调度工具AlphaSyndrome和PropHunt相比，本工具将逻辑错误率分别平均降低25.9%和71.7%，在距离为15的表面码上降低幅度高达97.8%。
+Abstract: https://arxiv.org/abs/2609.12020
+PDF: https://arxiv.org/pdf/2609.12020
+
+[62] GUIDE: Generative Utility Inference and Decision Engine
+中文标题：GUIDE：生成式效用推断与决策引擎
+Topics: LLM
+推荐理由：LLM驱动的偏好推断用于决策，结合贝叶斯自适应采样；与LLM优化及投组优化相关，但核心是偏好获取而非算法自动设计。
+中文摘要：本文提出 GUIDE，一种 LLM 驱动的偏好 elicitation（偏好引出）架构：结合贝叶斯自适应采样进行问题选择，并用符号表示学习初始化领域特定偏好模型，以更高效地发现多维用户偏好。 GUIDE 通过对话推断用户偏好：采用贝叶斯自适应采样选择问题，采用符号表示学习初始化领域特定偏好模型。通过可扩展的变换类型系统，将自适应采样推广到多样化 elicitation 问题（作用于参数化偏好状态）；并通过基于符号规则学习的初始化过程，捕捉世界知识并在偏好维度上设定由决策备选数据支撑的先验。架构具备可观测性与可操控性，便于部署与分析 elicitation 过程。 在投资组合优化的 in silico（模拟）实验中，相比先前工作、纯 LLM 基线及 GUIDE 消融版本，GUIDE 在不同用户画像下持续改善冷启动表现，并在早期 elicitation 交互中最小化推荐遗憾。
+Abstract: https://arxiv.org/abs/2609.12137
+PDF: https://arxiv.org/pdf/2609.12137
+
+[62] RiPPLE: Cross-Space Performance Prediction from Early Training for Neural Architecture Search
+中文标题：RiPPLE：面向神经架构搜索的跨空间早期训练性能预测
+Topics: 
+推荐理由：神经架构搜索中的跨空间性能预测与排序，属于自动化算法/模型设计，但与核心兴趣（LLM/EC/RL/CO）仅间接相关。
+中文摘要：RiPPLE 将部分训练视为锚点标签来源，通过前缀训练、学习曲线外推与标签传播实现免完全训练的全空间架构排序。 提出 RiPPLE（Ranking via Prefix-Propagated Label Extrapolation）：选取小规模覆盖集作为锚点，仅训练到早期前缀，将其学习曲线外推为代理标签，再基于无标签架构特征把标签传播到整个空间。早期训练信号作为锚点标签而非逐候选特征；特征、读出与编码规则不依赖留存精度即可选定，并可跨搜索空间复用。 在四个搜索空间家族的十二个基准单元及更大的 DARTS 空间上评估，考察了排序质量、标签效率、架构选择以及读出、覆盖与传播的作用。结果显示，RiPPLE 能以分数级锚点训练预算提供全空间排序；相关比较在其各自的评估与成本协议下进行解释。
+Abstract: https://arxiv.org/abs/2609.12418
+PDF: https://arxiv.org/pdf/2609.12418
+
+[62] MInTRL: Off-policy Intervention can boost On-policy RL
+中文标题：MInTRL：离策略干预可提升在策略强化学习
+Topics: RL / LLM
+推荐理由：提出基于LLM的干预策略提升强化学习探索，与LLM+RL交叉相关，但非优化算法设计核心。
+中文摘要：提出MInTRL，通过稀疏局部干预扩展on-policy探索前沿，配合序列级优势回归目标，在数学与代码任务上超越on-policy与off-policy基线。 MInTRL：生成阶段由裁判-干预策略周期性审查当前策略输出，将错误后缀替换为简短修正后立即交还控制权；训练阶段采用序列级优势回归目标，避免重要性采样。 在数学与代码基准上持续优于标准on-policy和off-policy基线；消融显示自干预与不同裁判策略下均有效，且性能在中等干预强度达到峰值。
+Abstract: https://arxiv.org/abs/2609.12419
+PDF: https://arxiv.org/pdf/2609.12419
+
+[62] SIMS: Scale-Invariant Merit-Function-Based Scalarization for Multi-Task Learning
+中文标题：SIMS：面向多任务学习的尺度不变价值函数标量化方法
+Topics: 
+推荐理由：面向多目标优化的标量化方法，与自动优化算法设计间接相关，但未涉及LLM/EC/RL。
+中文摘要：本文提出尺度不变的评价函数标量化方法SIMS，通过对数变换将多任务学习的多目标优化转化为对损失量级不变的单一目标，理论上证明尺度不变性唯一决定该对数形式，并保持弱帕累托最优性与可控近似误差，在多个基准上取得最优性能。 提出尺度不变评价函数标量化（SIMS）。采用变换诱导的评价函数，将对数变换引入标量化，把多目标优化问题转化为对损失量级不变的单一目标；理论证明尺度不变性要求唯一确定该变换为对数形式，并证明该变换保持弱帕累托最优性，且可给出近似误差可控的光滑替代函数。 在多个代表性多任务基准上进行大量实验，SIMS 一致优于现有标量化方法，并达到当前最优性能。
+Abstract: https://arxiv.org/abs/2609.12599
+PDF: https://arxiv.org/pdf/2609.12599
+
+[62] Curriculum-Based Adversarial Heterogeneous Agent Reinforcement Learning for Autonomous Quad-Copter Landing in Maritime Settings
+中文标题：面向海上自主四旋翼无人机着舰的课程式对抗异构智能体强化学习
+Topics: RL
+推荐理由：主要贡献是多智能体强化学习与课程/对抗训练用于无人机着舰控制，属于强化学习控制应用；与组合优化、进化计算或自动算法设计无直接关联，但有潜在借鉴意义。
+中文摘要：本文在仿真环境中研究舰载机械臂对四旋翼无人机的空中捕获,采用异构多智能体近端策略优化(HAPPO)结合课程学习与对抗风智能体(HARL-AC)训练协同控制策略,在分布内海况下与域随机化方法相当,在分布外海况下泛化更优。 在NVIDIA Isaac Lab中构建舰载机械臂空中捕获四旋翼无人机的仿真任务,使用HAPPO进行多智能体强化学习,并引入课程学习(Curriculum)与对抗风智能体(HARL-AC);将所得策略与基于课程的域随机化策略以及在单一海况下训练的基线策略进行对比评估。 在分布内海况0/4/5上,HARL-AC与域随机化成功率相当,最高达97.5%;在分布外海况7/8/10上,HARL-AC泛化更好,海况10时中位成功率高出最多16%,崩溃率降低最多14%,同时超时率仅增加<3%。
+Abstract: https://arxiv.org/abs/2609.12758
+PDF: https://arxiv.org/pdf/2609.12758
